@@ -23,7 +23,7 @@ pip install shadowsocks
     "workers":5
 }
 ```
-!["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadows_json.png "shadows_json")<br />
+!["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 
 :warning: 
 -[x] 注意修改 password 为自己的密码
