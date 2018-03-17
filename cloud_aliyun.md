@@ -1,15 +1,15 @@
-ÔÚ°¢ÀïÔÆÉÏ´î½¨×Ô¼ºµÄshadowsocks
+åœ¨é˜¿é‡Œäº‘ä¸Šæ­å»ºè‡ªå·±çš„shadowsocks
 ======
-* »·¾³£º
-	* CentOS 7.4, 64bit£¬ ÃÀ¹úÎ÷²¿£¨¹è¹È£©£¬ shadowsocks<br />
+* ç¯å¢ƒï¼š
+	* CentOS 7.4, 64bitï¼Œ ç¾å›½è¥¿éƒ¨ï¼ˆç¡…è°·ï¼‰ï¼Œ shadowsocks<br />
 	![centos_version](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/centos_version.png "centos_version")<br />
-* Ê×ÏÈ£¬ĞèÒªÂòÒ»Ì¨°¢ÀïÔÆ·şÎñÆ÷£¬ÎÒÂòµÄÊÇÃÀ¹úÎ÷²¿¹è¹ÈµÄCentOS 7.4
-* ¹ºÂòºÃÔÆ·şÎñÆ÷Ö®ºó£¬ÔËĞĞÒÔÏÂÃüÁî£¬°²×° `python-pip` ºÍ `shadowsocks`:<br />
+* é¦–å…ˆï¼Œéœ€è¦ä¹°ä¸€å°é˜¿é‡Œäº‘æœåŠ¡å™¨ï¼Œæˆ‘ä¹°çš„æ˜¯ç¾å›½è¥¿éƒ¨ç¡…è°·çš„CentOS 7.4
+* è´­ä¹°å¥½äº‘æœåŠ¡å™¨ä¹‹åï¼Œè¿è¡Œä»¥ä¸‹å‘½ä»¤ï¼Œå®‰è£… `python-pip` å’Œ `shadowsocks`:<br />
 ```shell
 yum install python-pip
 pip install shadowsocks
 ```
-* ÉÏÊöÃüÁîÍê³Éºó£¬°²×°ÒÔÏÂÃüÁî£º<br />
+* ä¸Šè¿°å‘½ä»¤å®Œæˆåï¼Œå®‰è£…ä»¥ä¸‹å‘½ä»¤ï¼š<br />
 ```shell
 {
     "server":"0.0.0.0",
@@ -26,18 +26,18 @@ pip install shadowsocks
 !["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 
 :warning: <br /> 
-1. ×¢ÒâĞŞ¸Ä password Îª×Ô¼ºµÄÃÜÂë
-2. workers ±íÊ¾Æô¶¯µÄ½ø³ÌÊıÁ¿ 
+1. æ³¨æ„ä¿®æ”¹ password ä¸ºè‡ªå·±çš„å¯†ç 
+2. workers è¡¨ç¤ºå¯åŠ¨çš„è¿›ç¨‹æ•°é‡ 
 
-* Æô¶¯shadowsocks·şÎñ:<br />
+* å¯åŠ¨shadowsocksæœåŠ¡:<br />
 ```shell
-shadowsocksÆô¶¯: ssserver -c /etc/shadowsocks.json -d start 
-shadowsocksÖØÆô: ssserver -c /etc/shadowsocks.json -d restart 
-shadowsocks¹Ø±Õ: ssserver -c /etc/shadowsocks.json -d stop
+shadowsockså¯åŠ¨: ssserver -c /etc/shadowsocks.json -d start 
+shadowsocksé‡å¯: ssserver -c /etc/shadowsocks.json -d restart 
+shadowsockså…³é—­: ssserver -c /etc/shadowsocks.json -d stop
 ```
 
 ****
-Ê¹ÓÃ±¾»úShdowsocks¿Í»§¶Ë, Á¬½Ó°¢ÀïÔÆ·şÎñÆ÷ÉÏÍø£º<br />
-[shadowsocks android °æ±¾](https://github.com/shadowsocks/shadowsocks-android/releases)<br />
-[shadowsocks windows °æ±¾](https://github.com/shadowsocks/shadowsocks-windows/releases)<br />
-shadowsocks iPhone, iPad°æ±¾,¿ÉÒÔÈ¥App storeÀïËÑË÷ £º firstwingy
+ä½¿ç”¨æœ¬æœºShdowsockså®¢æˆ·ç«¯, è¿æ¥é˜¿é‡Œäº‘æœåŠ¡å™¨ä¸Šç½‘ï¼š<br />
+[shadowsocks android ç‰ˆæœ¬](https://github.com/shadowsocks/shadowsocks-android/releases)<br />
+[shadowsocks windows ç‰ˆæœ¬](https://github.com/shadowsocks/shadowsocks-windows/releases)<br />
+shadowsocks iPhone, iPadç‰ˆæœ¬,å¯ä»¥å»App storeé‡Œæœç´¢ ï¼š firstwingy
