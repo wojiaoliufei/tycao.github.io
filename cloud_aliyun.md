@@ -35,9 +35,12 @@ shadowsocks启动: ssserver -c /etc/shadowsocks.json -d start
 shadowsocks重启: ssserver -c /etc/shadowsocks.json -d restart 
 shadowsocks关闭: ssserver -c /etc/shadowsocks.json -d stop
 ```
-
+## 使用本机Shdowsocks客户端, 连接阿里云服务器上网：<br />
 ****
-使用本机Shdowsocks客户端, 连接阿里云服务器上网：<br />
 [shadowsocks android 版本](https://github.com/shadowsocks/shadowsocks-android/releases)<br />
 [shadowsocks windows 版本](https://github.com/shadowsocks/shadowsocks-windows/releases)<br />
-shadowsocks iPhone, iPad版本,可以去App store里搜索 ： firstwingy
+shadowsocks iPhone, iPad版本,可以去App store里搜索 ： **firstwingy**
+
+
+****
+参考链接：[使用阿里云ECS CentOS 搭建Shadowscoks](http://blog.csdn.net/zh237560547/article/details/75318697)<br />
