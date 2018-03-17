@@ -25,9 +25,9 @@ pip install shadowsocks
 ```
 !["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 
-:warning: 
-[x] 注意修改 password 为自己的密码
-[x] workers 表示启动的进程数量 
+:warning: <br />
+[ x ] 注意修改 password 为自己的密码
+[ x ] workers 表示启动的进程数量 
 
 * 启动shadowsocks服务:<br />
 ```shell
