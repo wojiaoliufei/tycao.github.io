@@ -50,7 +50,7 @@ vi /etc/shadowsocks.json
 	"workers":1
 }
 ```
-!["port"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/port2.png "port")<br />
+!["port2"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/port2.png "port2")<br />
 
 :warning: <br /> 
 1. 注意修改 `"password":"12345"` 为自己的密码
