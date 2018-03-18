@@ -72,4 +72,6 @@ shadowsocks iPhone, iPad版本,可以去App store里搜索 ： **firstwingy**
 
 
 ****
-参考链接：[使用阿里云ECS CentOS 搭建Shadowscoks](http://blog.csdn.net/zh237560547/article/details/75318697)<br />
+参考链接：
+[x] [使用阿里云ECS CentOS 搭建Shadowscoks](http://blog.csdn.net/zh237560547/article/details/75318697)<br />
+[x] [阿里云centos 7下搭建shadowsocks](https://segmentfault.com/a/1190000010639190)<br />
