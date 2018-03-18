@@ -35,6 +35,7 @@ vi /etc/shadowsocks.json
 :warning: <br /> 
 1. 注意修改 `"password":"12345"` 为自己的密码
 2. workers 表示启动的进程数量 
+3. 需要去`阿里云控制台`为该**阿里云服务器开通443端口**.
 
 * 启动shadowsocks服务:<br />
 ```shell
