@@ -196,6 +196,8 @@ ldconfig
 ```shell
 protoc --version
 ```
+!["protoc_version3"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protoc_version3.png "protoc_version3")<br />
+
 
 ### 接下来，写一个小的测试程序,来验证protocol buffer的使用情况：
 ```shell
