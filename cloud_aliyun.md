@@ -3,7 +3,7 @@
 * 环境：
 	* CentOS 7.4, 64bit， 美国西部（硅谷）， shadowsocks<br />
 	![centos_version](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/centos_version.png "centos_version")<br />
-* 首先，需要买一台阿里云服务器，我买的是美国西部硅谷的CentOS 7.4
+* 首先，需要买一台阿里云服务器，我买的是**美国西部硅谷的CentOS 7.4版本**。 具体如何买阿里云服务器，[请参考我的上一篇博客](https://github.com/tycao/tycao.github.io/blob/master/deploy_ShadowsSocks_in_Aliyun.md)<br />
 * 购买好云服务器之后，运行以下命令，安装 `python-pip` 和 `shadowsocks`:<br />
 ```shell
 yum install python-pip
