@@ -7,7 +7,6 @@
 	sudo apt-get install vsftpd
 	```
 	!["vsftpd"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/vsftpd.png "vsftpd")<br />
-	!["vsftpd2"]( "vsftpd2")<br />
 	* 查看vsftpd服务：
 	```shell
 	service vsftpd status	#查看vsftpd服务状态
@@ -39,4 +38,65 @@ sudo chmod 544 /etc/ld.so.conf
 ```
 再次运行 `protoc --version`, 结果成功了！<br />
 !["protoc_version2"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protoc_version2.png "protoc_version2")<br />
+
+<br /><br /><br />
+参考文档: [Google protobuf in Linux](https://stackoverflow.com/questions/2456664/google-protobuf-in-linux)<br />
+!["stackoverflow"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/stackoverflow.png "stackoverflow")<br />
+
+****
+## 接下来，我们写一个小demo来测试以下protobuf的使用情况：
+### 首先，写一个 `lm.person.proto` 文件:
+一个比较好的习惯是认真对待 proto 文件的文件名。比如将命名规则定于如下：`packageName.MessageName.proto` <br />
+##### lm.person.proto文件：
+```shell
+syntax = "proto3";
+package lm; 
+message Person 
+{ 
+   string     name = 1;  // proto3里，所有字段全是optional
+   string    email = 2;  // 邮箱 
+   int32     age = 3;  //年龄
+}
+```
+### 编译 `lm.person.proto` 文件:
+```shell
+protoc -I=./ --cpp_out=./ ./lm.person.proto
+```
+!["build_proto"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/build_proto.png "build_proto")<br />
+
+### 编写 writer.cpp 和 Reader.cpp
+**writer.cpp**内容如下：<br />
+```shell
+#include <iostream>
+#include <fstream>
+#include "lm.helloworld.pb.h"
+
+using namespace std;
+ 
+int main(void) 
+{ 
+	lm::Person msg1; 
+	msg1.set_name("tycao"); 
+	msg1.set_age(25);
+	msg1.set_email("616881845@qq.com");
+	 
+	// Write the Person's info to disk. 
+	ofstream output("./log"); 
+		 
+	if (!msg1.SerializeToOstream(&output)) { 
+	  cerr << "Failed to write msg." << endl; 
+	  return -1; 
+	}         
+	return 0; 
+}
+```
+
+
+
+
+
+
+
+
+
 
