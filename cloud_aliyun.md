@@ -17,7 +17,7 @@ vi /etc/shadowsocks.json
 ```
 
 * 在 `/etc/shadowsocks.json` 里添加以下内容:<br />
-（多人）只使用单个端口上网的情况：
+**（多人）只使用单个端口上网的情况：**
 ```shell
 {
     "server":"0.0.0.0",
@@ -31,7 +31,7 @@ vi /etc/shadowsocks.json
     "workers":5
 }
 ```
-（多人）各自使用自己的端口上网的情况：
+**（多人）各自使用自己的端口上网的情况：**
 ```shell
 {
 	"server":"0.0.0.0",
