@@ -17,6 +17,7 @@ vi /etc/shadowsocks.json
 ```
 
 * 在 `/etc/shadowsocks.json` 里添加以下内容:<br />
+（多人）只使用单个端口上网的情况：
 ```shell
 {
     "server":"0.0.0.0",
@@ -30,12 +31,32 @@ vi /etc/shadowsocks.json
     "workers":5
 }
 ```
+（多人）各自使用自己的端口上网的情况：
+```shell
+{
+	"server":"0.0.0.0",
+	"local_address": "127.0.0.1",
+	"local_port":1080,
+	"port_password":{
+	"8381":"pass1",
+	"8382":"pass2",
+	"8383":"pass3",
+	"8384":"pass4"
+	},
+	"timeout":60,
+	"method":"aes-256-cfb",
+	"fast_open":false,
+	"workers":1
+}
+```
 !["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 
 :warning: <br /> 
 1. 注意修改 `"password":"12345"` 为自己的密码
 2. workers 表示启动的进程数量 
-3. 需要去`阿里云控制台`为该**阿里云服务器开通443端口**. :point_right: `"server_port":443`  
+3. 单个端口上网的情况：需要去`阿里云控制台`为该**阿里云服务器开通443端口**. :point_right: `"server_port":443`  
+4. 多个端口上网的情况：需要去`阿里云控制台`为该**阿里云服务器开通8381/8384端口**.
+!["port"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/port.png "port")<br />
 
 * 启动shadowsocks服务:<br />
 ```shell
