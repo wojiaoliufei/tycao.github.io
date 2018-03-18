@@ -38,10 +38,10 @@ vi /etc/shadowsocks.json
 	"local_address": "127.0.0.1",
 	"local_port":1080,
 	"port_password":{
-	"8381":"pass1",
-	"8382":"pass2",
-	"8383":"pass3",
-	"8384":"pass4"
+		"8381":"pass1",
+		"8382":"pass2",
+		"8383":"pass3",
+		"8384":"pass4"
 	},
 	"timeout":60,
 	"method":"aes-256-cfb",
