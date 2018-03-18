@@ -30,7 +30,7 @@ sudo make install
 ```shell
 sudo chmod 777 /etc/ld.so.conf
 sudo echo "/usr/local/lib">>/etc/ld.so.conf  
-sudo echo "/usr/lib">>/etc/ld.so.conf    
+sudo echo "/usr/lib">>/etc/ld.so.conf
 sudo ldconfig
 
 # 再把/etc/ld.so.conf 的权限修改回来
@@ -53,9 +53,9 @@ syntax = "proto3";
 package lm; 
 message Person 
 { 
-   string     name = 1;  // proto3里，所有字段全是optional
-   string    email = 2;  // 邮箱 
-   int32     age = 3;  //年龄
+   string name = 1;  // proto3里，所有字段全是optional
+   stringemail = 2;  // 邮箱 
+   int32 age = 3;  //年龄
 }
 ```
 ### 编译 `lm.person.proto` 文件:
@@ -86,12 +86,92 @@ int main(void)
 	if (!msg1.SerializeToOstream(&output)) { 
 	  cerr << "Failed to write msg." << endl; 
 	  return -1; 
-	}         
+	} 
 	return 0; 
 }
 ```
 
 
+****
+## 环境： CentOS 7.4, 64bit
+* 解压protobuf 安装包
+```shell
+tar -zxvf protobuf-cpp-3.2.0.tar.gz
+yum install glibc-headers
+yum install gcc-c++
+pwd
+cd /home/wwwroot/ftptest/
+ll
+cd protobuf-3.2.0/
+./configure
+make
+make install
+ldconfig
+protoc --version
+
+
+find / -name "test.proto"
+protoc --version
+pwd
+ll
+vi test.proto
+ll
+chmod 777 test.proto
+ll
+mv test.proto lm.Person.proto
+ll
+protoc -I=./ --cpp_out=./ ./lm.Person.proto
+vi lm.Person.proto
+protoc -I=./ --cpp_out=./ ./lm.Person.proto
+vi lm.Person.proto
+protoc -I=./ --cpp_out=./ ./lm.Person.proto
+ll
+vi Writer.cpp
+touch log
+chmod 777 log
+ll
+chmod 775 Writer.cpp
+ll
+vi Writer.cpp
+g++ -std=c++11 Writer.cpp -o ./Writer
+vi Writer.cpp
+g++ -std=c++11 Writer.cpp -o ./Writer
+vi Writer.cpp
+ll
+vi Writer.cpp
+g++ -std=c++11 Writer.cpp -o ./Writer -pthread
+g++ lm.Person.pb.cc Writer.cpp -o ./Writer `pkg-config --cflags --libs pr otobuf` -lpthread
+ll
+g++ lm.Person.pb.cc Writer.cpp -o ./Writer  -lpthread
+g++ lm.Person.pb.cc Writer.cpp -o ./Writer `pkg-config --cflags --libs pr otobuf` -lpthread
+g++ lm.Person.pb.cc Writer.cpp -o ./Writer
+g++ ./lm.Person.pb.cc ./Writer.cpp -o ./write -lpthread -lprotocol
+g++ ./lm.Person.pb.cc ./Writer.cpp -o ./write -lpthread -lprotobuf
+ll
+./write
+ldconfig
+./write
+cd /usr/local/lib
+ll
+vi /etc/ld.so.conf
+/sbin/ldconfig -v
+cd -
+./write
+cat log
+vi log
+g++ ./lm.Person.pb.cc ./Writer.cpp -o ./write -lpthread -lprotocol
+g++ ./lm.Person.pb.cc ./Writer.cpp -o ./write -lpthread -lprotobuf
+protoc -I=./ --cpp_out=./ ./lm.Person.proto
+ll
+cd /home/wwwroot/ftptest/
+vi Writer.cpp
+vi Reader.cpp
+chmod 775 Reader.cpp
+g++ ./lm.Person.pb.cc ./Reader.cpp -o ./reader -lpthread -lprotobuf
+./reader
+
+
+```
 
 
 
