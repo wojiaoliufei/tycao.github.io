@@ -173,6 +173,171 @@ g++ ./lm.Person.pb.cc ./Reader.cpp -o ./reader -lpthread -lprotobuf
 
 ```
 
+### 首先，运行以下命令：
+```shell
+yum install glibc-headers
+yum install gcc-c++
+```
+### 然后进入 `protobuf-3.5.1/` 目录
+```shell
+cd protobuf-3.5.1/
+```
+
+### 进入`protobuf-3.5.1/` 目录之后，运行以下命令：
+```shell
+./configure
+make		# 编译protocol buffer, 需要等待一段时间
+make check
+make install
+ldconfig
+```
+
+### 测试protocol buffer是否安装成功：
+```shell
+protoc --version
+```
+
+### 接下来，写一个小的测试程序,来验证protocol buffer的使用情况：
+```shell
+touch test.proto
+chmod 777 test.proto
+vi test.proto
+```
+
+在test.proto里填写以下内容：
+```shell
+syntax = "proto3";
+package csx;
+
+message Person {
+    string  name  = 1;
+	int32   age   = 2;
+	string  email = 3;
+}
+```
+
+接下来，运行以下程序生成`test.pb.cc` 和 `test.pb.h`：
+```shell
+protoc -I=./ --cpp_out=./ ./test.proto
+```
+!["test_proto"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/test_proto.png "test_proto")<br />
+
+### 编写`write.cpp`:
+```shell
+touch write.cpp
+chmod 777 write.cpp
+vi write.cpp
+```
+在 `write.cpp` 里填写以下内容：
+```shell
+#include <iostream>
+#include <fstream>
+#include "test.pb.h"
+
+using namespace std;
+
+int main(void)
+{
+        csx::Person msg1;
+        msg1.set_name("tycao");
+        msg1.set_age(25);
+        msg1.set_email("616881845@qq.com");
+
+        // Write the Person's info to disk.
+        ofstream output("./log");
+
+        if (!msg1.SerializeToOstream(&output)) {
+          cerr << "Failed to write msg." << endl;
+          return -1;
+        }
+        return 0;
+}
+```
+
+#### 编译 `write.cpp`:
+```shell
+g++ ./test.pb.cc ./write.cpp -o ./write -lpthread -lprotobuf
+```
+上述编译命令，会生成write可执行文件。我们运行此write文件：
+```shell
+./write
+```
+发现报错了：报错信息是 `./write: error while loading shared libraries: libprotobuf.so.15: cannot open shared object file: No such file or directory`, 即`无法找到静态库libprotobuf.so.15`<br />
+!["write"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/write.png "write")<br />
+
+**解决方法是**：<br />
+```shell
+vi /etc/ld.so.conf
+```
+在/etc/ld.so.conf里添加如下内容：
+```shell
+/usr/local/lib
+/usr/lib
+```
+然后运行 `ldconfig`。
+
+Alternatively, 或者是运行如何命令：
+```shell
+echo "/usr/local/lib">>/etc/ld.so.conf
+echo "/usr/lib">>/etc/ld.so.conf
+idconfig
+```
+
+### 接下来再次运行./write是，就成功了！
+
+
+### 编写`read.cpp`:
+```shell
+touch read.cpp
+chmod 777 read.cpp
+vi read.cpp
+```
+`read.cpp`的内容填写如下：
+```shell
+#include <iostream>
+#include <fstream>
+#include "test.pb.h"
+
+using namespace std;
+
+// get Person's info from disk
+void ListMsg(const lm::helloworld & msg) 
+{ 
+	cout << msg.id() << endl; 
+	cout << msg.str() << endl; 
+} 
+  
+int main(int argc, char* argv[]) 
+{ 
+	csx::Person msg1; 
+	{ 
+		fstream input("./log", ios::in | ios::binary); 
+		if (!msg1.ParseFromIstream(&input)) { 
+		  cerr << "Failed to parse address book." << endl; 
+		  return -1; 
+		}
+	}
+	ListMsg(msg1); 
+}
+```
+
+接下来，编译`read.cpp`文件：
+```shell
+g++ ./test.pb.cc ./read.cpp -o read -lpthread -lprotobuf
+```
+上述命令生成read可执行文件。 运行`./read`得到如下信息：<br />
+!["result"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/result.png "result")<br />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
