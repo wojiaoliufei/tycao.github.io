@@ -31,6 +31,7 @@ vi /etc/shadowsocks.json
     "workers":5
 }
 ```
+!["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 ###（多人）各自使用自己的端口上网的情况：
 ```shell
 {
@@ -49,7 +50,7 @@ vi /etc/shadowsocks.json
 	"workers":1
 }
 ```
-!["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
+!["port"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/port2.png "port")<br />
 
 :warning: <br /> 
 1. 注意修改 `"password":"12345"` 为自己的密码
