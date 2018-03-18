@@ -11,6 +11,13 @@ pip install shadowsocks
 ```
 * 上述命令完成后，安装以下命令：<br />
 ```shell
+touch /etc/shadowsocks.json
+chmod 777 /etc/shadowsocks.json
+vi /etc/shadowsocks.json
+```
+
+* 在 `/etc/shadowsocks.json` 里添加以下内容:<br />
+```shell
 {
     "server":"0.0.0.0",
     "server_port":443,
@@ -26,7 +33,7 @@ pip install shadowsocks
 !["shadows_json"](https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun_src/shadowsocks_json.png "shadows_json")<br />
 
 :warning: <br /> 
-1. 注意修改 password 为自己的密码
+1. 注意修改 `"password":"12345"` 为自己的密码
 2. workers 表示启动的进程数量 
 
 * 启动shadowsocks服务:<br />
