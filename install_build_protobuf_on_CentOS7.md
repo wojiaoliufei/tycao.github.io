@@ -126,6 +126,11 @@ g++ ./test.pb.cc ./write.cpp -o write -lpthread -lprotobuf
 g++ ./test.pb.cc ./read.cpp -o read -lpthread -lprotobuf
 ```
 
+****
+Ubuntu16.04上貌似只能编译过proto2,proto3在g++编译时会报错.所以我又重新下载了protocol buffer 2-6-1:
+```shell
+wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
+```
 
 
 ****
