@@ -90,6 +90,42 @@ int main(void)
 	return 0; 
 }
 ```
+**read.cpp**内容如下:<br />
+```shell
+#include <iostream>
+#include <fstream>
+#include "test.pb.h"
+
+using namespace std;
+
+// get Person's info from disk
+void ListMsg(const csx::Person & msg)
+{
+        cout << msg.name() << endl;
+        cout << msg.age() << endl;
+        cout << msg.email() << endl;
+}
+
+int main(int argc, char* argv[])
+{
+        csx::Person msg1;
+        {
+                fstream input("./log", ios::in | ios::binary);
+                if (!msg1.ParseFromIstream(&input)) {
+                  cerr << "Failed to parse address book." << endl;
+                  return -1;
+                }
+        }
+        ListMsg(msg1);
+}
+
+```
+### 编译`write.cpp` 和 `read.cpp`:
+```shell
+g++ ./test.pb.cc ./write.cpp -o write -lpthread -lprotobuf
+g++ ./test.pb.cc ./read.cpp -o read -lpthread -lprotobuf
+```
+
 
 
 ****
@@ -303,11 +339,13 @@ vi read.cpp
 using namespace std;
 
 // get Person's info from disk
-void ListMsg(const lm::helloworld & msg) 
-{ 
-	cout << msg.id() << endl; 
-	cout << msg.str() << endl; 
-} 
+void ListMsg(const csx::Person & msg)
+{
+        cout << msg.name() << endl;
+        cout << msg.age() << endl;
+        cout << msg.email() << endl;
+}
+
   
 int main(int argc, char* argv[]) 
 { 
