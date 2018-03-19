@@ -131,6 +131,7 @@ Ubuntu16.04上貌似只能编译过proto2,proto3在g++编译时会报错.所以�
 ```shell
 wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
 ```
+!["protobuf_2_6_1"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protobuf_2_6_1.png "protobuf_2_6_1")<br />
 
 
 ****
