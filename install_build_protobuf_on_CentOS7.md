@@ -37,7 +37,7 @@ sudo ldconfig
 sudo chmod 544 /etc/ld.so.conf 
 ```
 再次运行 `protoc --version`, 结果成功了！<br />
-!["protoc_version2"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protoc_version2.png "protoc_version2")<br />
+!["protoc_version2"](https://github.com/tycao/tycao.github.io/blob/master/protobuf_src/protoc_version2.png "protoc_version2")<br />
 
 <br /><br /><br />
 参考文档: [Google protobuf in Linux](https://stackoverflow.com/questions/2456664/google-protobuf-in-linux)<br />
