@@ -37,7 +37,7 @@ sudo ldconfig
 sudo chmod 544 /etc/ld.so.conf 
 ```
 再次运行 `protoc --version`, 结果成功了！<br />
-!["protoc_version2"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protoc_version2.png "protoc_version2")<br />
+!["protoc_version2"](https://github.com/tycao/tycao.github.io/blob/master/protobuf_src/protoc_version2.png "protoc_version2")<br />
 
 <br /><br /><br />
 参考文档: [Google protobuf in Linux](https://stackoverflow.com/questions/2456664/google-protobuf-in-linux)<br />
@@ -90,7 +90,60 @@ int main(void)
 	return 0; 
 }
 ```
+**read.cpp**内容如下:<br />
+```shell
+#include <iostream>
+#include <fstream>
+#include "test.pb.h"
 
+using namespace std;
+
+// get Person's info from disk
+void ListMsg(const csx::Person & msg)
+{
+        cout << msg.name() << endl;
+        cout << msg.age() << endl;
+        cout << msg.email() << endl;
+}
+
+int main(int argc, char* argv[])
+{
+        csx::Person msg1;
+        {
+                fstream input("./log", ios::in | ios::binary);
+                if (!msg1.ParseFromIstream(&input)) {
+                  cerr << "Failed to parse address book." << endl;
+                  return -1;
+                }
+        }
+        ListMsg(msg1);
+}
+
+```
+### 编译`write.cpp` 和 `read.cpp`:
+```shell
+g++ ./test.pb.cc ./write.cpp -o write -lpthread -lprotobuf
+g++ ./test.pb.cc ./read.cpp -o read -lpthread -lprotobuf
+```
+
+****
+### Ubuntu16.04上貌似只能编译过proto2,proto3在g++编译时会报错.所以我又重新下载了protocol buffer 2-6-1:
+```shell
+wget https://github.com/google/protobuf/releases/download/v2.6.1/protobuf-2.6.1.tar.gz
+```
+!["protobuf_2_6_1"](https://github.com/tycao/tycao.github.io/blob/master/install_and_build_protobuf_in_Linux/protobuf_2_6_1.png "protobuf_2_6_1")<br />
+
+### test.proto的内容修改为proto2的语法：
+```shell
+syntax = "proto2";
+package csx;
+
+message Person {
+    optional string  name  = 1;
+    optional int32   age   = 2;
+    optional string  email = 3;
+}
+```
 
 ****
 ## 环境： CentOS 7.4, 64bit
@@ -303,11 +356,13 @@ vi read.cpp
 using namespace std;
 
 // get Person's info from disk
-void ListMsg(const lm::helloworld & msg) 
-{ 
-	cout << msg.id() << endl; 
-	cout << msg.str() << endl; 
-} 
+void ListMsg(const csx::Person & msg)
+{
+        cout << msg.name() << endl;
+        cout << msg.age() << endl;
+        cout << msg.email() << endl;
+}
+
   
 int main(int argc, char* argv[]) 
 { 
