@@ -39,13 +39,13 @@
 			var btnn = document.querySelector("#btn");
 			var div = document.querySelector("#test");
 			btnn.onclick = function(){
-				div.style.position = "relative";
+				//div.style.position = "relative";
 				for(var i=0; i<200;i++) {
 					setTimeout(function() {
 						var left = div.style.left ? div.style.left : 0;
 						left = parseInt(left) + 1;
 						div.style.left = left + "px";
-						div.offsetWidth;
+						//div.offsetWidth;
 					}, i);
 				}
 			}
