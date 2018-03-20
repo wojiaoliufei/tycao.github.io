@@ -13,10 +13,13 @@
 			function changeColor2() {
 				document.getElementById("blog_id").style.backgroundColor="red";
 			}
+			function changeColor3() {
+				document.getElementById("blog_id").style.backgroundColor="yellow";
+			}
 		</script>
 	</head>
 	<body>
-		<h1 id="blog_id" class="blog" onmouseover="changeColor2()">博客文章列表:</h1>
+		<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
 		<ul>
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Test_MySQL_Performance.md"> C++测试MySQL的插入操作性能 </a></h3></li>
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/test_SQLite_performance.md"> C++测试SQlite的插入操作性能 </a></h3></li>
