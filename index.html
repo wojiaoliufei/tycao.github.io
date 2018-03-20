@@ -17,6 +17,20 @@
 				document.getElementById("blog_id").style.backgroundColor="yellow";
 			}
 		</script>
+		<script type="text/javascript">
+			var btn = document.querySelector("#btn"),div = document.querySelector("#test");
+			btn.onclick = function(){
+				div.style.position = "relative";
+				for(var i=0; i<200;i++){
+					setTimeout(function(){
+						var left = div.style.left ? div.style.left : 0;
+						left = parseInt(left) + 1;
+						div.style.left = left + "px";
+						//div.offsetWidth;
+					}, i);
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
@@ -33,7 +47,9 @@
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/TCP_three_times_handshake.md" > TCP三次握手和四次挥手</a></h3></li>
 			<li><h3><a href = "https://www.cnblogs.com/chenpi/p/5136483.html">经典：MySQL的存储过程！值得学习！</a></h3></li>
 		</ul>
-		<!--标题2-->	
+		<!--标题2-->
+		 <button id="btn">btn</button>
+		 <div id="test" style="width:30px;height:30px;background-color: blue;"></div>
 		<ul>
 		</ul>
 		<div id="box1" class="div1" ></div>
