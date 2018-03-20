@@ -18,15 +18,16 @@
 			}
 		</script>
 		<script type="text/javascript">
-			var btn = document.querySelector("#btn"),div = document.querySelector("#test");
+			var btn = document.querySelector("#btn");
+			var div = document.querySelector("#test");
 			btn.onclick = function(){
 				div.style.position = "relative";
-				for(var i=0; i<200;i++){
-					setTimeout(function(){
+				for(var i=0; i<200;i++) {
+					setTimeout(function() {
 						var left = div.style.left ? div.style.left : 0;
 						left = parseInt(left) + 1;
 						div.style.left = left + "px";
-						//div.offsetWidth;
+						div.offsetWidth;
 					}, i);
 				}
 			}
