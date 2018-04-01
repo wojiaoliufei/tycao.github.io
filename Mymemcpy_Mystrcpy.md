@@ -1,7 +1,7 @@
 定义自己的内存拷贝函数（以及字符串拷贝函数）
 =======
 
-### Talk is checp, show me the demo!好的，我们先上代码：
+### Talk is cheap, show me the demo!好的，我们先上代码：
 ```cpp
 #include <cstdio>	// for printf()
 #include <cstring>	// for strlen
