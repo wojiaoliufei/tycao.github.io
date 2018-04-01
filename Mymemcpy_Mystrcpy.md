@@ -4,7 +4,7 @@
 ### Talk is checp, show me the demo!好的，我们先上代码：
 ```cpp
 #include <cstdio>	// for printf()
-#include <cstring>	
+#include <cstring>	// for strlen
 #include <iostream>	// for cout , endl
 #include <cassert>	// for assert ：预编译期断言，非运行期断言，非编译期（静态）断言
 #include <string>	// for string
