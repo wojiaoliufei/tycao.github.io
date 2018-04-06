@@ -18,5 +18,5 @@
 	* [CentOS 7下如何安装ruby：方法3亲测可用](https://www.cnblogs.com/ding2016/p/7903147.html)<br />
 	
 * 用C++写线程池是什么体验 :question:
-	* [用C++写线程池是什么体验?](https://www.zhihu.com/question/27908489)<br />
+	* [用C++写线程池是什么体验? 知乎](https://www.zhihu.com/question/27908489)<br />
 	* [Linux C++线程池的实现](https://blog.csdn.net/zhoubl668/article/details/8927090)<br />
