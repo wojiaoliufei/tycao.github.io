@@ -99,3 +99,144 @@ int main()
 
 
 
+
+### 更新 ----2018-04-06 21:17
+#### 上面的代码是在某一个指定目录下（ **当前目录的下一级，而不是下一级目录下的下一级** ）的所有txt文件的合并。
+接下来增加功能： __**对当前目录中的所有的txt文件进行合并在一个txt文件内。**__ 按照惯例，我们先奉上代码：
+### merge_txt.h
+```cpp
+#pragma once
+#include <fstream>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <cstring>  // for strcat
+#include <io.h>     // for class _finddata_t
+#include <windows.h>    // for Sleep()
+using namespace std;
+class MergeTxt{
+public:
+    MergeTxt(const string& path) : filepath(path) {  }
+    ~MergeTxt() {}
+    void merge();
+    void listFiles(const char*);
+    void listAllFiles(const char*);
+private:
+    const string filepath;
+    std::vector<string> strVec; // store all file names in the dir
+    ofstream out;
+    ifstream in;
+};
+inline void MergeTxt::merge() {
+    listAllFiles(filepath.c_str());
+    //out.open(filepath.substr(0, filepath.find_first_of("\\") + 1) + "merge.txt");
+    out.open(filepath + "\\merge.txt");
+    if (!out) {
+        cout << "out not open!!!\n";
+        return;
+    }
+    for (auto& f : strVec) {
+        if (f.find(".txt") == string::npos) // only file names in ".txt" format can be handled
+            continue;
+        //string ff = filepath.substr(0, filepath.find_first_of("\\") + 1) + f;
+        string line;
+        in.open(f);
+        if (!in.is_open())
+            continue;
+        else {
+            out << "-----------------------" << f << "-------------------\n";
+            while (getline(in, line)) {
+                out << line << "\n";
+            }
+            in.close(); // close file handle, and will open next file
+        }
+    }
+}
+inline void MergeTxt::listFiles(const char * dir) {
+    char dirNew[20000] = "";
+    strcpy(dirNew, dir);
+    strcat(dirNew, "\\*.*");
+    intptr_t handle;
+    _finddata_t findData;
+
+    handle = _findfirst(dirNew, &findData);    // 查找目录中的第一个文件
+    if (handle == -1) {
+        cout << "Failed to find first file!\n";
+        return;
+    }
+    do {
+        if (findData.attrib & _A_SUBDIR
+            || strcmp(findData.name, ".") == 0
+            || strcmp(findData.name, "..") == 0
+            )    // 是否是子目录并且不为"."或".."
+            cout << string(dir) + "\\" + findData.name << "\t<dir>\n";
+        else {
+            cout << string(dir) + "\\" + findData.name << "\t" << findData.size << endl;
+            strVec.push_back(string(dir) + "\\" + findData.name);
+        }
+    } while (_findnext(handle, &findData) == 0);    // 查找目录中的下一个文件
+    cout << "Done!\n";
+    _findclose(handle);    // 关闭搜索句柄
+}
+
+
+inline void MergeTxt::listAllFiles(const char * dir) {
+    //Sleep(3000);
+    char dirNew[20000] = "";
+    strcpy(dirNew, dir);
+    strcat(dirNew, "\\*.*");
+    intptr_t handle;
+    _finddata_t findData;
+
+    handle = _findfirst(dirNew, &findData);    // 查找目录中的第一个文件
+    if (handle == -1) {
+        cout << "Failed to find first file!\n";
+        return;
+    }
+    do {
+        if (findData.attrib & _A_SUBDIR) {   // 是否是子目录并且不为"."或".."
+            if (strcmp(findData.name, ".") == 0 || strcmp(findData.name, "..") == 0)
+                continue;   // 子目录下，忽略"."或".."
+            cout << string(dir) + "\\" + findData.name << "\t<dir>\n";
+            memset(dirNew, '\0', sizeof(dirNew));
+            strcpy(dirNew, dir);
+            strcat(dirNew, "\\");
+            strcat(dirNew, findData.name);
+
+            listAllFiles(dirNew);
+        }
+        else {
+            cout << string(dir) + "\\" + findData.name << "\t" << findData.size << endl;
+            strVec.push_back(string(dir) + "\\" + findData.name);
+        }
+    } while (_findnext(handle, &findData) == 0);    // 查找目录中的下一个文件
+    cout << "Done!\n";
+    _findclose(handle);    // 关闭搜索句柄
+
+}
+```
+
+### main.cpp
+```cpp
+#include "merger_txt.h"
+
+int main()
+{
+    MergeTxt m("D:\\Git_Dir");
+    m.merge();
+
+    return 0;
+}
+```
+
+* 通过跟上一个版本对比可知：
+	* 我们增加了`void MergeTxt::listAllFiles(const char *)`成员函数。它的作用是`遍历当前目录中以及所有下一级的下一级的所有txt文件，然后将这些txt文件合并在一个`merge.txt`文件里。`
+	* 整个编码过程中，唯一的难点就是在拼接`txt文本文件的绝对路径`。希望大家不要搞错路径，否则程序运行之后等不到我们预期的效果。
+	
+### 程序运行之后的截图：<br />
+!["path"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/path.png "path")<br />
+!["result2"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/result2.png "result2")<br />
+
+
+
+
