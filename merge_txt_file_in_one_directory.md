@@ -232,10 +232,17 @@ int main()
 * 通过跟上一个版本对比可知：
 	* 我们增加了`void MergeTxt::listAllFiles(const char *)`成员函数。它的作用是`遍历当前目录中以及所有下一级的下一级的所有txt文件，然后将这些txt文件合并在一个`merge.txt`文件里。`
 	* 整个编码过程中，唯一的难点就是在拼接`txt文本文件的绝对路径`。希望大家不要搞错路径，否则程序运行之后等不到我们预期的效果。
+
+### 运行程序之前的目录截图：<br />
+!["path"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/path.png "path")<br />
 	
 ### 程序运行之后的截图：<br />
-!["path"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/path.png "path")<br />
+!["path2"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/path2.png "path2")<br />
 !["result2"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/result2.png "result2")<br />
+
+以及·D:\Git_Dir\· **目录中的** 所有txt文件，经过合并后生成的`merge.txt`内容：<br />
+!["merge_result"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/merge_result.png "merge_result")<br />
+
 
 
 
