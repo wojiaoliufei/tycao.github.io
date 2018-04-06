@@ -248,5 +248,7 @@ int main()
 
 
 
-
+******
+#### 参考文章：
+* [x] [C/C++遍历目录下的所有文件（Windows/Linux篇，超详细）](http://www.cnblogs.com/collectionne/p/6815924.html)<br />
 
