@@ -240,7 +240,7 @@ int main()
 !["path2"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/path2.png "path2")<br />
 !["result2"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/result2.png "result2")<br />
 
-以及·D:\Git_Dir\· **目录中的** 所有txt文件，经过合并后生成的`merge.txt`内容：<br />
+以及`D:\Git_Dir\` **目录中的** 所有txt文件，经过合并后生成的`merge.txt`内容：<br />
 !["merge_result"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/merge_result.png "merge_result")<br />
 
 
