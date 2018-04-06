@@ -243,6 +243,9 @@ int main()
 以及`D:\Git_Dir\` **目录中的** 所有txt文件，经过合并后生成的`merge.txt`内容：<br />
 !["merge_result"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/merge_result.png "merge_result")<br />
 
+以及本次更新的主要的核心函数 ： `void MergeTxt::listAllFiles(const char * dir);` <br />
+!["listAllFiles"](https://github.com/tycao/tycao.github.io/blob/master/merge_txt_src/listAllFiles.png "listAllFiles")<br />
+
 
 
 
