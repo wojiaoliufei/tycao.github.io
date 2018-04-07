@@ -1,16 +1,16 @@
-Ê¹ÓÃC++Ğ´Ïß³Ì³Ø
+ä½¿ç”¨C++å†™çº¿ç¨‹æ± 
 =========
-### ±³¾°£º
-¶àÏß³Ì±à³ÌÊÇC++¿ª·¢ÕßµÄÒ»¸ö»ù±¾¹¦£¬µ«ÊÇºÜ¶à¿ª·¢Õß¶¼ÊÇÖ±½ÓÊ¹ÓÃ¹«Ë¾·â×°ºÃµÄÏß³Ì¿â£¬²¢Ã»ÓĞÈ¥ÁË½â¾ßÌåÊµÏÖ¡£¶øÓĞĞ©Ïß³Ì¿âµÄÊµÏÖÒ²ÊÇÒòÎª¸ß¶ÈÓÅ»¯£¬¶øĞ´µÄºÜÄÑ¶®£¬ÈÃ³õÑ§Õß¿´µÄºÜ³ÔÁ¦¡£
-±¾ÎÄ½«ÒÔ¼òµ¥µÄ·½Ê½½²½²ÊµÏÖÔ­Àí£¬´Ó¶øÄÜ¹»ÈÃÑ§Ï°¶àÏß³Ì±à³ÌµÄC++³õÑ§ÕßÄÜ¹»¿´¶®¡£
-### C++±àĞ´Ïß³Ì³ØµÄÔ­Àí£º
-_**ÔÚÏß³Ì³ØÖĞÏÈ´´½¨Èô¸ÉÊıÁ¿µÄÏß³Ì£¬²¢ÈÃÕâĞ©Ïß³ÌÒ»Ö±²»¶ÏµØ´ÓÏß³Ì³ØÖĞµÄÈÎÎñÁĞ±íÖĞÈ¡ÈÎÎñ£¬È»ºóÖ´ĞĞ£¨Ïß³Ì´ÓÈÎÎñ³ØÖĞÈ¡ÈÎÎñµÄ¹ı³ÌÖĞ£¬ÊÇĞèÒªÊµĞĞÍ¬²½Ëø»úÖÆµÄ£©¡£µ±ÈÎÎñ³ØÖĞÃ»ÓĞÈÎÎñÖ®ºó£¬ËùÓĞµÄÏß³Ì¶¼»á´¦ÓÚ`wait×´Ì¬`£¨ÓÖ³ÆÎª`Ë¯Ãß×´Ì¬`£©¡£**_
-Ö®ºó£¬»á½«ËùÓĞµÄÏß³ÌÏú»Ùµô¡£Ïú»ÙÖ®Ç°£¬ĞèÒª½«`´¦ÓÚË¯Ãß×´Ì¬µÄËùÓĞÏß³Ì` **»½ĞÑ**£¬¼´·¢³öÍ¬²½ĞÅºÅ»½ĞÑËùÓĞË¯Ãß£¨²»¸É»îµÄ£©Ïß³Ì£¬È»ºó²ÅÄÜÏú»Ù¡£<br />
-:question: ¿ÉÄÜÄãÒ²Ğí»áÎÊ£ºÎªÊ²Ã´Òª¸ãµÃÕâÃ´Âé·³£¬Èç¹ûÃ¿µ±¿Í»§¶ËÓĞĞÂµÄÇëÇóÊ±£¬ÎÒ¾Í´´½¨Ò»¸öĞÂµÄÏß³Ì²»¾ÍÍêÁË£¿ÕâÒ²ĞíÊÇ¸ö²»´íµÄ·½·¨£¬ÒòÎªËüÄÜÊ¹µÃÄã±àĞ´´úÂëÏà¶ÔÈİÒ×Ò»Ğ©£¬µ«ÄãÈ´ºöÂÔÁËÒ»¸öÖØÒªµÄÎÊÌâ¡ª¡ª **ĞÔÄÜ**¡£
-Èç¹ûÎªÃ¿¸ö¿Í»§¶ËÇëÇó´´½¨Ò»¸öĞÂÏß³ÌµÄ»°£¬ÄÇºÄ·ÑµÄCPUÊ±¼äºÍÄÚ´æ½«ÊÇ¾ªÈËµÄ£¬Èç¹û²ÉÓÃÒ»¸öÓµÓĞ200¸öÏß³ÌµÄÏß³Ì³Ø£¬ÄÇ½«»á½ÚÔ¼´óÁ¿µÄµÄÏµÍ³×ÊÔ´£¬Ê¹µÃ¸ü¶àµÄCPUÊ±¼äºÍÄÚ´æÓÃÀ´´¦ÀíÊµ¼ÊµÄÉÌÒµÓ¦ÓÃ£¬¶ø²»ÊÇÆµ·±µÄÏß³Ì´´½¨ÓëÏú»Ù¡£
+### èƒŒæ™¯ï¼š
+å¤šçº¿ç¨‹ç¼–ç¨‹æ˜¯C++å¼€å‘è€…çš„ä¸€ä¸ªåŸºæœ¬åŠŸï¼Œä½†æ˜¯å¾ˆå¤šå¼€å‘è€…éƒ½æ˜¯ç›´æ¥ä½¿ç”¨å…¬å¸å°è£…å¥½çš„çº¿ç¨‹åº“ï¼Œå¹¶æ²¡æœ‰å»äº†è§£å…·ä½“å®ç°ã€‚è€Œæœ‰äº›çº¿ç¨‹åº“çš„å®ç°ä¹Ÿæ˜¯å› ä¸ºé«˜åº¦ä¼˜åŒ–ï¼Œè€Œå†™çš„å¾ˆéš¾æ‡‚ï¼Œè®©åˆå­¦è€…çœ‹çš„å¾ˆåƒåŠ›ã€‚
+æœ¬æ–‡å°†ä»¥ç®€å•çš„æ–¹å¼è®²è®²å®ç°åŸç†ï¼Œä»è€Œèƒ½å¤Ÿè®©å­¦ä¹ å¤šçº¿ç¨‹ç¼–ç¨‹çš„C++åˆå­¦è€…èƒ½å¤Ÿçœ‹æ‡‚ã€‚
+### C++ç¼–å†™çº¿ç¨‹æ± çš„åŸç†ï¼š
+_**åœ¨çº¿ç¨‹æ± ä¸­å…ˆåˆ›å»ºè‹¥å¹²æ•°é‡çš„çº¿ç¨‹ï¼Œå¹¶è®©è¿™äº›çº¿ç¨‹ä¸€ç›´ä¸æ–­åœ°ä»çº¿ç¨‹æ± ä¸­çš„ä»»åŠ¡åˆ—è¡¨ä¸­å–ä»»åŠ¡ï¼Œç„¶åæ‰§è¡Œï¼ˆçº¿ç¨‹ä»ä»»åŠ¡æ± ä¸­å–ä»»åŠ¡çš„è¿‡ç¨‹ä¸­ï¼Œæ˜¯éœ€è¦å®è¡ŒåŒæ­¥é”æœºåˆ¶çš„ï¼‰ã€‚å½“ä»»åŠ¡æ± ä¸­æ²¡æœ‰ä»»åŠ¡ä¹‹åï¼Œæ‰€æœ‰çš„çº¿ç¨‹éƒ½ä¼šå¤„äº`waitçŠ¶æ€`ï¼ˆåˆç§°ä¸º`ç¡çœ çŠ¶æ€`ï¼‰ã€‚**_
+ä¹‹åï¼Œä¼šå°†æ‰€æœ‰çš„çº¿ç¨‹é”€æ¯æ‰ã€‚é”€æ¯ä¹‹å‰ï¼Œéœ€è¦å°†`å¤„äºç¡çœ çŠ¶æ€çš„æ‰€æœ‰çº¿ç¨‹` **å”¤é†’**ï¼Œå³å‘å‡ºåŒæ­¥ä¿¡å·å”¤é†’æ‰€æœ‰ç¡çœ ï¼ˆä¸å¹²æ´»çš„ï¼‰çº¿ç¨‹ï¼Œç„¶åæ‰èƒ½é”€æ¯ã€‚<br />
+:question: å¯èƒ½ä½ ä¹Ÿè®¸ä¼šé—®ï¼šä¸ºä»€ä¹ˆè¦æå¾—è¿™ä¹ˆéº»çƒ¦ï¼Œå¦‚æœæ¯å½“å®¢æˆ·ç«¯æœ‰æ–°çš„è¯·æ±‚æ—¶ï¼Œæˆ‘å°±åˆ›å»ºä¸€ä¸ªæ–°çš„çº¿ç¨‹ä¸å°±å®Œäº†ï¼Ÿè¿™ä¹Ÿè®¸æ˜¯ä¸ªä¸é”™çš„æ–¹æ³•ï¼Œå› ä¸ºå®ƒèƒ½ä½¿å¾—ä½ ç¼–å†™ä»£ç ç›¸å¯¹å®¹æ˜“ä¸€äº›ï¼Œä½†ä½ å´å¿½ç•¥äº†ä¸€ä¸ªé‡è¦çš„é—®é¢˜â€”â€” **æ€§èƒ½**ã€‚
+å¦‚æœä¸ºæ¯ä¸ªå®¢æˆ·ç«¯è¯·æ±‚åˆ›å»ºä¸€ä¸ªæ–°çº¿ç¨‹çš„è¯ï¼Œé‚£è€—è´¹çš„CPUæ—¶é—´å’Œå†…å­˜å°†æ˜¯æƒŠäººçš„ï¼Œå¦‚æœé‡‡ç”¨ä¸€ä¸ªæ‹¥æœ‰200ä¸ªçº¿ç¨‹çš„çº¿ç¨‹æ± ï¼Œé‚£å°†ä¼šèŠ‚çº¦å¤§é‡çš„çš„ç³»ç»Ÿèµ„æºï¼Œä½¿å¾—æ›´å¤šçš„CPUæ—¶é—´å’Œå†…å­˜ç”¨æ¥å¤„ç†å®é™…çš„å•†ä¸šåº”ç”¨ï¼Œè€Œä¸æ˜¯é¢‘ç¹çš„çº¿ç¨‹åˆ›å»ºä¸é”€æ¯ã€‚
  
-### C++Ïß³Ì³Ø
-**Talk is cheap, show me the demo!** ºÃ£¬ÏÖÔÚÎÒÃÇÏÈ·îÉÏÈçºÎ´´½¨Ïß³Ì³ØµÄ´úÂë£º
+### C++çº¿ç¨‹æ± 
+**Talk is cheap, show me the demo!** å¥½ï¼Œç°åœ¨æˆ‘ä»¬å…ˆå¥‰ä¸Šå¦‚ä½•åˆ›å»ºçº¿ç¨‹æ± çš„ä»£ç ï¼š
 #### thread.h
 ```cpp
 #pragma once
@@ -22,44 +22,44 @@ _**ÔÚÏß³Ì³ØÖĞÏÈ´´½¨Èô¸ÉÊıÁ¿µÄÏß³Ì£¬²¢ÈÃÕâĞ©Ïß³ÌÒ»Ö±²»¶ÏµØ´ÓÏß³Ì³ØÖĞµÄÈÎÎñÁĞ±íÖĞÈ
 using namespace std;
 
 /**
- * Ö´ĞĞÈÎÎñµÄÀà £ºÉèÖÃÈÎÎñÊı¾İ²¢Ö´ĞĞ
+ * æ‰§è¡Œä»»åŠ¡çš„ç±» ï¼šè®¾ç½®ä»»åŠ¡æ•°æ®å¹¶æ‰§è¡Œ
 */
 class CTask {
 public:
-    CTask() {}  /** Ä¬ÈÏ¹¹Ôìº¯Êı */
-    CTask(string taskName) : m_strTaskName(taskName){ } /** ´øÓĞÒ»¸ö²ÎÊıµÄ¹¹Ôìº¯Êı */
-    virtual int Run() = 0;  /** ´¿Ğéº¯Êı : ËµÃ÷¸ÃÀàÊÇÒ»¸ö³éÏó»ùÀà£¨²»ÄÜÖ±½Ó³õÊ¼»¯£©*/
-    void SetData(void*);   /** ÉèÖÃÈÎÎñÊı¾İ */
+    CTask() {}  /** é»˜è®¤æ„é€ å‡½æ•° */
+    CTask(string taskName) : m_strTaskName(taskName){ } /** å¸¦æœ‰ä¸€ä¸ªå‚æ•°çš„æ„é€ å‡½æ•° */
+    virtual int Run() = 0;  /** çº¯è™šå‡½æ•° : è¯´æ˜è¯¥ç±»æ˜¯ä¸€ä¸ªæŠ½è±¡åŸºç±»ï¼ˆä¸èƒ½ç›´æ¥åˆå§‹åŒ–ï¼‰*/
+    void SetData(void*);   /** è®¾ç½®ä»»åŠ¡æ•°æ® */
     ~CTask() {}
 
 protected:
-    string m_strTaskName;   /** ÈÎÎñµÄÃû³Æ */
-    void* m_ptrData = nullptr;  /** ÒªÖ´ĞĞµÄÈÎÎñµÄ¾ßÌåÊı¾İ*/
+    string m_strTaskName;   /** ä»»åŠ¡çš„åç§° */
+    void* m_ptrData = nullptr;  /** è¦æ‰§è¡Œçš„ä»»åŠ¡çš„å…·ä½“æ•°æ®*/
 };
 
 /**
- * Ïß³Ì³Ø¹ÜÀíÀà
+ * çº¿ç¨‹æ± ç®¡ç†ç±»
 */
 class CThreadPool {
 private:
-    static          vector<CTask*> m_vecTaskList;    /** ÈÎÎñÁĞ±í £¨ÈÎÎñ³Ø£©*/
-    static          bool shutdown;      /** Ïß³ÌÍË³ö±êÖ¾*/
-    int             m_iThreadNum = 0;       /** Ïß³Ì³ØÖĞÆô¶¯µÄÏß³ÌÊı */
+    static          vector<CTask*> m_vecTaskList;    /** ä»»åŠ¡åˆ—è¡¨ ï¼ˆä»»åŠ¡æ± ï¼‰*/
+    static          bool shutdown;      /** çº¿ç¨‹é€€å‡ºæ ‡å¿—*/
+    int             m_iThreadNum = 0;       /** çº¿ç¨‹æ± ä¸­å¯åŠ¨çš„çº¿ç¨‹æ•° */
     pthread_t*      pthread_id;
 
-    static pthread_mutex_t m_pthreadMutex;  /** Ïß³ÌÍ¬²½Ëø */
-    static pthread_cond_t m_pthreadCond;    /** Ïß³ÌÍ¬²½µÄÌõ¼ş±äÁ¿ */
+    static pthread_mutex_t m_pthreadMutex;  /** çº¿ç¨‹åŒæ­¥é” */
+    static pthread_cond_t m_pthreadCond;    /** çº¿ç¨‹åŒæ­¥çš„æ¡ä»¶å˜é‡ */
 protected:
-    static void* ThreadFunc(void*);     /** ĞÂÏß³ÌµÄÏß³Ì»Øµ÷º¯Êı */
-    static int MoveToIdle(pthread_t);       /** Ïß³ÌÖ´ĞĞ½áÊøºó£¬°Ñ×Ô¼º·ÅÈë¿ÕÏĞÏß³ÌÖĞ */
-    static int MoveToBusy(pthread_t);       /** ÒÆÈëµ½Ã¦ÂµÏß³ÌÖĞÈ¥ */
+    static void* ThreadFunc(void*);     /** æ–°çº¿ç¨‹çš„çº¿ç¨‹å›è°ƒå‡½æ•° */
+    static int MoveToIdle(pthread_t);       /** çº¿ç¨‹æ‰§è¡Œç»“æŸåï¼ŒæŠŠè‡ªå·±æ”¾å…¥ç©ºé—²çº¿ç¨‹ä¸­ */
+    static int MoveToBusy(pthread_t);       /** ç§»å…¥åˆ°å¿™ç¢Œçº¿ç¨‹ä¸­å» */
 
-    int Create();       /** ÔÚÏß³Ì³ØÖĞ´´½¨Ïß³Ì */
+    int Create();       /** åœ¨çº¿ç¨‹æ± ä¸­åˆ›å»ºçº¿ç¨‹ */
 public:
-    CThreadPool(int threadNum = 10);    /** Ä¬ÈÏÔÚÏß³Ì³ØÖĞ´´½¨10¸öÏß³Ì : Ã¿¸öÏß³Ì¶¼ÔÚÑ­»·µØ£¨²»Í£µØ£©´ÓÈÎÎñÁĞ±íÖĞÈ¡³öÈÎÎñ£¬È»ºóÖ±ĞĞÈÎÎñ */
-    int AddTask(CTask*);    /** °ÑÈÎÎñÌí¼Óµ½ÈÎÎñ¶ÓÁĞÖĞ */
-    int StopAll();      /** Ê¹Ïß³Ì³ØÖĞµÄÏß³ÌÍË³ö */
-    int GetTaskSize();  /** »ñÈ¡µ±Ç°ÈÎÎñÁĞ±íÖĞµÄÈÎÎñÊıÁ¿ */
+    CThreadPool(int threadNum = 10);    /** é»˜è®¤åœ¨çº¿ç¨‹æ± ä¸­åˆ›å»º10ä¸ªçº¿ç¨‹ : æ¯ä¸ªçº¿ç¨‹éƒ½åœ¨å¾ªç¯åœ°ï¼ˆä¸åœåœ°ï¼‰ä»ä»»åŠ¡åˆ—è¡¨ä¸­å–å‡ºä»»åŠ¡ï¼Œç„¶åç›´è¡Œä»»åŠ¡ */
+    int AddTask(CTask*);    /** æŠŠä»»åŠ¡æ·»åŠ åˆ°ä»»åŠ¡é˜Ÿåˆ—ä¸­ */
+    int StopAll();      /** ä½¿çº¿ç¨‹æ± ä¸­çš„çº¿ç¨‹é€€å‡º */
+    int GetTaskSize();  /** è·å–å½“å‰ä»»åŠ¡åˆ—è¡¨ä¸­çš„ä»»åŠ¡æ•°é‡ */
 };
 
 ```
@@ -74,34 +74,34 @@ void CTask::SetData(void* data) {
     m_ptrData = data;
 }
 
-// static³ÉÔ±±äÁ¿±ØĞëÔÚÀàÍâ³õÊ¼»¯¡££¨²¢ÇÒÀàÍâ²»ÄÜ¼ÓÉÏstatic£©
-vector<CTask*> CThreadPool::m_vecTaskList;         //ÈÎÎñÁĞ±í
+// staticæˆå‘˜å˜é‡å¿…é¡»åœ¨ç±»å¤–åˆå§‹åŒ–ã€‚ï¼ˆå¹¶ä¸”ç±»å¤–ä¸èƒ½åŠ ä¸Šstaticï¼‰
+vector<CTask*> CThreadPool::m_vecTaskList;         //ä»»åŠ¡åˆ—è¡¨
 bool CThreadPool::shutdown = false;
 
-pthread_mutex_t CThreadPool::m_pthreadMutex = PTHREAD_MUTEX_INITIALIZER;  /** Ïß³ÌÍ¬²½Ëø */
-pthread_cond_t CThreadPool::m_pthreadCond = PTHREAD_COND_INITIALIZER;    /** Ïß³ÌÍ¬²½µÄÌõ¼ş±äÁ¿ */
+pthread_mutex_t CThreadPool::m_pthreadMutex = PTHREAD_MUTEX_INITIALIZER;  /** çº¿ç¨‹åŒæ­¥é” */
+pthread_cond_t CThreadPool::m_pthreadCond = PTHREAD_COND_INITIALIZER;    /** çº¿ç¨‹åŒæ­¥çš„æ¡ä»¶å˜é‡ */
 
-// Ïß³Ì³Ø¹¹Ôìº¯Êı £º ´´½¨£¨¹Ì¶¨ÊıÁ¿µÄ£©Ïß³Ì
+// çº¿ç¨‹æ± æ„é€ å‡½æ•° ï¼š åˆ›å»ºï¼ˆå›ºå®šæ•°é‡çš„ï¼‰çº¿ç¨‹
 CThreadPool::CThreadPool(int threadNum) {
     this->m_iThreadNum = threadNum;
     printf("I will create %d threads.\n", threadNum);
     Create();
 }
 
-// ´´½¨Ïß³Ì³ØÖĞµÄÏß³Ì
+// åˆ›å»ºçº¿ç¨‹æ± ä¸­çš„çº¿ç¨‹
 int CThreadPool::Create() {
     this->pthread_id  = static_cast<pthread_t*>(malloc(sizeof(pthread_t) * m_iThreadNum));
     for (int i = 0; i != m_iThreadNum; ++i)
         pthread_create(&pthread_id[i], nullptr, ThreadFunc, nullptr);
     return 0;
 }
-// Ïß³Ì»Øµ÷º¯Êı
+// çº¿ç¨‹å›è°ƒå‡½æ•°
 void* CThreadPool::ThreadFunc(void* threadData) {
-    pthread_t tid = pthread_self(); // »ñÈ¡µ±Ç°Ïß³ÌµÄÏß³Ìid
+    pthread_t tid = pthread_self(); // è·å–å½“å‰çº¿ç¨‹çš„çº¿ç¨‹id
     while (true) {
-        pthread_mutex_lock(&m_pthreadMutex);    /** Ëø×¡Ïß³ÌÍ¬²½Ëø */
+        pthread_mutex_lock(&m_pthreadMutex);    /** é”ä½çº¿ç¨‹åŒæ­¥é” */
 
-        /** ÈôÈÎÎñ³ØÀïµÄËùÓĞÈÎÎñÈ«²¿¶¼´¦ÀíÍê³ÉÁË£¨¼´Ïß³Ì³ØÖĞµÄÈÎÎñ³ØÃ»ÓĞÈÎºÎÈÎÎñÁË£©, ÔòÏß³Ì´¦ÓÚË¯Ãß×´Ì¬*/
+        /** è‹¥ä»»åŠ¡æ± é‡Œçš„æ‰€æœ‰ä»»åŠ¡å…¨éƒ¨éƒ½å¤„ç†å®Œæˆäº†ï¼ˆå³çº¿ç¨‹æ± ä¸­çš„ä»»åŠ¡æ± æ²¡æœ‰ä»»ä½•ä»»åŠ¡äº†ï¼‰, åˆ™çº¿ç¨‹å¤„äºç¡çœ çŠ¶æ€*/
         while (m_vecTaskList.size() == 0 && !shutdown) {
             pthread_cond_wait(&m_pthreadCond, &m_pthreadMutex);
         }
@@ -114,22 +114,22 @@ void* CThreadPool::ThreadFunc(void* threadData) {
 
         printf("tid %lu run\n", tid);
 
-        /** È¡³öÒ»¸öÈÎÎñ£¬²¢´¦ÀíÖ®*/
+        /** å–å‡ºä¸€ä¸ªä»»åŠ¡ï¼Œå¹¶å¤„ç†ä¹‹*/
         vector<CTask*>::iterator iter = m_vecTaskList.begin();
         CTask* task = nullptr;
         if (iter != m_vecTaskList.end()) {
             task = *iter;
             m_vecTaskList.erase(iter);
         }
-        pthread_mutex_unlock(&m_pthreadMutex);  /** ½âËøÏß³ÌÍ¬²½Ëø */
+        pthread_mutex_unlock(&m_pthreadMutex);  /** è§£é”çº¿ç¨‹åŒæ­¥é” */
 
-        task->Run();    /** Ö´ĞĞÈÎÎñ */
+        task->Run();    /** æ‰§è¡Œä»»åŠ¡ */
         printf("tid : %lu idle\n", tid);
     }
     return 0;
 }
 
-// ÍùÈÎÎñÁĞ±íÀïÃæÌí¼ÓÈÎÎñ£¬²¢·¢³öÍ¬²½Ïß³ÌÍ¬²½ĞÅºÅ
+// å¾€ä»»åŠ¡åˆ—è¡¨é‡Œé¢æ·»åŠ ä»»åŠ¡ï¼Œå¹¶å‘å‡ºåŒæ­¥çº¿ç¨‹åŒæ­¥ä¿¡å·
 int CThreadPool::AddTask(CTask* task) {
     pthread_mutex_lock(&m_pthreadMutex);
     this->m_vecTaskList.push_back(task);
@@ -138,24 +138,24 @@ int CThreadPool::AddTask(CTask* task) {
     return 0;
 }
 
-// Í£Ö¹ËùÓĞÏß³Ì
+// åœæ­¢æ‰€æœ‰çº¿ç¨‹
 int CThreadPool::StopAll() {
-    /** ±ÜÃâÖØ¸´µ÷ÓÃ */
+    /** é¿å…é‡å¤è°ƒç”¨ */
     if (shutdown)
         return -1;
     printf("Now i will end all threads!\n");
-    /** »½ĞÑËùÓĞ£¨´¦ÓÚpthread_cond_wait×´Ì¬µÄ£©Ïß³Ì£¬ Ïß³Ì³ØÒªÏú»ÙÁË */
+    /** å”¤é†’æ‰€æœ‰ï¼ˆå¤„äºpthread_cond_waitçŠ¶æ€çš„ï¼‰çº¿ç¨‹ï¼Œ çº¿ç¨‹æ± è¦é”€æ¯äº† */
     shutdown = true;
     pthread_cond_broadcast(&m_pthreadCond);
 
-    /** ×èÈûµÈ´ıÏß³ÌÍË³ö£¬ ·ñÔò¾Í³É½©Ê¬ÁË */
+    /** é˜»å¡ç­‰å¾…çº¿ç¨‹é€€å‡ºï¼Œ å¦åˆ™å°±æˆåƒµå°¸äº† */
     for (int i = 0; i != m_iThreadNum; ++i)
         pthread_join(pthread_id[i], nullptr);
 
     free(pthread_id);
     pthread_id = nullptr;
 
-    /** Ïú»ÙÌõ¼ş±äÁ¿ ºÍ »¥³âÌå */
+    /** é”€æ¯æ¡ä»¶å˜é‡ å’Œ äº’æ–¥ä½“ */
     pthread_cond_destroy(&m_pthreadCond);
     pthread_mutex_destroy(&m_pthreadMutex);
 
@@ -163,7 +163,7 @@ int CThreadPool::StopAll() {
 }
 
 /**
- * »ñÈ¡µ±Ç°¶ÓÁĞÖĞÈÎÎñÊı
+ * è·å–å½“å‰é˜Ÿåˆ—ä¸­ä»»åŠ¡æ•°
  */
 int CThreadPool::GetTaskSize()
 {
@@ -189,23 +189,23 @@ public:
 
 
 int main() {
-    /** ´´½¨ÈÎÎñ¶ÔÏó£¬Ö®ºóÈûÈëCThreadPool::m_vecTaskListÀï */
+    /** åˆ›å»ºä»»åŠ¡å¯¹è±¡ï¼Œä¹‹åå¡å…¥CThreadPool::m_vecTaskListé‡Œ */
     CMyTask taskObj;
 
     char szTmp[] = "this is the first thread running!";
     taskObj.SetData(static_cast<void*>(szTmp));
 
-    /** ´´½¨Ïß³Ì³Ø£¬°üº¬10¸öÏß³Ì */
+    /** åˆ›å»ºçº¿ç¨‹æ± ï¼ŒåŒ…å«10ä¸ªçº¿ç¨‹ */
     CThreadPool threadPool;
 
-    /** ½«20¸öÈÎÎñ·Å½øÏß³Ì³ØÖĞµÄÈÎÎñ³Ø£¨ÈÎÎñÁĞ±í£©ÖĞ */
+    /** å°†20ä¸ªä»»åŠ¡æ”¾è¿›çº¿ç¨‹æ± ä¸­çš„ä»»åŠ¡æ± ï¼ˆä»»åŠ¡åˆ—è¡¨ï¼‰ä¸­ */
     for (int i = 0; i != 20; ++i)
         threadPool.AddTask(&taskObj);
 
     while (1) {
         printf("there are still %d tasks need to be handled.\n", threadPool.GetTaskSize());
-        if (threadPool.GetTaskSize() == 0) { // µ±ÈÎÎñ³ØÖĞÃ»ÓĞÈÎºÎÈÎÎñÖ®ºó£¬ËùÓĞÏß³Ì¶¼»á´¦ÓÚpthread_cond_wait×´Ì¬£¬¼´¡°Ë¯Ãß×´Ì¬¡±
-            if (threadPool.StopAll() == -1) {   // µ±Ö´ĞĞStopAll()Ö®ºó£¬ËùÓĞµÄÏß³Ì¶¼»á£¨´ÓË¯Ãß×´Ì¬£©±»»½ĞÑ£¬È»ºó±»Ïú»Ù
+        if (threadPool.GetTaskSize() == 0) { // å½“ä»»åŠ¡æ± ä¸­æ²¡æœ‰ä»»ä½•ä»»åŠ¡ä¹‹åï¼Œæ‰€æœ‰çº¿ç¨‹éƒ½ä¼šå¤„äºpthread_cond_waitçŠ¶æ€ï¼Œå³â€œç¡çœ çŠ¶æ€â€
+            if (threadPool.StopAll() == -1) {   // å½“æ‰§è¡ŒStopAll()ä¹‹åï¼Œæ‰€æœ‰çš„çº¿ç¨‹éƒ½ä¼šï¼ˆä»ç¡çœ çŠ¶æ€ï¼‰è¢«å”¤é†’ï¼Œç„¶åè¢«é”€æ¯
                 printf("Now i will exit from main.\n");
                 exit(0);
             }
@@ -216,8 +216,12 @@ int main() {
 }
 ```
 
-### ³ÌĞòÔËĞĞºóµÄ½ØÍ¼£º
-!["C++ÊµÏÖÏß³Ì³Ø"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result02.png "C++ÊµÏÖÏß³Ì³Ø")<br />
-!["C++ÊµÏÖÏß³Ì³Ø2"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result01.png "C++ÊµÏÖÏß³Ì³Ø2")<br />
+### ç¨‹åºè¿è¡Œåçš„æˆªå›¾ï¼š
+!["C++å®ç°çº¿ç¨‹æ± "](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result02.png "C++å®ç°çº¿ç¨‹æ± ")<br />
+!["C++å®ç°çº¿ç¨‹æ± 2"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result01.png "C++å®ç°çº¿ç¨‹æ± 2")<br />
 
 
+******
+å‚è€ƒæ–‡æ¡£ï¼š<br />
+* [x] [çŸ¥ä¹ï¼šç”¨ C++ å†™çº¿ç¨‹æ± æ˜¯æ€æ ·ä¸€ç§ä½“éªŒï¼Ÿ](https://www.zhihu.com/question/27908489)<br />
+* [x] [linux c++çº¿ç¨‹æ± çš„å®ç°](https://blog.csdn.net/zhoubl668/article/details/8927090)<br />
