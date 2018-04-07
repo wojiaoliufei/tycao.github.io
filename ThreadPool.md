@@ -10,7 +10,7 @@ _**在线程池中先创建若干数量的线程，并让这些线程一直不�
 如果为每个客户端请求创建一个新线程的话，那耗费的CPU时间和内存将是惊人的，如果采用一个拥有200个线程的线程池，那将会节约大量的的系统资源，使得更多的CPU时间和内存用来处理实际的商业应用，而不是频繁的线程创建与销毁。
  
 ### C++线程池
-**Talk is cheap, show me the demo!** 好，现在我们先奉上如何创建线程池的代码：
+**Talk is cheap, show me the demo!** 好，现在我们先奉上如何创建线程池的代码：（项目代码请移步这里查看 :point_right: [C++线程池项目代码](https://github.com/tycao/tycao.github.io/tree/master/thread_pool/MyThreadPool)）
 #### thread.h
 ```cpp
 #pragma once
