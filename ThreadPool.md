@@ -220,6 +220,10 @@ int main() {
 !["C++实现线程池"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result02.png "C++实现线程池")<br />
 !["C++实现线程池2"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result01.png "C++实现线程池2")<br />
 
+### 接下来，我们详细讲解下`线程池类CThreadPool的具体实现`
+
+
+
 
 ******
 参考文档：<br />
