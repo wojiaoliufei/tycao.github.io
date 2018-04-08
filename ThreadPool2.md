@@ -3,7 +3,7 @@
 ### 首先，我们了解下线程池的原理
 !["thrPool1"](https://github.com/tycao/Cpp_mini_projects/blob/master/thread_pool/threadpool_1.png "thrPool1")<br />
 由上图，我们可以看出：**线程池就是一个 _工厂_ ，它包含固定数量的线程，这些线程一直不停地从任务池（又称任务队列）中取出任务，并执行。**
-在执行任务的过程中，各个线程之间的操作使互斥的，以确保线程安全。
+在执行任务的过程中，各个线程之间的操作是互斥的，以确保线程安全。
 
 ### 先上代码
 #### thread.h
@@ -146,3 +146,27 @@ int main(int argc, const char * argv[])
 ### 程序运行之后的截图：
 !["C++实现线程池3"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result03.png "C++实现线程池3")<br />
 
+### 接下来，我们详细讲解`ThreadPool`这个线程类
+#### ThreadPool::ThreadPool(size_t threads)
+这个线程池的构造函数，做了一些很重要的事情：`在线程池构造的过程中，创建了固定数量的线程，并将创建的线程放进线程列表内。`  **一开始所有线程都会处于睡眠状态，等待被唤醒。** <br />
+`当stop为true或者任务队列不为空时，` 线程就会一直不停地往任务池里取任务，并执行。<br />
+`当stop为true且任务队列为空时，` 此时说明任务被全部执行完毕，线程也都重新处于等待被唤醒的状态（睡眠状态）。这时就需要销毁所有睡眠的线程。最后销毁main主线程。<br />
+**各个线程之间的操作是互斥的，以确保线程安全的执行。**
+
+#### template <typename F, typename... Args> auto ThreadPool::enqueue(F&& f, Args&&... args)->std::future<typename std::result_of<F(Args...)>::type> {}
+这个函数是为了往任务池中添加任务 ： 每次添加一个任务，就会唤醒一个线程去处理此任务。
+
+####  ThreadPool::~ThreadPool()
+线程池类的析构函数：此时加同步锁（确保线程安全），然后修改成员变量stop为true。当执行`condition.notify_all()`之后，所有线程都会被唤醒，然后执行下面的代码：<br />
+```cpp
+/** 对象销毁之前，先销毁所有的睡眠线程 */
+                    if (this->stop && this->tasks.empty())
+                        return;
+```
+由上述可知，每个线程都会退出。然后被销毁：
+```cpp
+/** 销毁所有线程；最后销毁main主线程 */
+    for (std::thread &worker: workers)
+        worker.join();
+```
+最后所有线程都被销毁之后，主线程才被最后销毁。
