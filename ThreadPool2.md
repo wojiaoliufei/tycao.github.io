@@ -1,11 +1,11 @@
-Ê¹ÓÃC++11ÊµÏÖÏß³Ì³Ø
+ä½¿ç”¨C++11å®ç°çº¿ç¨‹æ± 
 =========
-### Ê×ÏÈ£¬ÎÒÃÇÁË½âÏÂÏß³Ì³ØµÄÔ­Àí
+### é¦–å…ˆï¼Œæˆ‘ä»¬äº†è§£ä¸‹çº¿ç¨‹æ± çš„åŸç†
 !["thrPool1"](https://github.com/tycao/Cpp_mini_projects/blob/master/thread_pool/threadpool_1.png "thrPool1")<br />
-ÓÉÉÏÍ¼£¬ÎÒÃÇ¿ÉÒÔ¿´³ö£º**Ïß³Ì³Ø¾ÍÊÇÒ»¸ö_¹¤³§_£¬Ëü°üº¬¹Ì¶¨ÊıÁ¿µÄÏß³Ì£¬ÕâĞ©Ïß³ÌÒ»Ö±²»Í£µØ´ÓÈÎÎñ³Ø£¨ÓÖ³ÆÈÎÎñ¶ÓÁĞ£©ÖĞÈ¡³öÈÎÎñ£¬²¢Ö´ĞĞ¡£**
-ÔÚÖ´ĞĞÈÎÎñµÄ¹ı³ÌÖĞ£¬¸÷¸öÏß³ÌÖ®¼äµÄ²Ù×÷Ê¹»¥³âµÄ£¬ÒÔÈ·±£Ïß³Ì°²È«¡£
+ç”±ä¸Šå›¾ï¼Œæˆ‘ä»¬å¯ä»¥çœ‹å‡ºï¼š**çº¿ç¨‹æ± å°±æ˜¯ä¸€ä¸ª_å·¥å‚_ï¼Œå®ƒåŒ…å«å›ºå®šæ•°é‡çš„çº¿ç¨‹ï¼Œè¿™äº›çº¿ç¨‹ä¸€ç›´ä¸åœåœ°ä»ä»»åŠ¡æ± ï¼ˆåˆç§°ä»»åŠ¡é˜Ÿåˆ—ï¼‰ä¸­å–å‡ºä»»åŠ¡ï¼Œå¹¶æ‰§è¡Œã€‚**
+åœ¨æ‰§è¡Œä»»åŠ¡çš„è¿‡ç¨‹ä¸­ï¼Œå„ä¸ªçº¿ç¨‹ä¹‹é—´çš„æ“ä½œä½¿äº’æ–¥çš„ï¼Œä»¥ç¡®ä¿çº¿ç¨‹å®‰å…¨ã€‚
 
-### ÏÈÉÏ´úÂë
+### å…ˆä¸Šä»£ç 
 #### thread.h
 ```cpp
 #pragma once
@@ -43,7 +43,7 @@ private:
 inline ThreadPool::ThreadPool(size_t threads)
     : stop(false)
 {
-    /** ÔÚÏß³Ì³ØÖĞ´´½¨£¨ÊıÁ¿Îªthreads¸ö£©Ïß³Ì */
+    /** åœ¨çº¿ç¨‹æ± ä¸­åˆ›å»ºï¼ˆæ•°é‡ä¸ºthreadsä¸ªï¼‰çº¿ç¨‹ */
     for (size_t i = 0; i < threads; ++i)
     {
         workers.emplace_back([this] {
@@ -56,7 +56,7 @@ inline ThreadPool::ThreadPool(size_t threads)
                         return this->stop || !this->tasks.empty();
                     });
 
-                    /** ¶ÔÏóÏú»ÙÖ®Ç°£¬ÏÈÏú»ÙËùÓĞµÄË¯ÃßÏß³Ì */
+                    /** å¯¹è±¡é”€æ¯ä¹‹å‰ï¼Œå…ˆé”€æ¯æ‰€æœ‰çš„ç¡çœ çº¿ç¨‹ */
                     if (this->stop && this->tasks.empty())
                         return;
 
@@ -75,16 +75,16 @@ inline ThreadPool::~ThreadPool() {
         stop = true;
     }
 
-    /** »½ĞÑËùÓĞ£¨²»¸É»îµÄ£©Ë¯ÃßÏß³Ì */
+    /** å”¤é†’æ‰€æœ‰ï¼ˆä¸å¹²æ´»çš„ï¼‰ç¡çœ çº¿ç¨‹ */
     condition.notify_all();
 
-    /** Ïú»ÙËùÓĞÏß³Ì£»×îºóÏú»ÙmainÖ÷Ïß³Ì */
+    /** é”€æ¯æ‰€æœ‰çº¿ç¨‹ï¼›æœ€åé”€æ¯mainä¸»çº¿ç¨‹ */
     for (std::thread &worker: workers)
         worker.join();
 }
 
 /**
- * ÍùÏß³Ì³ØµÄÈÎÎñ¶ÓÁĞÀïÌí¼ÓÈÎÎñ
+ * å¾€çº¿ç¨‹æ± çš„ä»»åŠ¡é˜Ÿåˆ—é‡Œæ·»åŠ ä»»åŠ¡
 */
 template <typename F, typename... Args>
 auto ThreadPool::enqueue(F&& f, Args&&... args)
@@ -119,7 +119,7 @@ auto ThreadPool::enqueue(F&& f, Args&&... args)
 
 int main(int argc, const char * argv[])
 {
-    /** ÔÚÏß³Ì³ØÖĞ´´½¨4¸öÏß³Ì */
+    /** åœ¨çº¿ç¨‹æ± ä¸­åˆ›å»º4ä¸ªçº¿ç¨‹ */
     ThreadPool pool(4);
 
     std::vector<std::future<std::string>> results;
@@ -143,6 +143,6 @@ int main(int argc, const char * argv[])
 }
 ```
 
-### ³ÌĞòÔËĞĞÖ®ºóµÄ½ØÍ¼£º
-!["C++ÊµÏÖÏß³Ì³Ø3"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result03.png "C++ÊµÏÖÏß³Ì³Ø3")<br />
+### ç¨‹åºè¿è¡Œä¹‹åçš„æˆªå›¾ï¼š
+!["C++å®ç°çº¿ç¨‹æ± 3"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result03.png "C++å®ç°çº¿ç¨‹æ± 3")<br />
 
