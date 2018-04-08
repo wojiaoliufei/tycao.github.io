@@ -146,6 +146,8 @@ int main(int argc, const char * argv[])
 ### 程序运行之后的截图：
 !["C++实现线程池3"](https://github.com/tycao/tycao.github.io/blob/master/thread_pool/result03.png "C++实现线程池3")<br />
 
+*********
+
 ### 接下来，我们详细讲解`ThreadPool`这个线程类
 * [x] **ThreadPool::ThreadPool(size_t threads)** <br />
 这个线程池的构造函数，做了一些很重要的事情：`在线程池构造的过程中，创建了固定数量的线程，并将创建的线程放进线程列表内。`  **一开始所有线程都会处于睡眠状态，等待被唤醒。** <br />
@@ -157,7 +159,7 @@ int main(int argc, const char * argv[])
 这个函数是为了往任务池中添加任务 ： 每次添加一个任务，就会唤醒一个线程去处理此任务。
 
 * [x] **ThreadPool::~ThreadPool()** <br />
-线程池类的析构函数：此时加同步锁（确保线程安全），然后修改成员变量stop为true。当执行`condition.notify_all()`之后，所有线程都会被唤醒，然后执行下面的代码：<br />
+线程池类的析构函数：此时加同步锁（确保线程安全），然后`修改成员变量stop为true`。当执行`condition.notify_all()`之后，所有线程都会被唤醒，然后执行下面的代码：<br />
 ```cpp
 /** 对象销毁之前，先销毁所有的睡眠线程 */
                     if (this->stop && this->tasks.empty())
