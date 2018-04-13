@@ -24,4 +24,11 @@
 !["offline_install5"](https://github.com/tycao/tycao.github.io/blob/master/src/vs2017_05.png "offline_install5")<br /><br />
 
 
+*******
+```cpp
+来源：https://zhuanlan.zhihu.com/p/33505519
+作者：vczh
+```
+参考连接：<br />
+[如何正确安装Visual Studio 2017](https://zhuanlan.zhihu.com/p/33505519)<br />
 
