@@ -3,14 +3,14 @@
 * 下载在线安装程序：
 [Visual Studio 下载](https://www.visualstudio.com/zh-hans/downloads/)<br /><br />
 
-* 右下角点击 `如何离线安装`：
+* 鼠标往下滑动，右下角点击 `如何离线安装`：
 !["offline_install"](https://github.com/tycao/tycao.github.io/blob/master/src/vs2017_01.png "offline_install")<br />
 
-* 通过正确理解页面里的内容，最终会把你带到这里 :left_point: [离线安装vs 2017](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio)<br />
+* 通过正确理解页面里的内容，最终会把你带到这里 :point_left: [离线安装vs 2017](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio)<br />
 !["offline_install2"](https://github.com/tycao/tycao.github.io/blob/master/src/vs2017_02.png "offline_install2")<br />
 
 按照上述截图，点击箭头指向的地址之后，就如如下页面：<br />
-!["offline_install3"](https://docs.microsoft.com/en-us/visualstudio/install/install-vs-inconsistent-quality-network "offline_install3")<br />
+!["offline_install3"](https://github.com/tycao/tycao.github.io/blob/master/src/vs2017_03.png "offline_install3")<br /><br />
 
 然后，点击安装 visual studio 2017 社区版安装程序： `vs_community.exe`
 
