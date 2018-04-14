@@ -39,6 +39,42 @@
 
 !["gcc_upgrade"](https://github.com/tycao/tycao.github.io/blob/master/src/gcc_upgrade.png "gcc_upgrade")<br /><br /><br />
 
+!["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
+****************
+### UBuntu16.04 升级到gcc-5版本：<br />
+
+#### Installing gcc 7.3 (gcc 7.3.0) - released 01/25/2018:
+
+#### download file: https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz  <br /><br />
+`wget https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz`
+#### 下载gcc的安装包之后，先解压：
+`tar -zxvf gcc-7.3.0/gcc-7.3.0.tar.gz`
+#### 解压好gcc包之后，开始安装gcc之前，需要安装一些依赖（required libraries）:
+* 首先，检查当前UBubtu安装源是否有这些依赖包：`gmp, mpfr, mpc`
+`apt-cache search gmp` <br />
+!["gmp_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/gmp_dev.png "gmp_dev")<br /><br />
+于是： `apt install libgmp-dev`， 第一个依赖安装好了<br />
+`apt-cache search mpfr` <br />
+!["mpfr_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpfr_dev.png.png "mpfr_dev")<br /><br />
+于是： `apt install libmpfr-dev`， 第二个依赖安装好了<br />
+`apt-cache search mpc` <br />
+!["mpc_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpc_dev.png "mpc_dev")<br /><br />
+于是： `apt install libmpc-dev`， 第三个依赖安装好了<br />
+#### 如上述，依赖安装好了之后，接下来，安装gcc：<br />
+```shell
+./configure --with-system-zlib --disable-multilib --enable-languages=c,c++
+make -j 8		####这一步编译将花费1个小时左右###
+make install
+```
+#### 然后查看gcc 版本： `gcc -v`
+!["apt_cache"](https://github.com/tycao/tycao.github.io/blob/master/src/apt_cache.png "apt_cache")<br /><br />
+参考文档：[apt-cache search gmp | apt-cache search mpfr | apt-cache search mpc](https://askubuntu.com/questions/832597/e-unable-to-locate-package-php5-gmp)<br /><br />
+
+#### 
+
+		
+	
+
 * [x] 参考链接：<br />
 [UBubtu16.04升级gcc版本](https://blog.csdn.net/Watson2016/article/details/52415429)<br />
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
@@ -55,6 +91,18 @@ sudo yum install devtoolset-7-gcc*
 scl enable devtoolset-7 bash
 which gcc
 gcc --version
+```
+
+compile and install:
+```shell
+//required libraries:
+yum install libmpc-devel mpfr-devel gmp-devel
+
+./configure --with-system-zlib --disable-multilib --enable-languages=c,c++
+
+make -j 8
+
+make install
 ```
 <br /><br /><br />
 * [x] 参考链接：<br />
