@@ -197,6 +197,17 @@ service mysql restart
 ```
 !["start_mysql_service"](https://github.com/tycao/tycao.github.io/blob/master/src/start_mysql_service.png "start_mysql_service")<br /><br />
 
+* 修改mysql用户的登录密码：<br />
+#### 在mysql系统外，使用mysqladmin：<br />
+`mysqladmin -u 用户名 -p password "密码"`
+```shell
+$ mysqladmin -uroot -p password "test1234"
+```
+!["change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/change_pwd.png "change_pwd")<br /><br />
+#### 通过登录mysql系统，在mysql内部修改密码：<br />
+```shell
+
+```
 * MySQL的配置文件：<br />
 ```shell
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
