@@ -206,6 +206,10 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 * [x] 参考链接：<br />
 [UBuntu下安装MySQL](https://blog.csdn.net/vXueYing/article/details/52330180)<br />
 
+!["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
+!["lufei2"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei2.jpg "lufei2")<br /><br />
+
+
 ***********
 
 
