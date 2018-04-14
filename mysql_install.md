@@ -204,10 +204,7 @@ service mysql restart
 $ mysqladmin -uroot -p password "test1234"
 ```
 !["change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/change_pwd.png "change_pwd")<br /><br />
-#### 通过登录mysql系统，在mysql内部修改密码：<br />
-```shell
 
-```
 * MySQL的配置文件：<br />
 ```shell
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
