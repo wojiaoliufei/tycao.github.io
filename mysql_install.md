@@ -1,0 +1,166 @@
+Linux下安装MySQL
+=======
+### 背景：虽然安装 `mysql` 是大家都很熟悉的技能。但是此篇教程对于刚刚学习Linux的同学，还是有些用处的。:blush:
+### 时间：2018-04-14 21:00 周六
+
+## Ubuntu下安装MySQL:
+#### 环境：UBuntu 16.04 32bit
+```shell
+	root@ubuntu:/mnt/hgfs/share/flamingoserver# uname -a
+	Linux ubuntu 4.4.0-34-generic #53-Ubuntu SMP Wed Jul 27 16:06:28 UTC 2016 i686 i686 i686 GNU/Linux
+```
+* 使用`sudo apt-get install mysql-server mysql-client` 命令安装 `mysql客户端` 和 `服务器端`
+```shell
+root@ubuntu:/mnt/hgfs/share# sudo apt-get install mysql-server mysql-client
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libwxbase3.0-0v5 libwxgtk3.0-0v5
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libaio1 libevent-core-2.0-5 libhtml-template-perl mysql-client-5.7 mysql-client-core-5.7 mysql-server-5.7
+  mysql-server-core-5.7
+Suggested packages:
+  libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libaio1 libevent-core-2.0-5 libhtml-template-perl mysql-client mysql-client-5.7 mysql-client-core-5.7
+  mysql-server mysql-server-5.7 mysql-server-core-5.7
+0 upgraded, 9 newly installed, 0 to remove and 576 not upgraded.
+Need to get 19.0 MB of archives.
+After this operation, 157 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu xenial/main i386 libaio1 i386 0.3.110-2 [6,646 B]
+Get:2 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-client-core-5.7 i386 5.7.21-0ubuntu0.16.04.1 [6,432 kB]
+7% [2 mysql-client-core-5.7 1,233 kB/6,432 kB 19%]                                          1,436 B/s 3h 25min 44s
+
+9% [2 mysql-client-core-5.7 1,543 kB/6,432 kB 24%]                                                                                 
+
+
+Get:3 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-client-5.7 i386 5.7.21-0ubuntu0.16.04.1 [1,732 kB]        
+Get:4 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-server-core-5.7 i386 5.7.21-0ubuntu0.16.04.1 [7,841 kB]   
+Get:5 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 libevent-core-2.0-5 i386 2.0.21-stable-2ubuntu0.16.04.1 [75.7 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-server-5.7 i386 5.7.21-0ubuntu0.16.04.1 [2,799 kB]        
+Get:7 http://us.archive.ubuntu.com/ubuntu xenial/main i386 libhtml-template-perl all 2.95-2 [60.4 kB]                              
+Get:8 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-client all 5.7.21-0ubuntu0.16.04.1 [10.1 kB]              
+Get:9 http://us.archive.ubuntu.com/ubuntu xenial-updates/main i386 mysql-server all 5.7.21-0ubuntu0.16.04.1 [10.2 kB]              
+Fetched 19.0 MB in 5min 29s (57.5 kB/s)                                                                                            
+Preconfiguring packages ...
+Selecting previously unselected package libaio1:i386.
+(Reading database ... 202358 files and directories currently installed.)
+Preparing to unpack .../libaio1_0.3.110-2_i386.deb ...
+Unpacking libaio1:i386 (0.3.110-2) ...
+Selecting previously unselected package mysql-client-core-5.7.
+Preparing to unpack .../mysql-client-core-5.7_5.7.21-0ubuntu0.16.04.1_i386.deb ...
+Unpacking mysql-client-core-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-client-5.7.
+Preparing to unpack .../mysql-client-5.7_5.7.21-0ubuntu0.16.04.1_i386.deb ...
+Unpacking mysql-client-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-server-core-5.7.
+Preparing to unpack .../mysql-server-core-5.7_5.7.21-0ubuntu0.16.04.1_i386.deb ...
+Unpacking mysql-server-core-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libevent-core-2.0-5:i386.
+Preparing to unpack .../libevent-core-2.0-5_2.0.21-stable-2ubuntu0.16.04.1_i386.deb ...
+Unpacking libevent-core-2.0-5:i386 (2.0.21-stable-2ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-server-5.7.
+Preparing to unpack .../mysql-server-5.7_5.7.21-0ubuntu0.16.04.1_i386.deb ...
+Unpacking mysql-server-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../libhtml-template-perl_2.95-2_all.deb ...
+Unpacking libhtml-template-perl (2.95-2) ...
+Selecting previously unselected package mysql-client.
+Preparing to unpack .../mysql-client_5.7.21-0ubuntu0.16.04.1_all.deb ...
+Unpacking mysql-client (5.7.21-0ubuntu0.16.04.1) ...
+Selecting previously unselected package mysql-server.
+Preparing to unpack .../mysql-server_5.7.21-0ubuntu0.16.04.1_all.deb ...
+Unpacking mysql-server (5.7.21-0ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu4) ...
+Setting up libaio1:i386 (0.3.110-2) ...
+Setting up mysql-client-core-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Setting up mysql-client-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Setting up mysql-server-core-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+Setting up libevent-core-2.0-5:i386 (2.0.21-stable-2ubuntu0.16.04.1) ...
+Setting up mysql-server-5.7 (5.7.21-0ubuntu0.16.04.1) ...
+update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Renaming removed key_buffer and myisam-recover options (if present)
+Setting up libhtml-template-perl (2.95-2) ...
+Setting up mysql-client (5.7.21-0ubuntu0.16.04.1) ...
+Setting up mysql-server (5.7.21-0ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu4) ...
+root@ubuntu:/mnt/hgfs/share# 
+root@ubuntu:/mnt/hgfs/share# 
+root@ubuntu:/mnt/hgfs/share# 
+root@ubuntu:/mnt/hgfs/share# 
+root@ubuntu:/mnt/hgfs/share# 
+root@ubuntu:/mnt/hgfs/share# mysql -v
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+root@ubuntu:/mnt/hgfs/share# mysql -V
+mysql  Ver 14.14 Distrib 5.7.21, for Linux (i686) using  EditLine wrapper
+```
+
+* 使用``命令，显示`mysql的版本`：
+```shell
+mysql -V
+```
+* 查看mysql的运行状态：
+```shell
+service mysql status
+```
+!["mysql_status"](https://github.com/tycao/tycao.github.io/blob/master/src/mysql_status.png "mysql_status")<br /><br />
+
+* 登录mysql服务器：
+```shell
+mysql -u root -p
+```
+会跳出`Enter Password:`的界面：输入mysql的登录密码，按回车键。
+然后就会成功进入到mysql的操作界面。
+***********
+
+## CentOS下安装mysql:
+#### 环境：CentOS 7.4 64bit
+
+* 下载：
+yum上mysql的资源有问题，所以不能仅仅之用yum。在使用yum之前还需要用其他命令获取mysql社区版：<br />
+```shell
+mkdir /temp				# 若/temp存在，则直接忽略这一步
+cd /temp
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+```
+* 通过yum进行安装:
+接着就可以通过yum安装了：<br />
+```shell
+yum install mysql mysql-server mysql-devel -y
+```
+
+* 以上只是安装，执行如下命令才能启动mysql服务器：
+```shell
+systemctl start mysql.service		# CentOS 6的启动服务的命令是：service mysql start
+```
+
+* 验证:
+安装后会自动启动，启动后会占用3306端口。 使用如下命令查看3306端口是否启动，如果启动了则表示mysql处于运行状态。
+```shell
+netstat -anp|grep 3306
+```
+* 创建密码并登录：
+通过Yum安装的mysql的管理员账户是没有密码的，这里通过命令设置其密码为 admin ，尽量使用这个密码哦，后续部署j2ee应用的时候会用到这个密码哦。
+注： Warning信息并非提示设置失败，而是告诉大家密码露出来了，当心背后有人~
+```shell
+mysqladmin -u root password admin
+```
+!["mysql_change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/mysql_change_pwd.PNG "mysql_change_pwd")<br /><br />
+
+* 登录验证：
+```shell
+mysql -u root -padmin
+```
+
+
+
+
