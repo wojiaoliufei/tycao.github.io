@@ -122,7 +122,85 @@ mysql -u root -p
 ```
 会跳出`Enter Password:`的界面：输入mysql的登录密码，按回车键。
 然后就会成功进入到mysql的操作界面。
+
+* 创建MySQL数据库和用户：
+```shell
+mysql> create database snailblog;
+```
+* 创建用户（用户名为`man_user`， 密码为`test1234`），并使用snailblog数据库：<br />
+```shell
+mysql> grant all on snailblog.* to 'man_user' identified by 'test1234';
+```
+!["create_db"](https://github.com/tycao/tycao.github.io/blob/master/src/create_db.png "create_db")<br /><br />
+
+* 使用新用户登录：<br />
+```shell
+mysql -u man_user -ptest1234
+```
+:warning: 注意！_**`-u`和用户名之间可以加空格，也可以不加空格**_  _-p和登录密码之间必须**不能**有空格_
+!["man_user"](https://github.com/tycao/tycao.github.io/blob/master/src/man_user.png "man_user")<br /><br />
+
+* 创建表：<br />
+```shell
+mysql> CREATE TABLE IF NOT EXISTS `user` (id INT, name VARCHAR(20), email VARCHAR(20));
+```
+!["create_tb"](https://github.com/tycao/tycao.github.io/blob/master/src/create_tb.png "create_tb")<br /><br />
+
+* 插入记录：<br />
+```shell
+mysql> INSERT INTO user (id,name,email) VALUES(1,"bar","bar@gmail.com");
+mysql> INSERT INTO user (id,name,email) VALUES(2,"foo","foo@163.com");
+mysql> INSERT INTO user (id,name,email) VALUES(3,"cat","cat@gmail.com");
+```
+* 简单查询：<br />
+```shell
+SELECT * FROM user;
+```
+!["insert"](https://github.com/tycao/tycao.github.io/blob/master/src/insert.png "insert")<br /><br />
+
+* 退出MySQL命令行：<br />
+```shell
+quit 或者 exit
+```
+* 停止MySQL数据库服务：<br />
+```shell
+sudo systemctl stop mysql.service
+```
+* 查看MySQL运行状态：<br />
+```shell
+sudo systemctl status mysql.service 
+# 或者
+service mysql status
+```
+!["query_mysql_status"](https://github.com/tycao/tycao.github.io/blob/master/src/query_mysql_status.png "query_mysql_status")<br /><br />
+
+* 启动MySQL数据库服务：<br />
+```shell
+sudo systemctl start mysql.service
+```
+
+* 重启MySQL数据库服务：<br />
+```shell
+sudo systemctl restart mysql.service
+```
+!["start_mysql_service"](https://github.com/tycao/tycao.github.io/blob/master/src/start_mysql_service.png "start_mysql_service")<br /><br />
+
+* MySQL的配置文件：<br />
+```shell
+sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+!["config_file"](https://github.com/tycao/tycao.github.io/blob/master/src/config_file.png "config_file")<br /><br />
+
+
+* [x] 参考链接：<br />
+[UBuntu下安装MySQL](https://blog.csdn.net/vXueYing/article/details/52330180)<br />
+
 ***********
+
+
+
+
+
 
 # CentOS下安装mysql:
 #### 环境：CentOS 7.4 64bit
