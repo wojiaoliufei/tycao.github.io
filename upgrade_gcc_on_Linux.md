@@ -37,7 +37,8 @@
 	 --slave /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-4.9 \
 	 --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-4.9
 
-<br /><br />
+!["gcc_upgrade"](https://github.com/tycao/tycao.github.io/blob/master/src/gcc_upgrade.jpg "gcc_upgrade")<br /><br /><br />
+
 * [x] 参考链接：<br />
 [UBubtu16.04升级gcc版本](https://blog.csdn.net/Watson2016/article/details/52415429)<br />
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
