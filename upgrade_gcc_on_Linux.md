@@ -1,5 +1,7 @@
 在Linux下升级GCC版本
 ===========
+### 参考链接：<br />
+[stackoverflow : CentOS下如何升级gcc版本](https://stackoverflow.com/questions/36327805/how-to-install-gcc-5-3-with-yum-on-centos-7-2)<br />
 ## 在UBuntu 16.04上升级gcc（最好使用root权限执行下列命令）：
 * 安装 add-apt-repository 工具
 
