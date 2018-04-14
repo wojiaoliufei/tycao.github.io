@@ -58,7 +58,7 @@
 !["mpfr_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpfr_dev.png "mpfr_dev")<br /><br />
 于是： `apt install libmpfr-dev`， 第二个依赖安装好了<br />
 `apt-cache search mpc` <br />
-!["mpc_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpc_dev.png "mpc_dev")<br /><br />
+!["mpc_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpc.png "mpc_dev")<br /><br />
 于是： `apt install libmpc-dev`， 第三个依赖安装好了<br />
 #### 如上述，依赖安装好了之后，接下来，安装gcc：<br />
 ```shell
