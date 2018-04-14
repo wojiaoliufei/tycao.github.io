@@ -1,27 +1,27 @@
-ÔÚLinuxÏÂÉı¼¶GCC°æ±¾
+åœ¨Linuxä¸‹å‡çº§GCCç‰ˆæœ¬
 ===========
-* ÔÚUBuntu 16.04ÉÏÉı¼¶gcc:
- * °²×° add-apt-repository ¹¤¾ß
+* åœ¨UBuntu 16.04ä¸Šå‡çº§gcc:
+ * å®‰è£… add-apt-repository å·¥å…·
 ```shell
 sudo apt-get install software-properties-common
 ```
- * Ôö¼ÓÔ´
+ * å¢åŠ æº
 ```shell
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 ```
- * ¸üĞÂÔ´
+ * æ›´æ–°æº
 ```shell
 sudo apt-get update
 ```
- * ¸üĞÂ°²×°
+ * æ›´æ–°å®‰è£…
 ```shell
 sudo apt-get upgrade
 ```
- * °²×° gcc/g++ 4.9
+ * å®‰è£… gcc/g++ 4.9
 ```shell
 sudo apt-get install gcc-4.9 g++-4.9
 ```
- * ¸üĞÂÁ´½Ó
+ * æ›´æ–°é“¾æ¥
 ```shell
 sudo updatedb
 sudo ldconfig
@@ -38,13 +38,13 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 49 \
  --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-4.9
 ```
 <br /><br />
-* [x] ²Î¿¼Á´½Ó£º<br />
+* [x] å‚è€ƒé“¾æ¥ï¼š<br />
 [](https://blog.csdn.net/Watson2016/article/details/52415429)<br />
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
 *****
 
-* ÔÚCentOSÏÂÉı¼¶gcc
- * Éı¼¶µ½gcc-7.2°æ±¾£º<br />
+* åœ¨CentOSä¸‹å‡çº§gcc
+ * å‡çº§åˆ°gcc-7.2ç‰ˆæœ¬ï¼š<br />
 Often people want the most recent version of gcc, and devtoolset is being kept up-to-date, so maybe you want devtoolset-N where N={4,5,6,7...}, check yum for the latest available on your system). Updated the cmds below for N=7.
 <br /><br />
 There is a package for gcc-7.2.1 for devtoolset-7 as an example. First you need to enable the [Software Collections](https://www.softwarecollections.org/en/scls/rhscl/devtoolset-4/), then it's available in devtoolset-7:
@@ -57,5 +57,5 @@ gcc --version
 ```
 
 <br /><br /><br />
-* [x] ²Î¿¼Á´½Ó£º<br />
+* [x] å‚è€ƒé“¾æ¥ï¼š<br />
 [How to Install gcc 5.3 with yum on CentOS 7.2](https://stackoverflow.com/questions/36327805/how-to-install-gcc-5-3-with-yum-on-centos-7-2)<br />
