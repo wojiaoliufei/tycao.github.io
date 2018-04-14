@@ -3,6 +3,7 @@ Linux下安装MySQL
 ### 背景：虽然安装 `mysql` 是大家都很熟悉的技能。但是此篇教程对于刚刚学习Linux的同学，还是有些用处的。:blush:
 ### 时间：2018-04-14 21:00 周六
 
+!["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
 ********
 
 
@@ -207,13 +208,9 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 [UBuntu下安装MySQL](https://blog.csdn.net/vXueYing/article/details/52330180)<br />
 
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
-!["lufei2"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei2.jpg "lufei2")<br /><br />
 
 
 ***********
-
-
-
 
 
 
@@ -262,6 +259,6 @@ mysql -u root -padmin
 * [x] 参考链接：
 [CentOS下如何安装MySQL](http://how2j.cn/k/deploy2linux/deploy2linux-install/1608.html)<br />
 
-
+!["lufei2"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei2.jpg "lufei2")<br /><br />
 
 
