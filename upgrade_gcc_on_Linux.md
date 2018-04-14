@@ -1,6 +1,6 @@
 在Linux下升级GCC版本
 ===========
-* 在UBuntu 16.04上升级gcc:
+* 在UBuntu 16.04上升级gcc（最好使用root权限执行下列命令）：
 	* 安装 add-apt-repository 工具
 
         `sudo apt-get install software-properties-common`
@@ -39,7 +39,7 @@
 
 <br /><br />
 * [x] 参考链接：<br />
-[](https://blog.csdn.net/Watson2016/article/details/52415429)<br />
+[UBubtu16.04升级gcc版本](https://blog.csdn.net/Watson2016/article/details/52415429)<br />
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
 *****
 
@@ -49,13 +49,12 @@ Often people want the most recent version of gcc, and devtoolset is being kept u
 <br /><br />
 There is a package for gcc-7.2.1 for devtoolset-7 as an example. First you need to enable the [Software Collections](https://www.softwarecollections.org/en/scls/rhscl/devtoolset-4/), then it's available in devtoolset-7:
 ```shell
-        sudo yum install centos-release-scl
-        sudo yum install devtoolset-7-gcc*
-		scl enable devtoolset-7 bash
-		which gcc
-		gcc --version
-
+sudo yum install centos-release-scl
+sudo yum install devtoolset-7-gcc*
+scl enable devtoolset-7 bash
+which gcc
+gcc --version
 ```
 <br /><br /><br />
 * [x] 参考链接：<br />
-[How to Install gcc 5.3 with yum on CentOS 7.2](https://stackoverflow.com/questions/36327805/how-to-install-gcc-5-3-with-yum-on-centos-7-2)<br />
+[StackOverflow ：How to Install gcc 5.3 with yum on CentOS 7.2](https://stackoverflow.com/questions/36327805/how-to-install-gcc-5-3-with-yum-on-centos-7-2)<br />
