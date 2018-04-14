@@ -3,11 +3,14 @@ Linux下安装MySQL
 ### 背景：虽然安装 `mysql` 是大家都很熟悉的技能。但是此篇教程对于刚刚学习Linux的同学，还是有些用处的。:blush:
 ### 时间：2018-04-14 21:00 周六
 
-## Ubuntu下安装MySQL:
+********
+
+
+# Ubuntu下安装MySQL:
 #### 环境：UBuntu 16.04 32bit
 ```shell
-	root@ubuntu:/mnt/hgfs/share/flamingoserver# uname -a
-	Linux ubuntu 4.4.0-34-generic #53-Ubuntu SMP Wed Jul 27 16:06:28 UTC 2016 i686 i686 i686 GNU/Linux
+root@ubuntu:/mnt/hgfs/share/flamingoserver# uname -a
+Linux ubuntu 4.4.0-34-generic #53-Ubuntu SMP Wed Jul 27 16:06:28 UTC 2016 i686 i686 i686 GNU/Linux
 ```
 * 使用`sudo apt-get install mysql-server mysql-client` 命令安装 `mysql客户端` 和 `服务器端`
 ```shell
@@ -103,7 +106,7 @@ root@ubuntu:/mnt/hgfs/share# mysql -V
 mysql  Ver 14.14 Distrib 5.7.21, for Linux (i686) using  EditLine wrapper
 ```
 
-* 使用``命令，显示`mysql的版本`：
+* 使用`mysql -V`命令，显示`mysql的版本`：
 ```shell
 mysql -V
 ```
@@ -121,10 +124,10 @@ mysql -u root -p
 然后就会成功进入到mysql的操作界面。
 ***********
 
-## CentOS下安装mysql:
+# CentOS下安装mysql:
 #### 环境：CentOS 7.4 64bit
 
-* 下载：
+* 下载：<br />
 yum上mysql的资源有问题，所以不能仅仅之用yum。在使用yum之前还需要用其他命令获取mysql社区版：<br />
 ```shell
 mkdir /temp				# 若/temp存在，则直接忽略这一步
@@ -132,18 +135,18 @@ cd /temp
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 ```
-* 通过yum进行安装:
+* 通过yum进行安装:<br />
 接着就可以通过yum安装了：<br />
 ```shell
 yum install mysql mysql-server mysql-devel -y
 ```
 
-* 以上只是安装，执行如下命令才能启动mysql服务器：
+* 以上只是安装，执行如下命令才能启动mysql服务器：<br />
 ```shell
 systemctl start mysql.service		# CentOS 6的启动服务的命令是：service mysql start
 ```
 
-* 验证:
+* 验证：<br />
 安装后会自动启动，启动后会占用3306端口。 使用如下命令查看3306端口是否启动，如果启动了则表示mysql处于运行状态。
 ```shell
 netstat -anp|grep 3306
@@ -154,12 +157,17 @@ netstat -anp|grep 3306
 ```shell
 mysqladmin -u root password admin
 ```
-!["mysql_change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/mysql_change_pwd.PNG "mysql_change_pwd")<br /><br />
+!["mysql_change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/mysql_change_pwd.png "mysql_change_pwd")<br /><br />
 
 * 登录验证：
 ```shell
 mysql -u root -padmin
 ```
+
+*****
+
+* [x] 参考链接：
+[CentOS下如何安装MySQL](http://how2j.cn/k/deploy2linux/deploy2linux-install/1608.html)<br />
 
 
 
