@@ -70,9 +70,20 @@ make install
 !["apt_cache"](https://github.com/tycao/tycao.github.io/blob/master/src/apt_cache.png "apt_cache")<br /><br />
 参考文档：[apt-cache search gmp | apt-cache search mpfr | apt-cache search mpc](https://askubuntu.com/questions/832597/e-unable-to-locate-package-php5-gmp)<br /><br />
 
-#### 
+#### 关于查找一个package:
+* UBubtu上的命令是： 
+```shell
+apt-cache search gmp
+apt-cache search mpfr
+apt-cache search mpc
+```
 
-		
+* 在CentOS下的命令：
+```shell
+yum search gem
+yum search mpfr
+yum search mpc
+```
 	
 
 * [x] 参考链接：<br />
