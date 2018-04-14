@@ -137,7 +137,9 @@ mysql> grant all on snailblog.* to 'man_user' identified by 'test1234';
 ```shell
 mysql -u man_user -ptest1234
 ```
-:warning: 注意！_**`-u`和用户名之间可以加空格，也可以不加空格**_  _-p和登录密码之间必须**不能**有空格_
+:warning: 注意！<br />
+* _**`-u`和用户名之间可以加空格，也可以不加空格**_  
+* _-p和登录密码之间必须**不能**有空格_
 !["man_user"](https://github.com/tycao/tycao.github.io/blob/master/src/man_user.png "man_user")<br /><br />
 
 * 创建表：<br />
@@ -154,7 +156,7 @@ mysql> INSERT INTO user (id,name,email) VALUES(3,"cat","cat@gmail.com");
 ```
 * 简单查询：<br />
 ```shell
-SELECT * FROM user;
+mysql> SELECT * FROM user;
 ```
 !["insert"](https://github.com/tycao/tycao.github.io/blob/master/src/insert.png "insert")<br /><br />
 
@@ -165,7 +167,12 @@ quit 或者 exit
 * 停止MySQL数据库服务：<br />
 ```shell
 sudo systemctl stop mysql.service
+# 或者
+service mysql stop
 ```
+!["stop_mysql_service"](https://github.com/tycao/tycao.github.io/blob/master/src/stop_mysql_service.png "stop_mysql_service")<br /><br />
+
+
 * 查看MySQL运行状态：<br />
 ```shell
 sudo systemctl status mysql.service 
@@ -177,11 +184,15 @@ service mysql status
 * 启动MySQL数据库服务：<br />
 ```shell
 sudo systemctl start mysql.service
+# 或者
+service mysql start
 ```
 
 * 重启MySQL数据库服务：<br />
 ```shell
 sudo systemctl restart mysql.service
+# 或者
+service mysql restart
 ```
 !["start_mysql_service"](https://github.com/tycao/tycao.github.io/blob/master/src/start_mysql_service.png "start_mysql_service")<br /><br />
 
