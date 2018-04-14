@@ -50,12 +50,12 @@
 #### 下载gcc的安装包之后，先解压：
 `tar -zxvf gcc-7.3.0/gcc-7.3.0.tar.gz`
 #### 解压好gcc包之后，开始安装gcc之前，需要安装一些依赖（required libraries）:
-* 首先，检查当前UBubtu安装源是否有这些依赖包：`gmp, mpfr, mpc`
+* 首先，检查当前UBubtu安装源是否有这些依赖包：`gmp, mpfr, mpc`<br />
 `apt-cache search gmp` <br />
 !["gmp_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/gmp_dev.png "gmp_dev")<br /><br />
 于是： `apt install libgmp-dev`， 第一个依赖安装好了<br />
 `apt-cache search mpfr` <br />
-!["mpfr_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpfr_dev.png.png "mpfr_dev")<br /><br />
+!["mpfr_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpfr_dev.png "mpfr_dev")<br /><br />
 于是： `apt install libmpfr-dev`， 第二个依赖安装好了<br />
 `apt-cache search mpc` <br />
 !["mpc_dev"](https://github.com/tycao/tycao.github.io/blob/master/src/mpc_dev.png "mpc_dev")<br /><br />
