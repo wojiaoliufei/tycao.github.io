@@ -115,16 +115,22 @@ gcc --version
 下载文件： https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz
 ```shell
 wget https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz
+tar -zxvf gcc-7.3.0.tar.gz
 ```
 编译 、 安装：<br />
 ```shell
 # 首先安装依赖库:
 yum install libmpc-devel mpfr-devel gmp-devel
 
+# 进入到gcc目录下
+cd gcc-7.3.0
+# 在gcc目录下执行一下命令：
 ./configure --with-system-zlib --disable-multilib --enable-languages=c,c++
 
+# 编译
 make -j 8
 
+# 安装
 make install
 ```
 <br /><br /><br />
