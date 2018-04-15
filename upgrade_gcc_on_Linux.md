@@ -65,10 +65,11 @@
 #### 如上述，依赖安装好了之后，接下来，安装gcc：<br />
 ```shell
 ./configure --with-system-zlib --disable-multilib --enable-languages=c,c++
-make -j 8		####这一步编译将花费1个小时左右###
+make -j 8		#### this step took me roughly 4 hours and 6G in dick to finnish!!! ###
 make install
 ```
-#### 然后查看gcc 版本： `gcc -v`
+####上述步骤完成之后，先关闭当前终端。再开一个新的终端。然后输入命令 `gcc -v` 查看gcc版本。<br />
+!["gcc_v"](https://github.com/tycao/tycao.github.io/blob/master/src/gcc_v.png "gcc_v")<br /><br />
 !["apt_cache"](https://github.com/tycao/tycao.github.io/blob/master/src/apt_cache.png "apt_cache")<br /><br />
 参考文档：[apt-cache search gmp | apt-cache search mpfr | apt-cache search mpc](https://askubuntu.com/questions/832597/e-unable-to-locate-package-php5-gmp)<br /><br />
 
