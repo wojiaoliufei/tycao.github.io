@@ -38,12 +38,12 @@
 	 --slave /usr/bin/gcc-ar gcc-ar /usr/bin/gcc-ar-4.9 \
 	 --slave /usr/bin/gcc-nm gcc-nm /usr/bin/gcc-nm-4.9 \
 	 --slave /usr/bin/gcc-ranlib gcc-ranlib /usr/bin/gcc-ranlib-4.9
-
+* 参考链接里的截图：<br />
 !["gcc_upgrade"](https://github.com/tycao/tycao.github.io/blob/master/src/gcc_upgrade.png "gcc_upgrade")<br /><br /><br />
 
 !["lufei"](https://github.com/tycao/tycao.github.io/blob/master/src/lufei.jpg "lufei")<br /><br />
 ****************
-### UBuntu16.04 升级到gcc-5版本：<br />
+### UBuntu16.04 升级到gcc-7版本：<br />
 
 #### Installing gcc 7.3 (gcc 7.3.0) - released 01/25/2018:
 
@@ -96,6 +96,7 @@ yum search mpc
 *****
 
 ## 在CentOS下升级gcc
+### 第一种方法：<br />
 * 升级到gcc-7.2版本：<br />
 Often people want the most recent version of gcc, and devtoolset is being kept up-to-date, so maybe you want devtoolset-N where N={4,5,6,7...}, check yum for the latest available on your system). Updated the cmds below for N=7.
 <br /><br />
@@ -108,9 +109,16 @@ which gcc
 gcc --version
 ```
 
-compile and install:
+### 第二种方法：<br />
+#### 下载gcc-7.2安装包：<br />
+安装 gcc 7.3 ( [gcc 7.3.0](https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/) ) - released 01/25/2018:<br />
+下载文件： https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz
 ```shell
-//required libraries:
+wget https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.gz
+```
+编译 、 安装：<br />
+```shell
+# 首先安装依赖库:
 yum install libmpc-devel mpfr-devel gmp-devel
 
 ./configure --with-system-zlib --disable-multilib --enable-languages=c,c++
