@@ -68,8 +68,9 @@
 make -j 8		#### this step took me roughly 4 hours and 6G in dick to finnish!!! ###
 make install
 ```
-####上述步骤完成之后，先关闭当前终端。再开一个新的终端。然后输入命令 `gcc -v` 查看gcc版本。<br />
+#### 上述步骤完成之后，先关闭当前终端。再开一个新的终端。然后输入命令 `gcc -v` 查看gcc版本。<br />
 !["gcc_v"](https://github.com/tycao/tycao.github.io/blob/master/src/gcc_v.png "gcc_v")<br /><br />
+#### 参考链接里的截图：<br />
 !["apt_cache"](https://github.com/tycao/tycao.github.io/blob/master/src/apt_cache.png "apt_cache")<br /><br />
 参考文档：[apt-cache search gmp | apt-cache search mpfr | apt-cache search mpc](https://askubuntu.com/questions/832597/e-unable-to-locate-package-php5-gmp)<br /><br />
 
