@@ -14,3 +14,12 @@
 !["web_server"](https://github.com/tycao/tycao.github.io/blob/master/src/web_server.png "web_server")<br /><br />
 !["web_server2"](https://github.com/tycao/tycao.github.io/blob/master/src/web_server2.png "web_server2")<br /><br />
 !["web_server3"](https://github.com/tycao/tycao.github.io/blob/master/src/web_server3.png "web_server3")<br /><br />
+
+
+### Linux下执行以下命令时：
+```shell
+./b2 --with-filesystem --with-system --with-log --with-date_time --with-regex --with-thread --with-atomic --with-locale --with-program_options --build-dir="/home/zogy/boostbuild" --stagedir="/home/zogy/boostlib/stage/lib" link=static runtime-link=shared threading=multi
+```
+### 大部分的gcc编译器版本都不支持`--with-log`的编译。一直报错。我只好一个个去编译，等到编译到`--with-log`时才发现原来是这货的问题。把上述命令，**去掉--with-log**在各个gcc编译器版本下都能编译通过。如：`gcc 4.8.5 , gcc 7.3.0`等等。
+
+### 另外，这个web服务程序，需要用到正则表达式，但是gcc4.8.5对正则表达式支持的不是很好，会报错。因此需要gcc4.9或者更高版本。
