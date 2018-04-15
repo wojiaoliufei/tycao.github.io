@@ -1,5 +1,7 @@
 在Linux下升级GCC版本
 ===========
+## 时间：2018-04-14 21:00
+编译gcc `make -j 8` 花了整整一夜！（4个小时）
 ### 参考链接：<br />
 [stackoverflow : CentOS下如何升级gcc版本](https://stackoverflow.com/questions/36327805/how-to-install-gcc-5-3-with-yum-on-centos-7-2)<br />
 ## 在UBuntu 16.04上升级gcc（最好使用root权限执行下列命令）：
