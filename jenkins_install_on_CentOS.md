@@ -13,3 +13,8 @@ CentOS7.4下安装Jenkins
     9  systemctl start jenkins
    10  systemctl status jenkins
 ```
+
+*******
+******
+### 参考链接：
+* https://blog.csdn.net/zhiaini06/article/details/45287671
