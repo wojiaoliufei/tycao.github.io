@@ -21,5 +21,8 @@ rpm -qa|grep mysql
 接下来，参考本博客其他文章（重新）安装mysql-community版本
 
 *********
-#### 参考： https://www.cnblogs.com/nihaorz/p/7170509.html
-#### 参考： http://www.vpsdaquan.cn/vpsdajianowncloud.html
+傻瓜式搭建私人网络硬盘——owncloud安装指南
+=========
+#### 参考： 
+* https://www.cnblogs.com/nihaorz/p/7170509.html
+* http://www.vpsdaquan.cn/vpsdajianowncloud.html
