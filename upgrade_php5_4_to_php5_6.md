@@ -19,3 +19,7 @@ rpm -qa|grep mysql
 ```
 有的话继续删除即可。 <br />
 接下来，参考本博客其他文章（重新）安装mysql-community版本
+
+*********
+#### 参考： https://www.cnblogs.com/nihaorz/p/7170509.html
+#### 参考： http://www.vpsdaquan.cn/vpsdajianowncloud.html
