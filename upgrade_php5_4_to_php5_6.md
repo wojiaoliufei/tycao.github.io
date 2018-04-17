@@ -26,3 +26,24 @@ rpm -qa|grep mysql
 #### 参考： 
 * https://www.cnblogs.com/nihaorz/p/7170509.html
 * http://www.vpsdaquan.cn/vpsdajianowncloud.html
+
+```shell
+rpm -import https://download.owncloud.org/download/repositories/stable/CentOS_7/repodata/repomd.xml.key
+wget http://download.owncloud.org/download/repositories/stable/CentOS_7/ce:stable.repo -O /etc/yum.repos.d/ce:stable.repo
+yum clean expire-cache
+yum install owncloud
+```
+中途会让你选择yes和no，全部yes<br />
+完成后重启apache：<br />
+```shell
+# CentOS6及其以下：
+service httpd start
+
+# CentOS7 及其以下：
+systemctl start httpd
+```
+
+
+
+******
+******
