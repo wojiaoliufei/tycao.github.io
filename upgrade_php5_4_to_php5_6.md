@@ -1,7 +1,17 @@
 centos7升级自带的php5.4版本到php5.6 
 ===========
 #### 参考： https://blog.csdn.net/qq_34829953/article/details/78078790
-
+##### history命令历史：
+```shell
+    8  yum provides php   #自带的只有5.4版本
+    9   rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm         #更新源
+   10   rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+   11  yum remove php-common -y     #移除系统自带的php-common
+   12  yum install -y php56w php56w-opcache php56w-xml php56w-mcrypt php56w-gd php56w-devel php56w-mysql php56w-intl php56w-mbstring         #安装依赖包
+   13  php -v                    #版本变为5.6
+   14  yum provides php-fpm      #因为我是准备搭建lnmp，所以安装php-fpm，这里会提示多个安装源，选择5.6版本的安装就可以了
+   15  yum install php56w-fpm-5.6.31-1.w7.x86_64 -y
+```
 
 *********
 CentOS7 下完全删除mysql，然后重新安装
