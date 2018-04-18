@@ -18,8 +18,8 @@ curl --user-agent 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML
 `{"error": {"message": "ZERR_NO_AUTH_TOKEN", "code": 100, "name": "AuthenticationInvalidRequest"}}`
 
 
-这是因为没有加上 `authorization`验证。加上之后，就会返回正常（且很长很长的）的json字符串：<br />
-现在把`authorization`添加上，万事俱备。接下来，我们运行下面的这个命令：<br />
+#### 这是因为没有加上 `authorization`验证。加上之后，就会返回正常（且很长很长的）的json字符串：<br />
+#### 现在把`authorization`添加上，万事俱备。接下来，我们运行下面的这个命令：<br />
 ```shell
 curl --user-agent 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36' -H 'authorization: Bearer 2|1:0|10:1522680027|4:z_c0|92:Mi4xSjNWT0F3QUFBQUFBc082YzhNWmhEU1lBQUFCZ0FsVk4yNDZ2V3dCMjZmUHRUdlFJUTZZWXFOOUZkSkxUZWlNZUFB|a0fe09415ac4d5835c94d3c28a4f986d2ff7c94d64581bcfd80260cbe04eba54' 'https://www.zhihu.com/api/v4/questions/40854395/answers?sort_by=default&include=data%5B%2A%5D.is_normal%2Cis_collapsed%2Cannotation_action%2Cannotation_detail%2Ccollapse_reason%2Cis_sticky%2Ccollapsed_by%2Csuggest_edit%2Ccomment_count%2Ccan_comment%2Ccontent%2Ceditable_content%2Cvoteup_count%2Creshipment_settings%2Ccomment_permission%2Cmark_infos%2Ccreated_time%2Cupdated_time%2Creview_info%2Crelationship.is_authorized%2Cis_author%2Cvoting%2Cis_thanked%2Cis_nothelp%2Cupvoted_followees%3Bdata%5B%2A%5D.author.follower_count%2Cbadge%5B%3F%28type%3Dbest_answerer%29%5D.topics&limit=20&offset=20'
 ```
