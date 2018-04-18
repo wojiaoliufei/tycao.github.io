@@ -1,9 +1,5 @@
-使用`shell`爬去知乎的图片
+使用`shell`爬取知乎的图片
 ==========
-```shell
-知乎链接：https://zhuanlan.zhihu.com/p/28258932
-作者：娶不到静香的胖虎
-```
 
 今天看到了这篇文章，觉得很有趣，然后就自己用自己的知乎id账号运行了一遍：<br />
 ### 首先，我使用Google浏览器，登录知乎，然后利用Chrome的debug模式，得到了自己的`知乎账号的authorization：`<br />
@@ -92,3 +88,9 @@ bash download.sh https://www.zhihu.com/question/40854395
 !["06"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/sh_05.png "06")<br />
 
 
+**************
+```shell
+知乎链接：https://zhuanlan.zhihu.com/p/28258932
+		  https://www.zhihu.com/question/40854395/answer/357230006
+作者：娶不到静香的胖虎
+```
