@@ -3,6 +3,7 @@
 ### 直接上代码：
 #### monitor.sh
 ```shell
+#!/bin/sh
 # usage: check_once <port> <path>  
 # 使用curl检查网页是否可以正常访问，如果不能访问就重启tomcat。  
 check_once()  
