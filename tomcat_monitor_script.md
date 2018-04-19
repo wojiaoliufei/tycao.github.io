@@ -58,3 +58,8 @@ bash monitor.sh
 ```shell
 tail -f check-data.log
 ```
+
+
+***********
+### 参考文档：
+[一个tomcat监控脚本](https://www.cnblogs.com/dim2046/p/5913701.html)<br />
