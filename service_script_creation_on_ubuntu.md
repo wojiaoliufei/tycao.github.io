@@ -263,4 +263,6 @@ systemctl stop caosx.service    或者 systemctl stop   caosx
 
 
 ***********
-### 参考连接：https://aak1247.coding.me/java-jar-as-service.html
+### 参考连接：
+* https://aak1247.coding.me/java-jar-as-service.html
+* https://blog.csdn.net/dgfj8x57/article/details/61199354
