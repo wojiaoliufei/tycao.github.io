@@ -1,61 +1,61 @@
-ubuntu ·şÎñ½Å±¾±àĞ´
+ubuntu æœåŠ¡è„šæœ¬ç¼–å†™
 ===========
-* Ö÷Òª²½Öè
-	* ÅäÖÃ·şÎñÆô¶¯½Å±¾
-	* ÅäÖÃÃüÁî´¦Àí½Å±¾
-	* ¿ª»ú×ÔÆô
-### ÅäÖÃ·şÎñÆô¶¯½Å±¾
-**ÔÚubuntu 16.04ÖĞ,·şÎñµÄÄ¿Â¼Îª`/lib/systemd/system`¡£ÎÒÃÇÏÖÔÚÒª½¨Á¢Ò»¸öÃûÎª`caosx`µÄ·şÎñ£¬¾ÍÔÚ´ËÄ¿Â¼ÏÂÌí¼ÓÒ»¸öÎÄ¼şÃûÎª`caosx.service`µÄÎÄ¼ş¼´¿É¡£** ÆäÄÚÈİ°üº¬£º<br />
+* ä¸»è¦æ­¥éª¤
+	* é…ç½®æœåŠ¡å¯åŠ¨è„šæœ¬
+	* é…ç½®å‘½ä»¤å¤„ç†è„šæœ¬
+	* å¼€æœºè‡ªå¯
+### é…ç½®æœåŠ¡å¯åŠ¨è„šæœ¬
+**åœ¨ubuntu 16.04ä¸­,æœåŠ¡çš„ç›®å½•ä¸º`/lib/systemd/system`ã€‚æˆ‘ä»¬ç°åœ¨è¦å»ºç«‹ä¸€ä¸ªåä¸º`caosx`çš„æœåŠ¡ï¼Œå°±åœ¨æ­¤ç›®å½•ä¸‹æ·»åŠ ä¸€ä¸ªæ–‡ä»¶åä¸º`caosx.service`çš„æ–‡ä»¶å³å¯ã€‚** å…¶å†…å®¹åŒ…å«ï¼š<br />
 ```shell
 [Unit]
-Description=xxxxxxxxxxxxxxxx #ÃèÊö·şÎñ 
-After=network.target #ÓÃÓÚÖ¸¶¨·şÎñÆô¶¯µÄÇ°ÖÃÌõ¼ş
-Documentation=  #°ïÖúÎÄ¼şµÄµØÖ·Èçhttp://baidu.com/ £¬¿ÉÈ±Ê¡
+Description=xxxxxxxxxxxxxxxx #æè¿°æœåŠ¡ 
+After=network.target #ç”¨äºæŒ‡å®šæœåŠ¡å¯åŠ¨çš„å‰ç½®æ¡ä»¶
+Documentation=  #å¸®åŠ©æ–‡ä»¶çš„åœ°å€å¦‚http://baidu.com/ ï¼Œå¯ç¼ºçœ
 
 [Service]
-# User=  Æô¶¯ÓÃ»§  
-# Group=  Æô¶¯ÓÃ»§×é
-ExecStart=  #·şÎñÆô¶¯ÃüÁî£¬´ËÏî±ØÌî
-# ExecStop=  ·şÎñÖÕÖ¹ÃüÁî£¬¿ÉÈ±Ê¡
+# User=  å¯åŠ¨ç”¨æˆ·  
+# Group=  å¯åŠ¨ç”¨æˆ·ç»„
+ExecStart=  #æœåŠ¡å¯åŠ¨å‘½ä»¤ï¼Œæ­¤é¡¹å¿…å¡«
+# ExecStop=  æœåŠ¡ç»ˆæ­¢å‘½ä»¤ï¼Œå¯ç¼ºçœ
 
 
-[Install] #ÓÃÀ´¶¨ÒåÈçºÎÆô¶¯£¬ÒÔ¼°ÊÇ·ñ¿ª»úÆô¶¯¡£
-WantedBy=multi-user.target #µ±·şÎñ¿ª»úÆô¶¯ºó£¬»á·ÅÈëÊ²Ã´ÎÄ¼ş¼Ğ£¬Ó°ÏìÆô¶¯Ë³Ğò
+[Install] #ç”¨æ¥å®šä¹‰å¦‚ä½•å¯åŠ¨ï¼Œä»¥åŠæ˜¯å¦å¼€æœºå¯åŠ¨ã€‚
+WantedBy=multi-user.target #å½“æœåŠ¡å¼€æœºå¯åŠ¨åï¼Œä¼šæ”¾å…¥ä»€ä¹ˆæ–‡ä»¶å¤¹ï¼Œå½±å“å¯åŠ¨é¡ºåº
 ```
 
-**¸ù¾İÉÏÊöÓï·¨¹æÔò£¬ÏÖÔÚÎÒÃÇ¾ÙÒ»¸öÀı×Ó£¬±àĞ´Ò»¸ö×Ô¶¨ÒåµÄ·şÎñ½Å±¾caosx.service**¡£ÆäÄÚÈİÈçÏÂ£º<br />
+**æ ¹æ®ä¸Šè¿°è¯­æ³•è§„åˆ™ï¼Œç°åœ¨æˆ‘ä»¬ä¸¾ä¸€ä¸ªä¾‹å­ï¼Œç¼–å†™ä¸€ä¸ªè‡ªå®šä¹‰çš„æœåŠ¡è„šæœ¬caosx.service**ã€‚å…¶å†…å®¹å¦‚ä¸‹ï¼š<br />
 #### /lib/systemd/system/caosx.service
-* ´´½¨·şÎñ½Å±¾£º
+* åˆ›å»ºæœåŠ¡è„šæœ¬ï¼š
 ```shell
 touch /lib/systemd/system/caosx.service
 chmod 777 /lib/systemd/system/caosx.service
 vi /lib/systemd/system/caosx.service
 ```
 
-´ò¿ª`/lib/systemd/system/caosx.service`ÎÄ¼şºó£¬ÊäÈëÒ»ÏÂÄÚÈİ£º<br />
+æ‰“å¼€`/lib/systemd/system/caosx.service`æ–‡ä»¶åï¼Œè¾“å…¥ä¸€ä¸‹å†…å®¹ï¼š<br />
 
 ```shell
 [Unit]
-Description=My Fucking Service	# ÃèÊö
+Description=My Fucking Service	# æè¿°
 After=network.target
 
 [Service]
-ExecStart=/root/server_http	# ĞèÒªÔËĞĞµÄÂ·¾¶
-SuccessExitStatus=143	# ³É¹¦Ê±·µ»ØµÄ×´Ì¬
+ExecStart=/root/server_http	# éœ€è¦è¿è¡Œçš„è·¯å¾„
+SuccessExitStatus=143	# æˆåŠŸæ—¶è¿”å›çš„çŠ¶æ€
 TimeoutStopSec=10
-Restart=on-failure	# ·ÇÕı³£dead£¬×Ô¶¯ÖØÆô
-RestartSec=5	# 5ÃëºóÆô¶¯
+Restart=on-failure	# éæ­£å¸¸deadï¼Œè‡ªåŠ¨é‡å¯
+RestartSec=5	# 5ç§’åå¯åŠ¨
 
 
 [Install]
 WantedBy=multi-user.target
 ```
-ÖÁ´Ë£¬·şÎñ½Å±¾ÒÑ¾­´´½¨Íê³É£¡
+è‡³æ­¤ï¼ŒæœåŠ¡è„šæœ¬å·²ç»åˆ›å»ºå®Œæˆï¼
 
-:warning: **ĞèÒª×¢ÒâµÄÊÇ£¬ ·şÎñÆô¶¯ÃüÁîĞèÒªÊäÈë¾ø¶ÔÂ·¾¶µÄĞÎÊ½£¬ÒòÎªÔÚ·şÎñÆô¶¯Ê±£¬¿ÉÄÜÏà¹ØµÄ»·¾³±äÁ¿»¹Î´¼ÓÔØ¡£**
+:warning: **éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œ æœåŠ¡å¯åŠ¨å‘½ä»¤éœ€è¦è¾“å…¥ç»å¯¹è·¯å¾„çš„å½¢å¼ï¼Œå› ä¸ºåœ¨æœåŠ¡å¯åŠ¨æ—¶ï¼Œå¯èƒ½ç›¸å…³çš„ç¯å¢ƒå˜é‡è¿˜æœªåŠ è½½ã€‚**
 
 
-### ÔÚ `/lib/systemd/system` Â·¾¶ÏÂÌí¼Ó´ËÎÄ¼ş²¢±£´æÎª`caosx.service`ºó£¬¾Í¿ÉÒÔÍ¨¹ı `systemctl start caosx` ÃüÁîÆô¶¯·şÎñÁË£º<br />
+### åœ¨ `/lib/systemd/system` è·¯å¾„ä¸‹æ·»åŠ æ­¤æ–‡ä»¶å¹¶ä¿å­˜ä¸º`caosx.service`åï¼Œå°±å¯ä»¥é€šè¿‡ `systemctl start caosx` å‘½ä»¤å¯åŠ¨æœåŠ¡äº†ï¼š<br />
 !["service_script_01"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script_01 "service_script_01")<br />
 
 
@@ -67,4 +67,4 @@ WantedBy=multi-user.target
 
 
 ***********
-### ²Î¿¼Á¬½Ó£ºhttps://aak1247.coding.me/java-jar-as-service.html
+### å‚è€ƒè¿æ¥ï¼šhttps://aak1247.coding.me/java-jar-as-service.html
