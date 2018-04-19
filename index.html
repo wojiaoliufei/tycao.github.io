@@ -29,10 +29,16 @@
 			function changeColor3() {
 				document.getElementById("blog_id").style.backgroundColor="yellow";
 			}
+			function hide() {
+				document.getElementById("div1").style.display="none";
+			}
+			function show() {
+				document.getElementById("div1").style.display="block";
+			}
 		</script>
 		
 	</head>
-	<body>
+	<body><div id="div1">
 		<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
 		<ul>
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Test_MySQL_Performance.md"> C++测试MySQL的插入操作性能 </a></h3></li>
@@ -55,12 +61,14 @@
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/upgrade_gcc_on_Linux.md" >Linux下升级gcc版本--2018/04/15</a></h3></li>
 			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/download_pic_from_zhihu_with_shell.md" >Linux下使用shell爬取知乎图片--2018/04/19</a></h3></li>
 			<li><h3><a href = "https://www.cnblogs.com/chenpi/p/5136483.html">经典：MySQL的存储过程！值得学习！</a></h3></li>
-		</ul>
+		</ul></div>
 		<!--标题2-->
 		
 		<ul>
 		</ul>
 		<div id="box1" class="div1" ></div>
 		<input type="button" value="点击一下，有惊喜哟~" onclick="changeColor()"  style = "text-align:center;background-color:#cfe"/>
+		<button onclick="hide()" >隐藏博客</button>
+		<button onclick="show()" >显示博客</button>
 	</body>
 </html>
