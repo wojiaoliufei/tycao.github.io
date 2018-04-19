@@ -61,7 +61,7 @@ WantedBy=multi-user.target
 systemctl daemon-reload
 systemctl enable caosx.service 
 
-# 接下来的命令不分顺序，欧诺过来查询、停止，开启服务
+# 接下来的命令不分顺序，用来查询、停止，开启服务
 systemctl status caosx.service  或者 systemctl status caosx
 systemctl start  caosx.service  或者 systemctl start  caosx
 systemctl stop caosx.service    或者 systemctl stop   caosx
