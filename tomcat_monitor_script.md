@@ -2,7 +2,7 @@
 ========
 ## 首先安装Tomcat:
 * 安装:
-yum上没有tomcat的源，所以使用如下方式下载解压:<br />
+#### yum上没有tomcat的源，所以使用如下方式下载解压:<br />
 ```shell
 cd /tmp
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-7/v7.0.86/bin/apache-tomcat-7.0.86.tar.gz
