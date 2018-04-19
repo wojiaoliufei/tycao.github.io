@@ -250,7 +250,51 @@ systemctl stop caosx.service    或者 systemctl stop   caosx
   563  cat caosx.service 
 ```
 
+************
+CentOS7 上编写服务脚本
+===========
+### CentOS下的 `systemd 目录` 是在 `/usr/lib/systemd/system`
+```shell
+cd /usr/lib/systemd/system
+touch caosx.service
+chmod 777 caosx.service
+vi caosx.service
+```
+进入到`caosx.service`之后，输入以下内容：<br />
+```shell
+[Unit]
+Description=My Fucking Service  # 描述
+After=network.target
 
+[Service]
+ExecStart=/root/HTTP/server_http        # 需要运行的路径
+SuccessExitStatus=143   # 成功时返回的状态
+TimeoutStopSec=10
+Restart=on-failure      # 非正常dead，自动重启
+RestartSec=5    # 5秒后启动
+
+
+[Install]
+WantedBy=multi-user.target
+```
+!["service_script_03"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script_03.png "service_script_03")<br />
+
+#### 然后，依次运行如下命令：
+```shell
+systemctl daemon-reload
+systemctl enable caosx.service  或者 systemctl enable caosx
+
+# 接下来的命令不分顺序，用来查询、停止，开启服务
+systemctl status caosx.service  或者 systemctl status caosx
+systemctl start  caosx.service  或者 systemctl start  caosx
+systemctl stop caosx.service    或者 systemctl stop   caosx
+```
+
+### 即CentOS7下，只有 `system目录` 跟上述的 `UBuntu16.04` 不一样。其它步骤完全一样。
+* CentOS7下的 system目录：
+	* /usr/lib/systemd/system
+* UBuntu16.04下的 systemd目录：
+	* /lib/systemd/system
 
 
 
