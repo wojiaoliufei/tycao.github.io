@@ -8,11 +8,9 @@
 # 使用curl检查网页是否可以正常访问，如果不能访问就重启tomcat。  
 check_once()  
 {
-        echo "$(date)  Tomcat check once"  
-        # 2008.08.21 -I/--head -s/--silent  
-        #if curl -s -I --connect-timeout 5 --max-time 10 http://localhost:$1/; then  
-        # 2010.02.16 add 200 OK test  
-	 # grep -q ： 表示禁止输出任何结果，以退出状态表示搜索是否成功。1代表搜索成功匹配。0代表匹配失败
+        echo "$(date)  Tomcat check once"
+        # add 200 OK test  
+	# grep -q ： 表示禁止输出任何结果，以退出状态表示搜索是否成功。1代表搜索成功匹配。0代表匹配失败
         if curl -s -I --connect-timeout 5 --max-time 10 http://localhost:$1/$2 | grep -q '200 OK'; then  
                 echo "$(date)  Tomcat maybe OK"  
         else  
