@@ -16,7 +16,9 @@ centos7升级自带的php5.4版本到php5.6
 *********
 CentOS7 下完全删除mysql，然后重新安装
 ==================
-#### 参考： https://blog.csdn.net/black_1988/article/details/54897235
+#### 参考：
+* https://blog.csdn.net/black_1988/article/details/54897235
+* https://www.cnblogs.com/kerrycode/p/4364465.html
 
 ```shell
 yum remove mysql mysql-server mysql-libs compat-mysql51
