@@ -19,6 +19,9 @@ check_once()
                 echo "$(date)  Tomcat maybe OK"  
         else  
                 echo "$(date)  Tomcat maybe FAULT" 
+		# 开启tomcat服务
+		exec /usr/local/tomcat7/bin/startup.sh &
+		sleep 40
         fi  
 }  
   
