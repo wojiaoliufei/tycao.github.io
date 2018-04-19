@@ -30,7 +30,7 @@ tail -300f /usr/local/tomcat7/logs/catalina.out
 #### 8080端口开放后，就可以从外网访问了：
 http://ip_address:8080/
 
-## 直接上代码：
+## 监控Tomcat的shell脚本
 #### monitor.sh
 ```shell
 #!/bin/sh
