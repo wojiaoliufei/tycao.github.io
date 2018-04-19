@@ -15,8 +15,8 @@ check_once()
                 echo "$(date)  Tomcat maybe OK"  
         else  
                 echo "$(date)  Tomcat maybe FAULT" 
-				exec /usr/local/tomcat7/bin/startup.sh &
-				sleep 30
+		exec /usr/local/tomcat7/bin/startup.sh &
+		sleep 30
         fi  
 }  
   
@@ -46,9 +46,9 @@ monitor()
 		fi
         echo "Tomcat server port is $PORT"  
 		
-#		if  [ $? -eq 0 ]; then
-				# & 符号是使进程在后台运行
-				check_loop $PORT "$1" &
+       #if  [ $? -eq 0 ]; then
+		# & 符号是使进程在后台运行
+		check_loop $PORT "$1" &
 }
 
 # 监控路径 ： http://localhost:8080/examples/
