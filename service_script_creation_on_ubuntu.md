@@ -302,7 +302,8 @@ systemctl stop caosx.service    或者 systemctl stop   caosx
 
 
 
-
+### 我在CentOS7下 ， 安装了Tomcat, 因为每次都需要手动运行 `/usr/local/tomcat7/bin/startup.sh` 才能运行Tomcat, 所以写个服务脚本，自动启动Tomcat。若是Tomcat意外终止，则会在5s之内自动重新启动。
+!["service_script_03"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/tomcat_service.PNG "service_script_03")<br />
 
 
 
