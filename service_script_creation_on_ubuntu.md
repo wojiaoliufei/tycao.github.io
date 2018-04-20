@@ -50,7 +50,7 @@ RestartSec=5	# 5秒后启动
 [Install]
 WantedBy=multi-user.target
 ```
-下图是我的另一个机器上的配置 ： **环境不是UBubtu16.04, 而是CentOS7 64bit**
+下图是我的另一个机器上的配置 ： **环境不是UBubtu16.04, 而是CentOS7 64bit**， 仅供参考：<br />
 !["service_script_02"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script.PNG "service_script_02")<br />
 
 至此，服务脚本已经创建完成！
