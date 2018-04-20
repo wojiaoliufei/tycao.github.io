@@ -43,7 +43,7 @@ After=network.target
 ExecStart=/root/server_http	# 需要运行的路径
 SuccessExitStatus=143	# 成功时返回的状态
 TimeoutStopSec=10
-Restart=on-failure	# 非正常dead，自动重启
+Restart=always	# 非正常dead，自动重启
 RestartSec=5	# 5秒后启动
 
 
@@ -55,6 +55,8 @@ WantedBy=multi-user.target
 :warning: 
 * 需要注意的是， 服务启动命令需要输入绝对路径的形式，因为在服务启动时，可能相关的环境变量还未加载。
 * 上述内容中，我把自己的前段时间的`实现简单的web服务项目`放在了`/root目录下。` 即 `/root/server_http`是一个轻量型的web可执行程序
+
+# 上述内容中 `Restart=always`表示我们可以通过`ps -ef | grep 进程名称`得到启动的进程pid, 使用`kill -9 pid`。这样，过了`RestartSec=5`秒后，再次运行`ps -ef | grep 进程名称`,就会发现 `进程被自动再次启动了！` 这就是本次服务脚本的核心作用！！！
 
 ### 完成了caosx.service文件的创建后：需要依次运行以下命令：
 ```shell
