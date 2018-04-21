@@ -43,7 +43,7 @@ After=network.target
 ExecStart=/root/server_http	# 需要运行的路径
 SuccessExitStatus=143	# 成功时返回的状态
 TimeoutStopSec=10
-Restart=on-failure	# 非正常dead，自动重启
+Restart=always	# 非正常dead，自动重启
 RestartSec=5	# 5秒后启动
 
 
@@ -55,6 +55,8 @@ WantedBy=multi-user.target
 :warning: 
 * 需要注意的是， 服务启动命令需要输入绝对路径的形式，因为在服务启动时，可能相关的环境变量还未加载。
 * 上述内容中，我把自己的前段时间的`实现简单的web服务项目`放在了`/root目录下。` 即 `/root/server_http`是一个轻量型的web可执行程序
+
+## 上述内容中 `Restart=always`表示我们可以通过`ps -ef | grep 进程名称`得到启动的进程pid, 使用`kill -9 pid`。这样，过了`RestartSec=5`秒后，再次运行`ps -ef | grep 进程名称`,就会发现 `进程被自动再次启动了！` 这就是本次服务脚本的核心作用！！！ 如果把`Restart=always`换成`Restart=on-failure`，那么使用`kill -9 pid`的方式结束进程的话，进程就不会再次自动启动。但是异常退出两种方式都是会自动启动的！
 
 ### 完成了caosx.service文件的创建后：需要依次运行以下命令：
 ```shell
@@ -277,8 +279,10 @@ RestartSec=5    # 5秒后启动
 [Install]
 WantedBy=multi-user.target
 ```
-!["service_script_03"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script_03.png "service_script_03")<br />
+!["service_script_03"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script_03.png "service_script_03")<br /><br /><br />
 
+下图是我的另一个机器上的配置 ： **环境不是UBubtu16.04, 而是CentOS7 64bit**， 仅供参考：<br />
+!["service_script_02"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/service_script.PNG "service_script_02")<br />
 #### 然后，依次运行如下命令：
 ```shell
 systemctl daemon-reload
@@ -298,7 +302,8 @@ systemctl stop caosx.service    或者 systemctl stop   caosx
 
 
 
-
+### 我在CentOS7下 ， 安装了Tomcat, 因为每次都需要手动运行 `/usr/local/tomcat7/bin/startup.sh` 才能运行Tomcat, 所以写个服务脚本，自动启动Tomcat。若是Tomcat意外终止，则会在5s之内自动重新启动。
+!["service_script_03"](https://github.com/tycao/tycao.github.io/blob/master/shell_crawler/tomcat_service.PNG "service_script_03")<br />
 
 
 
