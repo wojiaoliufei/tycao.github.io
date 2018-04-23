@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<meta charset = "utf-8" />
+		<title>快乐编程~快乐学习~</title>
+		<style type="text/css">
+			.div1
+			{
+				background-color:orange;
+				border-color:green;
+				border-width:4px;
+				border-style:double;
+				height:20px;
+				width:1400px;
+			}
+			.blog
+			{
+				text-align:center;
+				background-color:yellow;
+			}
+			li{color:green;}
+		</style>
+		<script type="text/javascript">
+			function changeColor() {
+				document.getElementById("box1").style.backgroundColor="blue";
+			}
+			function changeColor2() {
+				document.getElementById("blog_id").style.backgroundColor="red";
+			}
+			function changeColor3() {
+				document.getElementById("blog_id").style.backgroundColor="yellow";
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
+		<ul>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Test_MySQL_Performance.md"> C++测试MySQL的插入操作性能 </a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/test_SQLite_performance.md"> C++测试SQlite的插入操作性能 </a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/deploy_ShadowsSocks_in_Aliyun.md" > 如何在阿里云服务器上安装SS </a></h3></li>
+			<!--<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun.md" > 在阿里云上安装shadowsocks(最新版本) </a></h3></li>-->
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/protocol_buffer.md" > Windows下安装Protocol Buffer(Google 开源的数据传输格式)</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/install_build_protobuf_on_CentOS7.md" > Linux下安装Protocol Buffer</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Network_byte_order.md" > 网络字节序_主机字节序_大端_小端 </a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_Protocol.md" > HTTP原理解析</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_protocol_02.md" > HTTP原理再解析</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/TCP_three_times_handshake.md" > TCP三次握手和四次挥手</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/merge_txt_file_in_one_directory.md" >合并指定目录下的所有txt文件内容--2018/04/06</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/tree/master/thread_pool" >C++实现线程池--2018/04/08</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool2.md" >使用C++11实现线程池--2018/04/08</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Mymemcpy_Mystrcpy.md" > 定义自己的内存拷贝（以及字符串拷贝）函数</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/cpp_strtok.md" >C++实现：使用指定字符/子字符串，分割字符串</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/visualstudio_2017_community.md" >如何正确安装Visual Studio 2017--2018/04/13</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/mysql_install.md" >Linux下安装MySQL--2018/04/14</a></h3></li>
+			<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/upgrade_gcc_on_Linux.md" >Linux下升级gcc版本--2018/04/15</a></h3></li>
+			<li><h3><a href = "https://www.cnblogs.com/chenpi/p/5136483.html">经典：MySQL的存储过程！值得学习！</a></h3></li>
+		</ul>
+		<!--标题2-->
+		
+		<ul>
+		</ul>
+		<div id="box1" class="div1" ></div>
+		<input type="button" value="点击一下，有惊喜哟~" onclick="changeColor()"  style = "text-align:center;background-color:#cfe"/>
+	</body>
+</html>
