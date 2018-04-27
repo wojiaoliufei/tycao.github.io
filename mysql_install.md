@@ -273,7 +273,7 @@ netstat -anp|grep 3306
 通过Yum安装的mysql的管理员账户是没有密码的，这里通过命令设置其密码为 admin ，尽量使用这个密码哦，后续部署j2ee应用的时候会用到这个密码哦。
 注： Warning信息并非提示设置失败，而是告诉大家密码露出来了，当心背后有人~
 ```shell
-mysqladmin -u root password admin
+mysqladmin -u root -p password admin		# -p 这个参数一定不能忘记！！！
 ```
 !["mysql_change_pwd"](https://github.com/tycao/tycao.github.io/blob/master/src/mysql_change_pwd.png "mysql_change_pwd")<br /><br />
 
