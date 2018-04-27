@@ -225,6 +225,25 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 # CentOS下安装mysql:
 #### 环境：CentOS 7.4 64bit
 
+**history命令：**
+```shell
+  328  mkdir /temp
+  329  cd /temp/
+  332  wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+  333  ll
+  334  rpm -ivh mysql-community-release-el7-5.noarch.rpm
+  335  yum install mysql-server	# 此处在有网络的情况下，会自动下载mysql-client mysql-devlib mysql-commom等依赖包
+  336  systemctl status mysql
+  337  systemctl start mysql
+  338  systemctl status mysql
+  340  mysql -V
+  341  mysql -uroot -p	# Mysql的root初始值没有密码
+  342  mysqladmin -uroot -p password "1"	# 修改mysql的root登录密码为'1'
+  343  mysql -uroot -p1
+  344  mysql -ucaosx -p1
+```
+!["centos_mysql"](https://github.com/tycao/tycao.github.io/blob/master/src/centos_mysql.png "centos_mysql")<br /><br />
+
 * 下载：<br />
 yum上mysql的资源有问题，所以不能仅仅之用yum。在使用yum之前还需要用其他命令获取mysql社区版：<br />
 ```shell
@@ -261,7 +280,6 @@ mysqladmin -u root password admin
 ```shell
 mysql -u root -padmin
 ```
-!["centos_mysql"](https://github.com/tycao/tycao.github.io/blob/master/src/centos_mysql.png "centos_mysql")<br /><br />
 
 
 
