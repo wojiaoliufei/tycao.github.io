@@ -130,7 +130,7 @@ mysql> create database snailblog;
 ```
 * 创建用户（用户名为`man_user`， 密码为`test1234`），并使用snailblog数据库：<br />
 ```shell
-mysql> grant all on snailblog.* to 'man_user'@'localhost' identified by 'test1234';
+mysql> grant all privileges on snailblog.* to 'man_user'@'localhost' identified by 'test1234';
 mysql> flush privileges;			# 使命令立刻生效
 ```
 !["create_db"](https://github.com/tycao/tycao.github.io/blob/master/src/create_db.png "create_db")<br /><br />
