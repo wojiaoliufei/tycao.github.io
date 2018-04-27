@@ -233,12 +233,12 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
   332  wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
   333  ll
   334  rpm -ivh mysql-community-release-el7-5.noarch.rpm
-  335  yum install mysql-server				# 此处在有网络的情况下，会自动下载mysql-client mysql-devlib mysql-commom等依赖包
+  335  yum install mysql-server	# 此处在有网络的情况下，会自动下载mysql-client mysql-devlib mysql-commom等依赖包
   336  systemctl status mysql
   337  systemctl start mysql
   338  systemctl status mysql
   340  mysql -V
-  341  mysql -uroot -p						# Mysql的root初始值没有密码
+  341  mysql -uroot -p				# Mysql的root初始值没有密码
   342  mysqladmin -uroot -p password "1"	# 修改mysql的root登录密码为'1'
   343  mysql -uroot -p1
   344  mysql -ucaosx -p1
