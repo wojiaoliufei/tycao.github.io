@@ -131,7 +131,7 @@ mysql> create database snailblog;
 * 创建用户（用户名为`man_user`， 密码为`test1234`），并使用snailblog数据库：<br />
 ```shell
 mysql> grant all on snailblog.* to 'man_user'@'localhost' identified by 'test1234';
-mysql> flush privileges;	# 使命令立刻生效
+mysql> flush privileges;			# 使命令立刻生效
 ```
 !["create_db"](https://github.com/tycao/tycao.github.io/blob/master/src/create_db.png "create_db")<br /><br />
 
@@ -233,12 +233,12 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
   332  wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
   333  ll
   334  rpm -ivh mysql-community-release-el7-5.noarch.rpm
-  335  yum install mysql-server	# 此处在有网络的情况下，会自动下载mysql-client mysql-devlib mysql-commom等依赖包
+  335  yum install mysql-server				# 此处在有网络的情况下，会自动下载mysql-client mysql-devlib mysql-commom等依赖包
   336  systemctl status mysql
   337  systemctl start mysql
   338  systemctl status mysql
   340  mysql -V
-  341  mysql -uroot -p	# Mysql的root初始值没有密码
+  341  mysql -uroot -p						# Mysql的root初始值没有密码
   342  mysqladmin -uroot -p password "1"	# 修改mysql的root登录密码为'1'
   343  mysql -uroot -p1
   344  mysql -ucaosx -p1
@@ -248,7 +248,7 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 * 下载：<br />
 yum上mysql的资源有问题，所以不能仅仅之用yum。在使用yum之前还需要用其他命令获取mysql社区版：<br />
 ```shell
-mkdir /temp				# 若/temp存在，则直接忽略这一步
+mkdir /temp									# 若/temp存在，则直接忽略这一步
 cd /temp
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
@@ -261,7 +261,7 @@ yum install mysql mysql-server mysql-devel -y
 
 * 以上只是安装，执行如下命令才能启动mysql服务器：<br />
 ```shell
-systemctl start mysql.service		# CentOS 6的启动服务的命令是：service mysql start
+systemctl start mysql.service				# CentOS 6的启动服务的命令是：service mysql start
 ```
 
 * 验证：<br />
