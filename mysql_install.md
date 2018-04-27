@@ -261,6 +261,9 @@ mysqladmin -u root password admin
 ```shell
 mysql -u root -padmin
 ```
+!["centos_mysql"](https://github.com/tycao/tycao.github.io/blob/master/src/centos_mysql.png "centos_mysql")<br /><br />
+
+
 
 *****
 
