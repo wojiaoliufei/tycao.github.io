@@ -3,7 +3,7 @@ C++11 std::unique_lock与std::lock_guard区别及多线程应用实例
 **时间：** 2018-04-30<br />
 今天是五一假期的第三天了。明天就是最后一天了。有时候真的觉得时间过的好快~<br />
 **背景：** 最近一直在写线程池，然后就会对lock_guard和unqiue_lock这两个锁机制产生了迷惑。谨以此篇做个比较。<br />
-**项目代码：** point_right: [std::lock_guard和std::unique_lock的区别](https://github.com/tycao/tycao.github.io/tree/master/thread_pool/lock_guard_vs_unique_lock)<br />
+**项目代码：** :point_right: [std::lock_guard和std::unique_lock的区别](https://github.com/tycao/tycao.github.io/tree/master/thread_pool/lock_guard_vs_unique_lock)<br />
 **********
 ### 前言
 **std::unique_lock与std::lock_guard都是包含在头文件 `mutex` 里的。它们都是通过对lock和unlock进行一次简单的封装，实现自动unlock的功能。** <br />
