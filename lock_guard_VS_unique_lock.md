@@ -1,14 +1,14 @@
-C++11 std::unique_lockÓëstd::lock_guardÇø±ð¼°¶àÏß³ÌÓ¦ÓÃÊµÀý
+C++11 std::unique_lockä¸Žstd::lock_guardåŒºåˆ«åŠå¤šçº¿ç¨‹åº”ç”¨å®žä¾‹
 ========
-**Ê±¼ä£º** 2018-04-30<br />
-½ñÌìÊÇÎåÒ»¼ÙÆÚµÄµÚÈýÌìÁË¡£Ã÷Ìì¾ÍÊÇ×îºóÒ»ÌìÁË¡£ÓÐÊ±ºòÕæµÄ¾õµÃÊ±¼ä¹ýµÄºÃ¿ì~
-**±³¾°£º** ×î½üÒ»Ö±ÔÚÐ´Ïß³Ì³Ø£¬È»ºó¾Í»á¶Ôlock_guardºÍunqiue_lockÕâÁ½¸öËø»úÖÆ²úÉúÁËÃÔ»ó¡£½÷ÒÔ´ËÆª×ö¸ö±È½Ï¡£
+**æ—¶é—´ï¼š** 2018-04-30<br />
+ä»Šå¤©æ˜¯äº”ä¸€å‡æœŸçš„ç¬¬ä¸‰å¤©äº†ã€‚æ˜Žå¤©å°±æ˜¯æœ€åŽä¸€å¤©äº†ã€‚æœ‰æ—¶å€™çœŸçš„è§‰å¾—æ—¶é—´è¿‡çš„å¥½å¿«~
+**èƒŒæ™¯ï¼š** æœ€è¿‘ä¸€ç›´åœ¨å†™çº¿ç¨‹æ± ï¼Œç„¶åŽå°±ä¼šå¯¹lock_guardå’Œunqiue_lockè¿™ä¸¤ä¸ªé”æœºåˆ¶äº§ç”Ÿäº†è¿·æƒ‘ã€‚è°¨ä»¥æ­¤ç¯‡åšä¸ªæ¯”è¾ƒã€‚
 **********
-### Ç°ÑÔ
-**std::unique_lockÓëstd::lock_guard¶¼ÊÇ°üº¬ÔÚÍ·ÎÄ¼þ `mutex` ÀïµÄ¡£ËüÃÇ¶¼ÊÇÍ¨¹ý¶ÔlockºÍunlock½øÐÐÒ»´Î±¡µÄ·â×°£¬ÊµÏÖ×Ô¶¯unlockµÄ¹¦ÄÜ¡£** <br />
-C++¶àÏß³Ì±à³ÌÖÐÍ¨³£»á¶Ô¹²ÏíµÄÊý¾Ý½øÐÐÐ´±£»¤£¬ÒÔ·ÀÖ¹¶àÏß³ÌÔÚ¶Ô¹²ÏíÊý¾Ý³ÉÔ±½øÐÐ¶ÁÐ´Ê±Ôì³É×ÊÔ´ÕùÇÀµ¼ÖÂ³ÌÐò³öÏÖÎ´¶¨ÒåµÄÐÐÎª¡£Í¨³£µÄ×ö·¨ÊÇÔÚÐÞ¸Ä¹²ÏíÊý¾Ý³ÉÔ±µÄÊ±ºò½øÐÐ¼ÓËø--mutex¡£
-ÔÚÊ¹ÓÃËøµÄÊ±ºòÍ¨³£ÊÇÔÚ¶Ô¹²ÏíÊý¾Ý½øÐÐÐÞ¸ÄÖ®Ç°½øÐÐlock²Ù×÷£¬ÔÚÐ´ÍêÖ®ºóÔÙ½øÐÐunlock²Ù×÷£¬¾­³£»á³öÏÖÓÉÓÚÊèºöµ¼ÖÂ **lockÖ®ºóÔÚÀë¿ª¹²Ïí³ÉÔ±²Ù×÷ÇøÓòÊ±Íü¼Çunlock£¬µ¼ÖÂËÀËø¡£** <br />
-ÏÂÃæÎÒÃÇÀ´¸ø¸ösample£º<br />
+### å‰è¨€
+**std::unique_lockä¸Žstd::lock_guardéƒ½æ˜¯åŒ…å«åœ¨å¤´æ–‡ä»¶ `mutex` é‡Œçš„ã€‚å®ƒä»¬éƒ½æ˜¯é€šè¿‡å¯¹lockå’Œunlockè¿›è¡Œä¸€æ¬¡è–„çš„å°è£…ï¼Œå®žçŽ°è‡ªåŠ¨unlockçš„åŠŸèƒ½ã€‚** <br />
+C++å¤šçº¿ç¨‹ç¼–ç¨‹ä¸­é€šå¸¸ä¼šå¯¹å…±äº«çš„æ•°æ®è¿›è¡Œå†™ä¿æŠ¤ï¼Œä»¥é˜²æ­¢å¤šçº¿ç¨‹åœ¨å¯¹å…±äº«æ•°æ®æˆå‘˜è¿›è¡Œè¯»å†™æ—¶é€ æˆèµ„æºäº‰æŠ¢å¯¼è‡´ç¨‹åºå‡ºçŽ°æœªå®šä¹‰çš„è¡Œä¸ºã€‚é€šå¸¸çš„åšæ³•æ˜¯åœ¨ä¿®æ”¹å…±äº«æ•°æ®æˆå‘˜çš„æ—¶å€™è¿›è¡ŒåŠ é”--mutexã€‚
+åœ¨ä½¿ç”¨é”çš„æ—¶å€™é€šå¸¸æ˜¯åœ¨å¯¹å…±äº«æ•°æ®è¿›è¡Œä¿®æ”¹ä¹‹å‰è¿›è¡Œlockæ“ä½œï¼Œåœ¨å†™å®Œä¹‹åŽå†è¿›è¡Œunlockæ“ä½œï¼Œç»å¸¸ä¼šå‡ºçŽ°ç”±äºŽç–å¿½å¯¼è‡´ **lockä¹‹åŽåœ¨ç¦»å¼€å…±äº«æˆå‘˜æ“ä½œåŒºåŸŸæ—¶å¿˜è®°unlockï¼Œå¯¼è‡´æ­»é”ã€‚** <br />
+ä¸‹é¢æˆ‘ä»¬æ¥ç»™ä¸ªsampleï¼š<br />
 ### threadPool.h
 ```cpp
 #pragma once
@@ -72,16 +72,16 @@ int main(int argc, char *argv[])
 }
 ```
 !["lock_guard"](https://github.com/tycao/tycao.github.io/blob/master/src/lock_guard.png "lock_guard")<br />
-ÉÏÃæ´úÂëÖ»ÊµÏÖÁË¹Ø¼üµÄ¼¸¸öº¯Êý£¬²¢Ê¹ÓÃÁËC++11ÐÂÒýÈëµÄcondition_variableÌõ¼þ±äÁ¿¡£´ÓPopupÓëInertÁ½¸öº¯Êý¿´std::unique_lockÏà¶Ôstd::lock_guard¸üÁé»îµÄµØ·½ÔÚÓÚ: <br />
-ÔÚµÈ´ýÖÐµÄÏß³ÌÈç¹ûÔÚµÈ´ýÆÚ¼äÐèÒª½âËømutex£¬×èÈûÔÚ`cond_.wait()`ÄÇÒ»ÐÐ¡£²¢ÔÚ»½ÐÑÖ®ºóÓÖ¿ÉÒÔÖØÐÂ½«ÆäËø¶¨¡£¶østd::lock_guardÈ´²»¾ß±¸ÕâÑùµÄ¹¦ÄÜ¡£
+ä¸Šé¢ä»£ç åªå®žçŽ°äº†å…³é”®çš„å‡ ä¸ªå‡½æ•°ï¼Œå¹¶ä½¿ç”¨äº†C++11æ–°å¼•å…¥çš„condition_variableæ¡ä»¶å˜é‡ã€‚ä»ŽPopupä¸ŽInertä¸¤ä¸ªå‡½æ•°çœ‹std::unique_lockç›¸å¯¹std::lock_guardæ›´çµæ´»çš„åœ°æ–¹åœ¨äºŽ: <br />
+åœ¨ç­‰å¾…ä¸­çš„çº¿ç¨‹å¦‚æžœåœ¨ç­‰å¾…æœŸé—´éœ€è¦è§£é”mutexï¼Œé˜»å¡žåœ¨`cond_.wait()`é‚£ä¸€è¡Œã€‚å¹¶åœ¨å”¤é†’ä¹‹åŽåˆå¯ä»¥é‡æ–°å°†å…¶é”å®šã€‚è€Œstd::lock_guardå´ä¸å…·å¤‡è¿™æ ·çš„åŠŸèƒ½ã€‚
 
-ÉÏÃæ´úÂëÖÐµÄ£º<br />
+ä¸Šé¢ä»£ç ä¸­çš„ï¼š<br />
 ```cpp
 cond_.wait(lk, [this]{return !Empty();});  
 ```
-¿ÉÄÜ±È½ÏÄÑÒÔÀí½â£º<br />
+å¯èƒ½æ¯”è¾ƒéš¾ä»¥ç†è§£ï¼š<br />
 ```cpp
 [this]{return !Empty();}
 ```
-ÊÇC++11ÐÂÒýÈëµÄ¹¦ÄÜ£¬lambda±í´ïÊ½£¬ÊÇÒ»ÖÖÄäÃûº¯Êý¡£·½À¨ºÅÄÚ±íÊ¾²¶»ñ±äÁ¿¡£µ±lambda±í´ïÊ½·µ»ØtrueÊ±£¨¼´queue²»Îª¿Õ£©£¬waitº¯Êý»áËø¶¨mutex¡£µ±lambda±í´ïÊ½·µ»ØfalseÊ±£¬waitº¯Êý»á½âËømutexÍ¬Ê±»á½«µ±Ç°Ïß³ÌÖÃÓÚ×èÈû»òµÈ´ý×´Ì¬¡£
-»¹´æÔÚÁíÒ»ÖÖ¶ÁÐ´Ëø£¬µ«ÊÇ²¢Ã»ÓÐÒýÈëC++11£¬µ«ÊÇboost¿âÌá¹©ÁË¶ÔÓ¦µÄÊµÏÖ¡£¶ÁÐ´ËøÖ÷ÒªÊÊºÏÔÚÓÚ¹²ÏíÊý¾Ý¸üÐÂÆµÂÊ½ÏµÍ£¬µ«ÊÇ¶ÁÈ¡¹²ÏíÊý¾ÝÆµÂÊ½Ï¸ßµÄ³¡ºÏ¡£
+æ˜¯C++11æ–°å¼•å…¥çš„åŠŸèƒ½ï¼Œlambdaè¡¨è¾¾å¼ï¼Œæ˜¯ä¸€ç§åŒ¿åå‡½æ•°ã€‚æ–¹æ‹¬å·å†…è¡¨ç¤ºæ•èŽ·å˜é‡ã€‚å½“lambdaè¡¨è¾¾å¼è¿”å›žtrueæ—¶ï¼ˆå³queueä¸ä¸ºç©ºï¼‰ï¼Œwaitå‡½æ•°ä¼šé”å®šmutexã€‚å½“lambdaè¡¨è¾¾å¼è¿”å›žfalseæ—¶ï¼Œwaitå‡½æ•°ä¼šè§£é”mutexåŒæ—¶ä¼šå°†å½“å‰çº¿ç¨‹ç½®äºŽé˜»å¡žæˆ–ç­‰å¾…çŠ¶æ€ã€‚
+è¿˜å­˜åœ¨å¦ä¸€ç§è¯»å†™é”ï¼Œä½†æ˜¯å¹¶æ²¡æœ‰å¼•å…¥C++11ï¼Œä½†æ˜¯booståº“æä¾›äº†å¯¹åº”çš„å®žçŽ°ã€‚è¯»å†™é”ä¸»è¦é€‚åˆåœ¨äºŽå…±äº«æ•°æ®æ›´æ–°é¢‘çŽ‡è¾ƒä½Žï¼Œä½†æ˜¯è¯»å–å…±äº«æ•°æ®é¢‘çŽ‡è¾ƒé«˜çš„åœºåˆã€‚
