@@ -85,3 +85,7 @@ cond_.wait(lk, [this]{return !Empty();});
 ```
 是C++11新引入的功能，lambda表达式，是一种匿名函数。方括号内表示捕获变量。当lambda表达式返回true时（即queue不为空），wait函数会锁定mutex。当lambda表达式返回false时，wait函数会解锁mutex同时会将当前线程置于阻塞或等待状态。
 还存在另一种读写锁，但是并没有引入C++11，但是boost库提供了对应的实现。读写锁主要适合在于共享数据更新频率较低，但是读取共享数据频率较高的场合。
+
+******************
+### Reference:
+[std::unique_lock<std::mutex> or std::lock_guard<std::mutex>:question:](https://stackoverflow.com/questions/20516773/stdunique-lockstdmutex-or-stdlock-guardstdmutex)<br />
