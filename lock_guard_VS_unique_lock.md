@@ -88,4 +88,4 @@ cond_.wait(lk, [this]{return !Empty();});
 
 ******************
 ### Reference:
-[std::unique_lock\<std::mutex\> or std::lock_guard\<std::mutex\>:question:](https://stackoverflow.com/questions/20516773/stdunique-lockstdmutex-or-stdlock-guardstdmutex)<br />
+[StackOverflow : std::unique_lock\<std::mutex\> or std::lock_guard\<std::mutex\>:question:](https://stackoverflow.com/questions/20516773/stdunique-lockstdmutex-or-stdlock-guardstdmutex)<br />
