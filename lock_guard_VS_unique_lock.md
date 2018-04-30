@@ -15,17 +15,31 @@ C++多线程编程中通常会对共享的数据进行写保护，以防止多�
 #include <mutex>                // for mutex
 #include <condition_variable>   // for condition_variable
 #include <queue>                // for queue<>
+#include <thread>
+#include <vector>
 
 template <typename T>
 class ThreadSafeQueue{
 public:
          void Insert(T value);
-         void Popup(T &value);
+         T Popup();
          bool Empty() const;
+         ThreadSafeQueue(size_t threadNum) {
+             for (size_t i = 0; i != threadNum; ++i) {
+                 Pool.emplace_back([this]{
+                     printf("Popup()...%d\n", Popup());
+                  });
+             }
+         }
+
+         // 线程池
+        std::vector<std::thread> Pool;
 private:
        mutable std::mutex mut_;
        std::queue<T> que_;
        std::condition_variable cond_;
+
+
 };
 template <typename T>
 void ThreadSafeQueue<T>::Insert(T value){
@@ -34,15 +48,14 @@ void ThreadSafeQueue<T>::Insert(T value){
     cond_.notify_one();
 }
 
-
 template <typename T>
-void ThreadSafeQueue<T>::Popup(T &value){
+T ThreadSafeQueue<T>::Popup(){
     std::unique_lock<std::mutex> lk(mut_);
     cond_.wait(lk, [this]{return !que_.empty();});
-    value = que_.front();
+    T &value = que_.front();
     que_.pop();
+    return value;
 }
-
 
 template <typename T>
 bool ThreadSafeQueue<T>::Empty() const{
@@ -56,16 +69,17 @@ bool ThreadSafeQueue<T>::Empty() const{
 
 int main(int argc, char *argv[])
 {
-    ThreadSafeQueue<int> thrd;
+    ThreadSafeQueue<int> obj(10);
     for (size_t i = 0; i != 10; ++i) {
-        thrd.Insert(i);
+        obj.Insert(i);
     }
-    for (size_t i = 0; i != 10; ++i) {
-        int j;
-        if (!thrd.Empty()) {
-            thrd.Popup(j);
-            printf("%d\n", j);
-        }
+
+    for (auto&& t : obj.Pool) {
+            t.join();
+    }
+
+    if (obj.Empty()) {
+        printf("obj is empty...\n");
     }
 
     return 0;
