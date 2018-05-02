@@ -1,4 +1,7 @@
-* 在chrome首页的链接 `https://www.google.com/chrome/browser/desktop/index.html` 后加上「?system=true&standalone=1」，一般默认下载稳定版，如果需要指定下载的版本就再加上`&extra=版本名称`（版本有stablechannel、betachannel、devchannel、canarychannel）。修改完链接后回车，就能下载离线包了。
+Chrome离线安装包
+==============
+
+### 在chrome首页的链接 `https://www.google.com/chrome/browser/desktop/index.html` 后加上「?system=true&standalone=1」，一般默认下载稳定版，如果需要指定下载的版本就再加上`&extra=版本名称`（版本有stablechannel、betachannel、devchannel、canarychannel）。修改完链接后回车，就能下载离线包了。
 
 *************
 2016.04.29更新 :<br />
@@ -32,7 +35,7 @@ chrome链接模式仅供抛砖引玉，欢迎发掘更适合自己的方法下�
 
 * 作者：DevNull
 * 链接：
- * https://www.zhihu.com/question/19981495/answer/83273865
- * https://www.zhihu.com/question/19981495/answer/94373758
+    * https://www.zhihu.com/question/19981495/answer/83273865
+    * https://www.zhihu.com/question/19981495/answer/94373758
 * 来源：知乎
 * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
