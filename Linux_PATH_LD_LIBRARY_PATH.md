@@ -1,6 +1,6 @@
 linux 环境变量设置方法总结（PATH／LD_LIBRARY_PATH）
 ==============
-### PATH:  可执行程序的查找路径
+## PATH:  可执行程序的查找路径
 查看当前环境变量:
 
 echo $PATH
@@ -15,7 +15,7 @@ echo $PATH
 
 * source .bashrc  (Source命令也称为“点命令”，也就是一个点符号（.）。source命令通常用于重新执行刚修改的初始化文件，使之立即生效，而不必注销并重新登录)
 
-### LD_LIBRARY_PATH: 动态库的查找路径
+## LD_LIBRARY_PATH: 动态库的查找路径
 设置：<br />
 
 #### 方法一： export  LD_LIBRARY_PATH=LD_LIBRARY_PATH:/XXX 但是登出后就失效
