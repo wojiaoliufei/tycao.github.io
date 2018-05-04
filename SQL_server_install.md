@@ -32,3 +32,5 @@ Windows下安装SQL Server 2014，并且打开1433端口
 
 
 *************************
+继 [上篇博客教程：CentOS7下安装FreeTDS远程访问Windows下的SQl Server](https://github.com/tycao/tycao.github.io/blob/master/FreeTDS_ON_CentOS7.md) ，现在FreeTDS和SQL Server都已经安装好了。万事俱备，欧文嗯可以通过Linux远程访问（增删改查）Windows下的SQL Server了！！！<br />
+!["sql_server_07"](https://github.com/tycao/tycao.github.io/blob/master/src/sql_server_07.png "sql_server_07")<br /><br /><br />
