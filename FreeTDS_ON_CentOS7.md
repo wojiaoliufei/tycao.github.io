@@ -79,4 +79,4 @@ tsql -H 10.187.1.1 -U sa -p 1433 -P password
 [Linux下使用C/C++访问数据库——SQL Server篇](https://blog.csdn.net/xingxu0207/article/details/75027542)<br />
 [Linux下FreeTDS使用及问题总结](http://m.itboth.com/d/Mb6Nbe/tsql-sqlserver-linux-freetds)<br />
 [UnixODBC联合FreeTDS连接SQL Server 2000失败问题解决](http://china.ygw.blog.163.com/blog/static/6871974620117110752710/)<br />
-[linux平台下通过FreeTDS编译C++程序连接SQL Server](https://blog.csdn.net/neighbor1000/article/details/8824084)<br />
+[linux平台下通过FreeTDS编译C++程序连接SQL Server---------包含Linux下utf8和gbk相互转码的源码](https://blog.csdn.net/neighbor1000/article/details/8824084)<br />
