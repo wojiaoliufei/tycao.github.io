@@ -54,9 +54,11 @@ connect timeout = 600
 tds version = 8.0
 text size = 20971560
 ```
+!["freetds_conf"](https://github.com/tycao/tycao.github.io/blob/master/src/freetds_conf.PNG "freetds_conf")<br />
 然后终端运行如下命令测试远程连接windows SQL Server:<br />
 **tsql -S TestFreeTDS**
-tsql_S.PNG
+!["tsql_S"](https://github.com/tycao/tycao.github.io/blob/master/src/tsql_S.PNG "tsql_S")<br />
+
 
 * `/usr/local/freetds/etc/freetds.conf` 的配置 `[global]` 节点：
  * 注释掉 `[global]`下的 `; tds version = 4.2`
@@ -70,7 +72,7 @@ tsql_S.PNG
 ```shell
 tsql -H 10.187.1.1 -U sa -p 1433 -P password
 ```
-tsql_H
+!["tsql_H"](https://github.com/tycao/tycao.github.io/blob/master/src/tsql_S.PNG "tsql_H")<br />
 
 **************
 ### 参考链接：
