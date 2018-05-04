@@ -39,7 +39,7 @@ export LD_LIBRARY_PATH
 这么作的目的是为了避免加载FreeTds库文件加载不上的情况。 解决了每次运行程序时报错：`failed loading shared library` <br />
 这样，就把freetds添加到系统环境变量里面了。
 
-* `/usr/local/freetds/etc/freetds.conf` 的配置新的节点（很重要）
+* `/usr/local/freetds/etc/freetds.conf` 的配置新的节点（很重要）<br />
 **此步骤用来测试命令行可以远程连接**
 ```shell
 vim /usr/local/freetds/etc/freetds.conf
@@ -54,9 +54,9 @@ connect timeout = 600
 tds version = 8.0
 text size = 20971560
 ```
-!["freetds_conf"](https://github.com/tycao/tycao.github.io/blob/master/src/freetds_conf.PNG "freetds_conf")<br />
-然后终端运行如下命令测试远程连接windows SQL Server:<br />
-**tsql -S TestFreeTDS -U username -P passwd** <br />
+!["freetds_conf"](https://github.com/tycao/tycao.github.io/blob/master/src/freetds_conf.PNG "freetds_conf")<br /><br />
+然后终端运行如下命令测试远程连接windows SQL Server:<br /><br />
+**tsql -S TestFreeTDS -U username -P passwd** <br /><br />
 !["tsql_S"](https://github.com/tycao/tycao.github.io/blob/master/src/tsql_S.PNG "tsql_S")<br />
 
 
