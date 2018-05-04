@@ -56,17 +56,17 @@ text size = 20971560
 ```
 !["freetds_conf"](https://github.com/tycao/tycao.github.io/blob/master/src/freetds_conf.PNG "freetds_conf")<br />
 然后终端运行如下命令测试远程连接windows SQL Server:<br />
-**tsql -S TestFreeTDS**
+**tsql -S TestFreeTDS** <br />
 !["tsql_S"](https://github.com/tycao/tycao.github.io/blob/master/src/tsql_S.PNG "tsql_S")<br />
 
 
 * `/usr/local/freetds/etc/freetds.conf` 的配置 `[global]` 节点：
- * 注释掉 `[global]`下的 `; tds version = 4.2`
- * 添加新的如下两行内容
-  * tds version = 8.0
-  * port = 1433
- * 注视掉 `; dump file = /tmp/freetds.log`
- * 重新添加一行 `dump file = /tmp/freetds.log` ： 可以通过`/tmp/freetds.log`查看运行freetds时的状态
+	* 注释掉 `[global]`下的 `; tds version = 4.2`
+	* 添加新的如下两行内容
+		* tds version = 8.0
+		* port = 1433
+	* 注视掉 `; dump file = /tmp/freetds.log`
+	* 重新添加一行 `dump file = /tmp/freetds.log` ： 可以通过`/tmp/freetds.log`查看运行freetds时的状态
 
 运行如下命令，测试远程连接Windwos Server：<br />
 ```shell
