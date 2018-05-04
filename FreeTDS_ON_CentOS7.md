@@ -56,7 +56,7 @@ text size = 20971560
 ```
 !["freetds_conf"](https://github.com/tycao/tycao.github.io/blob/master/src/freetds_conf.PNG "freetds_conf")<br />
 然后终端运行如下命令测试远程连接windows SQL Server:<br />
-**tsql -S TestFreeTDS** <br />
+**tsql -S TestFreeTDS -U username -P passwd** <br />
 !["tsql_S"](https://github.com/tycao/tycao.github.io/blob/master/src/tsql_S.PNG "tsql_S")<br />
 
 
