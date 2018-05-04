@@ -27,7 +27,7 @@ Windows下安装SQL Server 2014，并且打开1433端口
 **运行命令： `netstat -a`** <br />
 !["sql_server_05"](https://github.com/tycao/tycao.github.io/blob/master/src/sql_server_05.png "sql_server_05")<br /><br /><br />
 
-* 在虚拟机运行以下命令，检测 `是否能够连接物理机的1433端口：`
+* 在虚拟机运行以下命令，检测 `是否能够连接物理机的1433端口：` <br />
 !["sql_server_06"](https://github.com/tycao/tycao.github.io/blob/master/src/sql_server_06.png "sql_server_06")<br /><br /><br />
 
 
