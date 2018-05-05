@@ -596,6 +596,10 @@ total 0
 * 修改smb.conf文件： `vim /etc/samba/smb.conf`  <br />
 !["samba_05"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
+* Windows下访问Linux上的共享文件夹<br />
+!["samba_13.png"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_13.png "samba_13.png")<br /><br />
+
+
 ***************
 ## UBuntu16.04 64bit
 !["samba_02"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_02.jpg "samba_02")<br /><br />
