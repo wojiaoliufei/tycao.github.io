@@ -51,75 +51,148 @@
 				document.getElementById("blog_id").style.backgroundColor="yellow";
 			}
 			function hide() {
-				document.getElementById("div1").style.display="none";
+				document.getElementById("globalNav").style.display="none";
 			}
 			function show() {
-				document.getElementById("div1").style.display="block";
+				document.getElementById("globalNav").style.display="block";
 			}
 		</script>
 		
-	</head>
-	<body>
-		<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
-		<div id="div1">
-			<ul>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Test_MySQL_Performance.md"> C++测试MySQL的插入操作性能 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/test_SQLite_performance.md"> C++测试SQlite的插入操作性能 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/web_server.md" >C++实现轻量型Web服务--HTTP框架--2018/04/23</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/DesignPattern" >设计模式的C++实现--目录</a></h3></li>
-				<!--<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/deploy_ShadowsSocks_in_Aliyun.md" > 如何在阿里云服务器上安装SS </a></h3></li>-->
-				<!--<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/cloud_aliyun.md" > 在阿里云上安装shadowsocks(最新版本) </a></h3></li>-->
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/protocol_buffer.md" > Windows下安装Protocol Buffer(Google 开源的数据传输格式)</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/install_build_protobuf_on_CentOS7.md" > Linux下安装Protocol Buffer</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Network_byte_order.md" > 网络字节序_主机字节序_大端_小端 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_Protocol.md" > HTTP原理解析</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_protocol_02.md" > HTTP原理再解析</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/TCP_three_times_handshake.md" > TCP三次握手和四次挥手</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/merge_txt_file_in_one_directory.md" >合并指定目录下的所有txt文件内容--2018/04/06</a></h3></li>
-				<!--<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool.md" >C++实现线程池--2018/04/08</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool2.md" >C++11实现线程池--2018/04/08</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/lock_guard_VS_unique_lock.md" >C++11 std::unique_lock与std::lock_guard区别--2018/04/30</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool0501.md" >基于C++11的线程池(threadpool),简洁且可以带任意多的参数--2018/05/01</a></h3></li>-->
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Mymemcpy_Mystrcpy.md" > 定义自己的内存拷贝（以及字符串拷贝）函数</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/cpp_strtok.md" >C++实现：使用指定字符/子字符串，分割字符串</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/visualstudio_2017_community.md" >如何正确安装Visual Studio 2017--2018/04/13</a></h3></li>
-				<!--<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/mysql_install.md" >Linux下安装MySQL--2018/04/14</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/upgrade_gcc_on_Linux.md" >Linux下升级gcc版本--2018/04/15</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/download_pic_from_zhihu_with_shell.md" >Linux下使用shell爬取知乎图片--2018/04/19</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/tomcat_monitor_script.md" >Linux下监控Tomcat运行状态的简单的shell脚本--2018/04/19</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/service_script_creation_on_ubuntu.md" >在UBuntu上编写服务脚本--2018/04/20</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/FreeTDS_ON_CentOS7.md"> CentOS7下安装FreeTDS远程访问Windows下的SQl Server --2018/05/04 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/samba_install_on_linux.md"> Linux下安装samba （包括 UBuntu16.04 和 CentOS7 ）--2018/05/05 </a></h3></li>-->
-				<li><h3><a href="https://github.com/tycao/tycao.github.io/blob/master/SQL_server_install.md">Windows下安装SQL Server 2014，并且打开1433端口</a></h3></li>
-				<li><h3><a href="https://github.com/tycao/tycao.github.io/blob/master/Chrome_offline_install.md">Chrome离线安装包下载--2018/05/02</a></h3></li>
-				<li><h3><a href = "https://www.cnblogs.com/chenpi/p/5136483.html">经典：MySQL的存储过程！值得学习！</a></h3></li>
-				
-			</ul>
-		
-			<!--标题2-->
-			<h2>Linux</h2>
-			<ul>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/mysql_install.md" >Linux下安装MySQL--2018/04/14</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/upgrade_gcc_on_Linux.md" >Linux下升级gcc版本--2018/04/15</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/download_pic_from_zhihu_with_shell.md" >Linux下使用shell爬取知乎图片--2018/04/19</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/tomcat_monitor_script.md" >Linux下监控Tomcat运行状态的简单的shell脚本--2018/04/19</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/service_script_creation_on_ubuntu.md" >在UBuntu上编写服务脚本--2018/04/20</a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/FreeTDS_ON_CentOS7.md"> CentOS7下安装FreeTDS远程访问Windows下的SQl Server --2018/05/04 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/samba_install_on_linux.md"> Linux下安装samba （包括 UBuntu16.04 和 CentOS7 ）--2018/05/05 </a></h3></li>
-				<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/root_delete_var_lib_dpkg.md"> 使用root权限，删除了 /var/lib/dpkg, 该如何恢复？--2018/05/05 </a></h3></li>
-				
-			</ul>
-			<h2>C++ 实现线程池</h2>
-			<ul>
-					<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool.md" >C++实现线程池--2018/04/08</a></h3></li>
-					<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool2.md" >C++11实现线程池--2018/04/08</a></h3></li>
-					<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/lock_guard_VS_unique_lock.md" >C++11 std::unique_lock与std::lock_guard区别--2018/04/30</a></h3></li>
-					<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool0501.md" >基于C++11的线程池(threadpool),简洁且可以带任意多的参数--2018/05/01</a></h3></li>
-			</ul>
-		</div>
+		<style type="text/css">
+			/*设置导航每个主菜单的样式*/
+			.main_nav{
+				margin:auto 10px;
+				display:block;
+				/*width:1000px;*/
+				padding:10px;   
+				font-weight:bold;   
+				background-color:#BADFF2;
+			}
+			
+			/*每个连接前面不会有 . 存在 */
+			li{list-style:none;}
+			
+			/*导航中每个子菜单的样式*/
+			#globalNav ul li a{
+				margin:auto 10px;
+				display:block;
+				/*width:400px;*/
+				/*color:#fff;*/
+				font-weight:bold;
+				text-decoration:none;
+			}
+			
+			/*子菜单中每个链接的颜色*/
+			/*#globalNav li ul li a{
+				background:#6DBBE1;
+			}*/
+			
+			/*子菜单 ： 鼠标经过的颜色*/ 
+			#globalNav li ul li a:hover{
+				background:#BCF2F0;  
+			}
+			
+			/*主菜单 ： 鼠标经过的颜色*/ 
+			#globalNav li a:hover {
+				background:#BCF2F0; 
+			}
+			
+			.fuck {
+				width: 1000px;
+			}
+		</style>
+		<script type="text/javascript" >
+			function initTree(t) {
+				var tree=document.getElementById(t);//生成树
+				tree.style.display="none";//设置样式为隐藏形式，不显示
+				var lis=tree.getElementsByTagName("li");
+				for(var i=0;i<lis.length;i++) {  //取出主要的导航栏
+					lis[i].id="li"+i;
+					var uls=lis[i].getElementsByTagName("ul"); //子导航栏
+					if(uls.length!=0) {
+						uls[0].id="ul"+i;
+						uls[0].style.display="none";
+						var as=lis[i].getElementsByTagName("a"); //子导航栏的内容
+						as[0].id="a"+i;
+						as[0].className="folder";
+						as[0].href="#this";
+						as[0].tget=uls[0];
+						as[0].onclick=function() {
+							openTag(this,this.tget);
+						}
+					}
+				}
+				tree.style.display="block";
+			}
+			function openTag(a,t) {
+				if(t.style.display=="block") { //点击一下展开，再点击一下折叠
+					t.style.display="none";
+					a.className="folder";
+				} else {
+					t.style.display="block";
+					a.className="";
+				}
+			}
+			window.onload=function() {
+				initTree("globalNav");
+			}
+		</script>
+</head>
+<body id="index">
+	<h1 id="blog_id" class="blog" onmouseover="changeColor2()" onmouseout="changeColor3()" >博客文章列表:</h1>
+<ul id="globalNav">
+  <li class="main_nav"><a>C++</a>
+	<ul>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Test_MySQL_Performance.md"> C++测试MySQL的插入操作性能 </a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/test_SQLite_performance.md"> C++测试SQlite的插入操作性能 </a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/web_server.md" >C++实现轻量型Web服务--HTTP框架--2018/04/23</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/DesignPattern" >设计模式的C++实现--目录</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/protocol_buffer.md" > Windows下安装Protocol Buffer(Google 开源的数据传输格式)</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/install_build_protobuf_on_CentOS7.md" > Linux下安装Protocol Buffer</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Network_byte_order.md" > 网络字节序_主机字节序_大端_小端 </a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_Protocol.md" > HTTP原理解析</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/HTTP_protocol_02.md" > HTTP原理再解析</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/TCP_three_times_handshake.md" > TCP三次握手和四次挥手</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/merge_txt_file_in_one_directory.md" >合并指定目录下的所有txt文件内容--2018/04/06</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/Mymemcpy_Mystrcpy.md" > 定义自己的内存拷贝（以及字符串拷贝）函数</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/cpp_strtok.md" >C++实现：使用指定字符/子字符串，分割字符串</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/visualstudio_2017_community.md" >如何正确安装Visual Studio 2017--2018/04/13</a></h3></li>
+		<li><h3><a href="https://github.com/tycao/tycao.github.io/blob/master/SQL_server_install.md">Windows下安装SQL Server 2014，并且打开1433端口</a></h3></li>
+		<li><h3><a href="https://github.com/tycao/tycao.github.io/blob/master/Chrome_offline_install.md">Chrome离线安装包下载--2018/05/02</a></h3></li>
+		<li><h3><a href = "https://www.cnblogs.com/chenpi/p/5136483.html">经典：MySQL的存储过程！值得学习！</a></h3></li>
+	</ul>
+  </li>
+  <li class="main_nav"><a>Linux</a>
+	<ul>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/mysql_install.md" >Linux下安装MySQL--2018/04/14</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/upgrade_gcc_on_Linux.md" >Linux下升级gcc版本--2018/04/15</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/download_pic_from_zhihu_with_shell.md" >Linux下使用shell爬取知乎图片--2018/04/19</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/tomcat_monitor_script.md" >Linux下监控Tomcat运行状态的简单的shell脚本--2018/04/19</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/service_script_creation_on_ubuntu.md" >在UBuntu上编写服务脚本--2018/04/20</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/FreeTDS_ON_CentOS7.md"> CentOS7下安装FreeTDS远程访问Windows下的SQl Server --2018/05/04 </a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/samba_install_on_linux.md"> Linux下安装samba （包括 UBuntu16.04 和 CentOS7 ）--2018/05/05 </a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/root_delete_var_lib_dpkg.md"> 使用root权限，删除了 /var/lib/dpkg, 该如何恢复？--2018/05/05 </a></h3></li>
+	</ul>
+  </li>
+  <li class="main_nav"><a>C++ 实现线程池</a>
+	<ul>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool.md" >C++实现线程池--2018/04/08</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool2.md" >C++11实现线程池--2018/04/08</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/lock_guard_VS_unique_lock.md" >C++11 std::unique_lock与std::lock_guard区别--2018/04/30</a></h3></li>
+		<li><h3><a href = "https://github.com/tycao/tycao.github.io/blob/master/ThreadPool0501.md" >基于C++11的线程池(threadpool),简洁且可以带任意多的参数--2018/05/01</a></h3></li>
+	</ul>
+  </li>
+  
+  <li class="main_nav"><a href="#">待续。。。</a>
+    <ul>
+      <!--TODO-->
+    </ul>
+  </li>
+  
+</ul>
 		<div align="center">
 			<button onclick="hide()" class="button">隐藏博客</button>
 			<button onclick="show()" class="button">显示博客</button>
 		</div>
-	</body>
+</body>
 </html>
