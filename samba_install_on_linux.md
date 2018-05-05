@@ -1,14 +1,14 @@
-LinuxÏÂ°²×°samba £¨°üÀ¨ `UBuntu16.04` ºÍ `CentOS7` £©
+Linuxä¸‹å®‰è£…samba ï¼ˆåŒ…æ‹¬ `UBuntu16.04` å’Œ `CentOS7` ï¼‰
 ===============
-**Ê±¼ä£º** 2018-05-05 18:00 <br />
-**¸Õ¸Õ17:00¿ªÊ¼Ğ´µ½17:50µÄÊ±ºò£¬`notepad++` ¿ÓµùµÄÒì³£ÍË³öÁË¡£»¹Ã»À´µÃ¼°pushµ½githubÉÏ£¬Ğ´µÄËùÓĞµÄÄÚÈİÈ«Ã»ÁË¡£ÔÙĞ´¾Í»¹ĞèÒªÒ»¸öĞ¡Ê±£¬ÒÑ¾­Ğ´ÁËÄÇÃ´¾Ã£¬ÓĞµãÀÛÁË¡£¾Í°Ñ°²×°µÄÕû¸ö¼ÇÂ¼ÌùÉÏÀ´°É~** <br />
+**æ—¶é—´ï¼š** 2018-05-05 18:00 <br />
+**åˆšåˆš17:00å¼€å§‹å†™åˆ°17:50çš„æ—¶å€™ï¼Œ`notepad++` å‘çˆ¹çš„å¼‚å¸¸é€€å‡ºäº†ã€‚è¿˜æ²¡æ¥å¾—åŠpushåˆ°githubä¸Šï¼Œå†™çš„æ‰€æœ‰çš„å†…å®¹å…¨æ²¡äº†ã€‚å†å†™å°±è¿˜éœ€è¦ä¸€ä¸ªå°æ—¶ï¼Œå·²ç»å†™äº†é‚£ä¹ˆä¹…ï¼Œæœ‰ç‚¹ç´¯äº†ã€‚å°±æŠŠå®‰è£…çš„æ•´ä¸ªè®°å½•è´´ä¸Šæ¥å§~** <br />
 
 ******************
-## »·¾³£º CentOS7 64bit
-### ×¢Òâ <br />
-* `netstat -anp | grep smb` »áµÃµ½samba·şÎñµÄ¶Ë¿Ú <br />
-* °²×°ºÃsambaÖ®ºó£¬ĞèÒªÔÚ `°¢ÀïÔÆ¿ØÖÆÌ¨ -> °²È«×é` ÄÇÀïÌí¼Ó139ºÍ445¶Ë¿Ú£¬ÄÇÑùWindows²ÅÄÜ·ÃÎÊLinuxÏÂµÄ¹²ÏíÎÄ¼ş¼Ğ¡£ <br />
-* CentOS 7 ÏÂ£¬samba·şÎñ²»ÄÜÍ¨¹ıÄäÃû·ÃÎÊ¹²ÏíÎÄ¼ş¼Ğ¡£Òò´ËĞèÒª´´½¨sambaÓÃ»§ºÍÃÜÂë¡£ ×îÖØÒªµÄÒ»²½£¡ <br />
+## ç¯å¢ƒï¼š CentOS7 64bit
+### æ³¨æ„ <br />
+* `netstat -anp | grep smb` ä¼šå¾—åˆ°sambaæœåŠ¡çš„ç«¯å£ <br />
+* å®‰è£…å¥½sambaä¹‹åï¼Œéœ€è¦åœ¨ `é˜¿é‡Œäº‘æ§åˆ¶å° -> å®‰å…¨ç»„` é‚£é‡Œæ·»åŠ 139å’Œ445ç«¯å£ï¼Œé‚£æ ·Windowsæ‰èƒ½è®¿é—®Linuxä¸‹çš„å…±äº«æ–‡ä»¶å¤¹ã€‚ <br />
+* CentOS 7 ä¸‹ï¼ŒsambaæœåŠ¡ä¸èƒ½é€šè¿‡åŒ¿åè®¿é—®å…±äº«æ–‡ä»¶å¤¹ã€‚å› æ­¤éœ€è¦åˆ›å»ºsambaç”¨æˆ·å’Œå¯†ç ã€‚ æœ€é‡è¦çš„ä¸€æ­¥ï¼ <br />
 ```shell
 [root@iZt4n12effj3d79928coatZ ~]# sudo smbpasswd -L -a root
 New SMB password:
@@ -18,20 +18,20 @@ Added user root.
 Enabled user root.
 ```
 
-## °²×°µÄÕû¸ö¹ı³Ì
+## å®‰è£…çš„æ•´ä¸ªè¿‡ç¨‹
 ```shell
-     ©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
-     ©¦                        ? MobaXterm 10.4 ?                          ©¦
-     ©¦            (SSH client, X-server and networking tools)             ©¦
-     ©¦                                                                    ©¦
-     ©¦ ? SSH session to root@47.88.218.246                                ©¦
-     ©¦   ? SSH compression : ?                                            ©¦
-     ©¦   ? SSH-browser     : ?                                            ©¦
-     ©¦   ? X11-forwarding  : ?  (disabled or not supported by server)     ©¦
-     ©¦   ? DISPLAY         : 192.168.1.107:0.0                            ©¦
-     ©¦                                                                    ©¦
-     ©¦ ? For more info, ctrl+click on help or visit our website           ©¦
-     ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+     â”‚                        ? MobaXterm 10.4 ?                          â”‚
+     â”‚            (SSH client, X-server and networking tools)             â”‚
+     â”‚                                                                    â”‚
+     â”‚ ? SSH session to root@47.88.218.246                                â”‚
+     â”‚   ? SSH compression : ?                                            â”‚
+     â”‚   ? SSH-browser     : ?                                            â”‚
+     â”‚   ? X11-forwarding  : ?  (disabled or not supported by server)     â”‚
+     â”‚   ? DISPLAY         : 192.168.1.107:0.0                            â”‚
+     â”‚                                                                    â”‚
+     â”‚ ? For more info, ctrl+click on help or visit our website           â”‚
+     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Last failed login: Sat May  5 14:41:34 CST 2018 from 97.65.64.222 on ssh:notty
 There were 4 failed login attempts since the last successful login.
@@ -348,21 +348,21 @@ samba-4.6.2-12.el7_4.x86_64
 [root@iZt4n12effj3d79928coatZ ~]#
 [root@iZt4n12effj3d79928coatZ ~]#
 [root@iZt4n12effj3d79928coatZ ~]# systemctl status smb
-¡ñ smb.service - Samba SMB Daemon
+â— smb.service - Samba SMB Daemon
    Loaded: loaded (/usr/lib/systemd/system/smb.service; disabled; vendor preset: disabled)
    Active: inactive (dead)
 [root@iZt4n12effj3d79928coatZ ~]# systemctl start smb
 [root@iZt4n12effj3d79928coatZ ~]# systemctl status smb
-¡ñ smb.service - Samba SMB Daemon
+â— smb.service - Samba SMB Daemon
    Loaded: loaded (/usr/lib/systemd/system/smb.service; disabled; vendor preset: disabled)
    Active: active (running) since Sat 2018-05-05 16:14:15 CST; 6s ago
  Main PID: 12503 (smbd)
    Status: "smbd: ready to serve connections..."
    CGroup: /system.slice/smb.service
-           ©À©¤12503 /usr/sbin/smbd
-           ©À©¤12504 /usr/sbin/smbd
-           ©À©¤12505 /usr/sbin/smbd
-           ©¸©¤12506 /usr/sbin/smbd
+           â”œâ”€12503 /usr/sbin/smbd
+           â”œâ”€12504 /usr/sbin/smbd
+           â”œâ”€12505 /usr/sbin/smbd
+           â””â”€12506 /usr/sbin/smbd
 
 May 05 16:14:15 iZt4n12effj3d79928coatZ systemd[1]: Starting Samba SMB Daemon...
 May 05 16:14:15 iZt4n12effj3d79928coatZ smbd[12503]: [2018/05/05 16:14:15.571767,  0] ../lib/util/become_daemon.c:124(daemon_ready)
@@ -391,16 +391,16 @@ unix  2      [ ]         DGRAM                    922282   12506/smbd           
 unix  2      [ ]         DGRAM                    922266   12503/smbd
 [root@iZt4n12effj3d79928coatZ ~]#
 [root@iZt4n12effj3d79928coatZ ~]# systemctl status smb
-¡ñ smb.service - Samba SMB Daemon
+â— smb.service - Samba SMB Daemon
    Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled; vendor preset: disabled)
    Active: active (running) since Sat 2018-05-05 16:14:15 CST; 6min ago
  Main PID: 12503 (smbd)
    Status: "smbd: ready to serve connections..."
    CGroup: /system.slice/smb.service
-           ©À©¤12503 /usr/sbin/smbd
-           ©À©¤12504 /usr/sbin/smbd
-           ©À©¤12505 /usr/sbin/smbd
-           ©¸©¤12506 /usr/sbin/smbd
+           â”œâ”€12503 /usr/sbin/smbd
+           â”œâ”€12504 /usr/sbin/smbd
+           â”œâ”€12505 /usr/sbin/smbd
+           â””â”€12506 /usr/sbin/smbd
 
 May 05 16:14:15 iZt4n12effj3d79928coatZ systemd[1]: Starting Samba SMB Daemon...
 May 05 16:14:15 iZt4n12effj3d79928coatZ smbd[12503]: [2018/05/05 16:14:15.571767,  0] ../lib/util/become_daemon.c:124(daemon_ready)
@@ -469,16 +469,16 @@ total 24
 [root@iZt4n12effj3d79928coatZ ~]#
 [root@iZt4n12effj3d79928coatZ ~]#
 [root@iZt4n12effj3d79928coatZ ~]# systemctl status smb
-¡ñ smb.service - Samba SMB Daemon
+â— smb.service - Samba SMB Daemon
    Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled; vendor preset: disabled)
    Active: active (running) since Sat 2018-05-05 16:14:15 CST; 15min ago
  Main PID: 12503 (smbd)
    Status: "smbd: ready to serve connections..."
    CGroup: /system.slice/smb.service
-           ©À©¤12503 /usr/sbin/smbd
-           ©À©¤12504 /usr/sbin/smbd
-           ©À©¤12505 /usr/sbin/smbd
-           ©¸©¤12506 /usr/sbin/smbd
+           â”œâ”€12503 /usr/sbin/smbd
+           â”œâ”€12504 /usr/sbin/smbd
+           â”œâ”€12505 /usr/sbin/smbd
+           â””â”€12506 /usr/sbin/smbd
 
 May 05 16:14:15 iZt4n12effj3d79928coatZ systemd[1]: Starting Samba SMB Daemon...
 May 05 16:14:15 iZt4n12effj3d79928coatZ smbd[12503]: [2018/05/05 16:14:15.571767,  0] ../lib/util/become_daemon.c:124(daemon_ready)
@@ -490,16 +490,16 @@ May 05 16:29:20 iZt4n12effj3d79928coatZ smbd[12604]: [2018/05/05 16:29:20.870280
 May 05 16:29:20 iZt4n12effj3d79928coatZ smbd[12604]:   Global parameter security found in service section!
 [root@iZt4n12effj3d79928coatZ ~]# systemctl restart smb
 [root@iZt4n12effj3d79928coatZ ~]# systemctl status smb
-¡ñ smb.service - Samba SMB Daemon
+â— smb.service - Samba SMB Daemon
    Loaded: loaded (/usr/lib/systemd/system/smb.service; enabled; vendor preset: disabled)
    Active: active (running) since Sat 2018-05-05 16:29:27 CST; 1s ago
  Main PID: 12617 (smbd)
    Status: "smbd: ready to serve connections..."
    CGroup: /system.slice/smb.service
-           ©À©¤12617 /usr/sbin/smbd
-           ©À©¤12618 /usr/sbin/smbd
-           ©À©¤12619 /usr/sbin/smbd
-           ©¸©¤12620 /usr/sbin/smbd
+           â”œâ”€12617 /usr/sbin/smbd
+           â”œâ”€12618 /usr/sbin/smbd
+           â”œâ”€12619 /usr/sbin/smbd
+           â””â”€12620 /usr/sbin/smbd
 
 May 05 16:29:27 iZt4n12effj3d79928coatZ systemd[1]: Starting Samba SMB Daemon...
 May 05 16:29:27 iZt4n12effj3d79928coatZ smbd[12614]: [2018/05/05 16:29:27.576182,  0] ../lib/param/loadparm.c:1809(lpcfg_do_service_parameter)
@@ -533,7 +533,7 @@ New SMB password:
 Retype new SMB password:
 Failed to find entry for user root.
 [root@iZt4n12effj3d79928coatZ ~]# mkdir /etc/samba/smbpasswd
-mkdir: cannot create directory ¡®/etc/samba/smbpasswd¡¯: File exists
+mkdir: cannot create directory â€˜/etc/samba/smbpasswdâ€™: File exists
 [root@iZt4n12effj3d79928coatZ ~]#  /etc/samba/smbusers
 -bash: /etc/samba/smbusers: No such file or directory
 [root@iZt4n12effj3d79928coatZ ~]# mkdir  /etc/samba/smbusers
@@ -582,16 +582,16 @@ total 0
 [root@iZt4n12effj3d79928coatZ ~]#
 ```
 
-* °²×° `samba`
+* å®‰è£… `samba`
 !["samba_01"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
-* ²é¿´samba¶Ë¿Ú£º <br />
+* æŸ¥çœ‹sambaç«¯å£ï¼š <br />
 !["samba_03"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
-* ¿ªÆô `samba` ·şÎñ <br />
+* å¼€å¯ `samba` æœåŠ¡ <br />
 !["samba_04"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
-* ĞŞ¸Äsmb.confÎÄ¼ş£º `vim /etc/samba/smb.conf`  <br />
+* ä¿®æ”¹smb.confæ–‡ä»¶ï¼š `vim /etc/samba/smb.conf`  <br />
 !["samba_05"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
 ***************
@@ -601,6 +601,6 @@ total 0
 
 
 ****************
-### ²Î¿¼ÎÄµµ£º<br />
-[CentOS 7ÏÂSamba·şÎñÆ÷µÄ°²×°ÓëÅäÖÃ](http://www.cnblogs.com/muscleape/p/6385583.html)<br />
-[CentOS7ĞèÒª´´½¨sambaÓÃ»§ºÍÃÜÂë²ÅÄÜ·ÃÎÊLinux¹²ÏíÎÄ¼ş¼Ğ](https://ubuntuforums.org/showthread.php?t=1474213)<br />
+### å‚è€ƒæ–‡æ¡£ï¼š<br />
+[CentOS 7ä¸‹SambaæœåŠ¡å™¨çš„å®‰è£…ä¸é…ç½®](http://www.cnblogs.com/muscleape/p/6385583.html)<br />
+[CentOS7éœ€è¦åˆ›å»ºsambaç”¨æˆ·å’Œå¯†ç æ‰èƒ½è®¿é—®Linuxå…±äº«æ–‡ä»¶å¤¹](https://ubuntuforums.org/showthread.php?t=1474213)<br />
