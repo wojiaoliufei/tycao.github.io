@@ -600,7 +600,58 @@ total 0
 
 
 
+******************
+## CentOS7安装 `samba-client`
+```shell
+yum install samba-client
+```
+!["samba_06"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_06.png "samba_06")<br /><br />
+
+
+## UBuntu16.04 安装 `samba-client`
+```shell
+sudo apt-get install samba-client
+```
+
+## smbclient命令行用法 <br /><br />
+[smbclient命令行用法](https://blog.csdn.net/smstong/article/details/4977976)<br /><br />
+```shell
+1，列出某个IP地址所提供的共享文件夹 
+smbclient -L 198.168.0.1 -U username%password 
+
+2,像FTP客户端一样使用smbclient 
+smbclient //192.168.0.1/tmp -U username%password
+执行smbclient命令成功后，进入smbclient环境，出现提示符： smb:/> 这时输入？会看到支持的命令
+这里有许多命令和ftp命令相似，如cd 、lcd、get、megt、put、mput等。通过这些命令，我们可以访问远程主机的共享资源。 
+
+3,直接一次性使用smbclient命令 
+smbclient -c "ls" //192.168.0.1/tmp -U username%password
+和 
+smbclient //192.168.0.1/tmp -U username%password
+smb:/>ls 
+功能一样的 
+
+例，创建一个共享文件夹 
+smbclient -c "mkdir share1" //192.168.0.1/tmp -U username%password 
+如果用户共享//192.168.0.1/tmp的方式是只读的，会提示 
+NT_STATUS_ACCESS_DENIED making remote directory /share1 
+
+4，除了使用smbclient，还可以通过mount和smbcount挂载远程共享文件夹 
+挂载 mount -t cifs -o username=administrator,password=123456 //192.168.0.1/tmp /mnt/tmp 
+取消挂载 umount /mnt/tmp
+```
+
 ****************
 ### 参考文档：<br />
 [CentOS 7下Samba服务器的安装与配置](http://www.cnblogs.com/muscleape/p/6385583.html)<br />
 [CentOS7需要创建samba用户和密码才能访问Linux共享文件夹](https://ubuntuforums.org/showthread.php?t=1474213)<br />
+
+
+
+
+
+***********
+!["samba_07"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_07.jpg "samba_07")<br /><br />
+!["samba_08"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_08.jpg "samba_08")<br /><br />
+!["samba_09"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_09.jpg "samba_09")<br /><br />
+!["samba_10"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_10.jpg "samba_10")<br /><br />
