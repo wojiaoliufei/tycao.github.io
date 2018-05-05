@@ -588,13 +588,13 @@ total 0
 !["samba_01"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
 
 * 查看samba端口： <br />
-!["samba_03"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
+!["samba_03"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_03.png "samba_03")<br /><br />
 
 * 开启 `samba` 服务 <br />
-!["samba_04"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
+!["samba_04"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_04.png "samba_01")<br /><br />
 
 * 修改smb.conf文件： `vim /etc/samba/smb.conf`  <br />
-!["samba_05"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_01.png "samba_01")<br /><br />
+!["samba_05"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_05.png "samba_01")<br /><br />
 
 * Windows下访问Linux上的共享文件夹<br />
 !["samba_13.png"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_13.png "samba_13.png")<br /><br />
