@@ -601,7 +601,7 @@ total 0
 
 
 ***************
-## UBuntu16.04 64bit
+## UBuntu16.04 64bit 安装`samba` <br />
 !["samba_02"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_02.jpg "samba_02")<br /><br />
 
 
