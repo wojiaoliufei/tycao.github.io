@@ -8,7 +8,7 @@ Linux下安装samba （包括 `UBuntu16.04` 和 `CentOS7` ）
 ### 注意 <br />
 * `netstat -anp | grep smb` 会得到samba服务的端口 <br />
 * 安装好samba之后，需要在 `阿里云控制台 -> 安全组` 那里添加139和445端口，那样Windows才能访问Linux下的共享文件夹。 <br />
-* CentOS 7 下，samba服务不能通过匿名访问共享文件夹。因此需要创建samba用户和密码。 最重要的一步！ <br />
+* CentOS 7 下，samba服务不能通过匿名访问共享文件夹。因此需要创建samba用户和密码。 最重要的一步！（这一点跟UBuntu不一样，UBuntu无需创建samba用户和密码，可以直接匿名访问） <br />
 ```shell
 [root@iZt4n12effj3d79928coatZ ~]# sudo smbpasswd -L -a root
 New SMB password:
@@ -17,6 +17,8 @@ Added user root.
 [root@iZt4n12effj3d79928coatZ ~]# sudo smbpasswd -L -e root
 Enabled user root.
 ```
+!["samba_12"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_12.png "samba_12")<br /><br />
+
 
 ## history 命令<br /><br />
 ```shell
