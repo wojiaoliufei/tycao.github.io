@@ -1100,6 +1100,7 @@ total 0
 yum install samba-client
 ```
 !["samba_06"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_06.png "samba_06")<br /><br />
+!["samba_11"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_11.png "samba_11")<br /><br />
 
 
 ## UBuntu16.04 安装 `samba-client`
