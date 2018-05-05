@@ -1,5 +1,8 @@
 CentOS7下安装FreeTDS远程访问Windows下的SQl Server
 ==============
+**时间：**  2018-05-05 
+**项目代码：**  请移步这里 :point_right: [Linux(UBuntu16.04/CentOS7)下C++程序代码：使用FreeTDS连接Windows SQL Server](https://github.com/tycao/tycao.github.io/tree/master/freetds_sample)<br />
+*************
 * 安装FreeTDs
 ```shell
 # 获取最新版本的freetds的gz安装包 ： 目前最新的安装包是v0.91 
