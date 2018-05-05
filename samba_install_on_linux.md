@@ -1103,6 +1103,7 @@ yum install samba-client
 
 
 ## UBuntu16.04 安装 `samba-client`
+参考连接 : [Ubuntu 下用smbclient访问smb](https://blog.csdn.net/FruitDrop/article/details/66475465)<br />
 ```shell
 sudo apt-get install smbclient
 ```
