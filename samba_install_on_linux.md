@@ -602,6 +602,144 @@ total 0
 
 ***************
 ## UBuntu16.04 64bit 安装`samba` <br />
+**history** <br />
+```shell
+   36  sudo apt-cache search smb
+   37  sudo apt-get install samba
+   38  sudo apt-cache search smbclient
+   39  sudo apt-get install smbclient
+   40  vim /etc/samba/smb.conf 
+   41  sudo apt-get install vim
+   42  cp -avrp /etc/samba/smb.conf /etc/samba/smb_bak.conf 
+   43  sudo cp -avrp /etc/samba/smb.conf /etc/samba/smb_bak.conf 
+   44  vim /etc/samba/smb.conf
+   45  sudo vim /etc/samba/smb.conf
+   46  systemctl status smb
+   47  systemctl start smb
+   48  service smb status
+   49  netstat -a | grep samba
+   50  netstat -a | grep smb
+   51  sudo dpkg -i samba
+   52  history 
+   53  /etc/init.d/samba status
+   54  /etc/init.d/samba restart
+   55  smbclient -L localhost -U zogy%1
+   56  ip addr
+   57  smbclient //192.168.183.129/share -U zogy%1
+   58  smbclient //192.168.183.129/share 
+   59  smbclient //192.168.183.129/share -U zogy%1
+   60  smbclient //127.0.0.1/share -U zogy%1
+   61  smbclient //localhost/share -U uzogy%1
+   62  smbclient -L localhost -U zogy%1
+   63  sudo smbpasswd -L -a zogy
+   64  sudo smbpasswd -L -e zogy
+   65  smbclient -L localhost -U zogy%1
+   66  smbclient //localhost/share -U uzogy%1
+   67  ifconfig
+   68  smbclient //192.168.183.129/share -U uzogy%1
+   69  ll /
+   70  sudo mkdir /share
+   71  ll /
+   72  smbclient //192.168.183.129/share -U uzogy%1
+```
+* 安装`samba` : <br />
+```shell
+# 查看samba安装包：
+sudo apt-cache search samba
+
+# 安装samba
+sudo apt-get install samba
+```
+
+* 安装smbclient
+```shell
+# 查找smbclient安装包
+sudo apt-cache search smbclient
+
+# 安装smbclient
+sudo apt-get install smbclient
+```
+
+* 创建samba用户和密码：（UBuntu可以匿名访问共享文件夹；CentOS7强制创建，不支持匿名访问） <br >
+```shell
+# 创建samba用户
+sudo smbpasswd -L -a zogy
+
+# 使用户立刻生效
+sudo smbpasswd -L -e zogy
+```
+!["ubuntu_samba_02"](https://github.com/tycao/tycao.github.io/blob/master/src/ubuntu_samba_02.png "ubuntu_samba_02")<br /><br />
+
+* 查看samba状态：<br />
+```shell
+# 查看状态
+/etc/init.d/samba status
+
+# 重启samba服务
+/etc/init.d/samba restart
+
+# 停止samba服务
+/etc/init.d/samba stop
+
+# 开启samba服务
+/etc/init.d/samba start
+```
+!["ubuntu_samba_01"](https://github.com/tycao/tycao.github.io/blob/master/src/ubuntu_samba_01.png "ubuntu_samba_01")<br /><br />
+
+* 使用smbclient访问共享文件夹：<br />
+```shell
+zogy@ubuntu:~$ smbclient //localhost/share -U uzogy%1
+WARNING: The "syslog" option is deprecated
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+smb: \> ls
+  .                                   D        0  Sat May  5 21:24:03 2018
+  ..                                  D        0  Sat May  5 21:24:03 2018
+
+		80374600 blocks of size 1024. 71573400 blocks available
+smb: \> quit
+zogy@ubuntu:~$ 
+```
+!["ubuntu_samba_03"](https://github.com/tycao/tycao.github.io/blob/master/src/ubuntu_samba_03.png "ubuntu_samba_03")<br /><br />
+
+* 修改/share权限，使得可以对文件夹进行写操作：<br />
+```shell
+zogy@ubuntu:~$ smbclient //192.168.183.129/share -U zogy%1
+WARNING: The "syslog" option is deprecated
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+smb: \> ls
+  .                                   D        0  Sat May  5 21:24:03 2018
+  ..                                  D        0  Sat May  5 21:24:03 2018
+
+		80374600 blocks of size 1024. 71573392 blocks available
+smb: \> mkdir a
+NT_STATUS_ACCESS_DENIED making remote directory \a
+smb: \> quit
+zogy@ubuntu:~$ chmod 777 /share/
+chmod: changing permissions of '/share/': Operation not permitted
+zogy@ubuntu:~$ sudo chmod 777 /share/
+[sudo] password for zogy: 
+zogy@ubuntu:~$ smbclient //192.168.183.129/share -U zogy%1
+WARNING: The "syslog" option is deprecated
+Domain=[WORKGROUP] OS=[Windows 6.1] Server=[Samba 4.3.11-Ubuntu]
+smb: \> mkdir a
+smb: \> ls
+  .                                   D        0  Sat May  5 21:52:56 2018
+  ..                                  D        0  Sat May  5 21:24:03 2018
+  a                                   D        0  Sat May  5 21:52:56 2018
+
+		80374600 blocks of size 1024. 71573388 blocks available
+smb: \> mkdir AAA
+smb: \> ls
+  .                                   D        0  Sat May  5 21:53:03 2018
+  ..                                  D        0  Sat May  5 21:24:03 2018
+  AAA                                 D        0  Sat May  5 21:53:03 2018
+  a                                   D        0  Sat May  5 21:52:56 2018
+
+		80374600 blocks of size 1024. 71573384 blocks available
+smb: \> 
+```
+!["ubuntu_samba_04"](https://github.com/tycao/tycao.github.io/blob/master/src/ubuntu_samba_04.png "ubuntu_samba_04")<br /><br />
+
 !["samba_02"](https://github.com/tycao/tycao.github.io/blob/master/src/samba_02.jpg "samba_02")<br /><br />
 
 
