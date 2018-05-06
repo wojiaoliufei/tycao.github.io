@@ -50,7 +50,7 @@ svnserve --version
 ```
 !["svn_03"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_03.png "svn_03")<br /><br />
 
-* 安装mysql
+* 安装mysql <br />
 yum上mysql的资源有问题，所以不能仅仅之用yum。在使用yum之前还需要用其他命令获取mysql社区版<br />
 ```shell
 # 根目录下创建/temp临时文件夹
@@ -164,7 +164,7 @@ svnadmin create /home/svn/project
 
 * 初始化版本仓库中的目录
 ```shell
-# 临时目录 project
+# 创建临时目录 project
 mkdir project project/server project/client project/test
 
 # 初始化SVN目录
@@ -261,12 +261,12 @@ project_t = test1,test1,test1, test_group
 ```
 !["svn_10"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_10.png "svn_10")<br /><br />
 
-	* 说明：
-		* 以上信息表示：
-			* 只有`project_p`用户组有`根目录`的读写权;
-			* 只有`project_p和project_s用户组`有`project:/server`目录的读写权
-			* 只有`project_p和project_c用户组`有`project:/client`目录的读写权
-			* `project_p, project_s, project_c, project_t用户组`都有`project:/test`目录的读写权
-			* `project_p, project_s, project_c, project_t用户组`都有`project:/doc`目录的读写权
-		* `r`表示对该目录有读权限，`w`表示对该目录有写权限，`rw`表示对该目录有读写权限。
-		* `最后一行的 _* =_ 表示，除了上面设置了权限的用户组之外，其他任何人都被禁止访问本目录。这个很重要，一定要加上！`
+* 说明：
+	* 以上信息表示：
+		* 只有`project_p`用户组有`根目录`的读写权;
+		* 只有`project_p和project_s用户组`有`project:/server`目录的读写权
+		* 只有`project_p和project_c用户组`有`project:/client`目录的读写权
+		* `project_p, project_s, project_c, project_t用户组`都有`project:/test`目录的读写权
+		* `project_p, project_s, project_c, project_t用户组`都有`project:/doc`目录的读写权
+	* `r`表示对该目录有读权限，`w`表示对该目录有写权限，`rw`表示对该目录有读写权限。
+	* `最后一行的 _* =_ 表示，除了上面设置了权限的用户组之外，其他任何人都被禁止访问本目录。这个很重要，一定要加上！`
