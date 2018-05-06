@@ -26,7 +26,7 @@ CentOS7下搭建SVn服务器（此方法同样适用于UBuntu）
 这里不再赘述，请参考这里 :point_right: [如何购买云服务器](http://how2j.cn/k/deploy2linux/deploy2linux-breif/1591.html?tid=107)<br />
 
 ### 安装必须的软件包：
-**yum install subversion mysql-server httpd mod_dav_svn mod_perl sendmail wget gcc-c++ make unzip perl* ntsysv vim-enhanced**
+**yum install subversion mysql-server httpd mod_dav_svn mod_perl sendmail wget gcc-c++ make unzip perl\* ntsysv vim-enhanced**
 * 说明：
 	* subversion (SVN服务器)
 	* mysql-server (用于codestriker)
