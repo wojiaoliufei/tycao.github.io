@@ -440,3 +440,28 @@ systemctl restart httpd
 !["svn_17"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_17.png "svn_17")<br /><br />
 !["svn_18"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_18.png "svn_18")<br /><br />
 !["svn_19"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_19.png "svn_19")<br /><br />
+
+
+******************
+Windows下安装svn客户端tortoisesvn ：<br />
+!["svn_20"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_20.png "svn_20")<br /><br />
+!["svn_21"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_21.png "svn_21")<br /><br />
+
+
+* 去svn服务器上操作：
+```shell
+[root@iZt4n12effj3d79928coatZ project]# cd /project
+[root@iZt4n12effj3d79928coatZ project]# ll doc/
+total 16
+-rw-r--r-- 1 root root 14734 May  6 16:40 SVN_CentOS7.md
+[root@iZt4n12effj3d79928coatZ project]# svn update
+Updating '.':
+A    doc/Linux下搭建SVN服务器.txt
+Updated to revision 10.
+[root@iZt4n12effj3d79928coatZ project]# ll doc/
+total 16
+-rw-r--r-- 1 root root     0 May  6 16:49 Linux下搭建SVN服务器.txt
+-rw-r--r-- 1 root root 14734 May  6 16:40 SVN_CentOS7.md
+[root@iZt4n12effj3d79928coatZ project]#
+```
+!["svn_22"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_22.png "svn_22")<br /><br />
