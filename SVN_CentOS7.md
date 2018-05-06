@@ -424,6 +424,16 @@ chown -R apache.apache /home/svn/project/
 
 * 重启Web服务器：
 ```shell
+# 查看apache服务的运行状态
+systemctl status httpd
 
-
+# 重启apache服务
+systemctl restart httpd
 ```
+!["svn_16"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_16.png "svn_16")<br /><br />
+
+* 用浏览器访问 `http://localhost/project/server/` 测试 <br />
+**若不是在本机测试，则需要把 `localhost` 修改成相应正确的 `公网ip地址`**
+!["svn_17"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_17.png "svn_17")<br /><br />
+!["svn_18"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_18.png "svn_18")<br /><br />
+!["svn_19"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_19.png "svn_19")<br /><br />
