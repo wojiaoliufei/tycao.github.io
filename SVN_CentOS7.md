@@ -27,7 +27,13 @@ CentOS7下搭建SVn服务器（此方法同样适用于UBuntu）
 
 ### 安装必须的软件包：
 **yum install subversion mysql-server httpd mod_dav_svn mod_perl sendmail wget gcc-c++ make unzip perl* ntsysv vim-enhanced**
-
+* 说明：
+	* subversion (SVN服务器)
+	* mysql-server (用于codestriker)
+	* httpd mod_dav_svn mod_perl (用于支持WEB方式管理SVN服务器)
+	* sendmail (用于配置用户提交代码后发邮件提醒)
+	* wget gcc-c++ make unzip perl* (必备软件包)
+	* ntsysv vim-enhanced (可选)
 * 安装subversion 
 ```shell
 # 查看subversion安装包
@@ -145,4 +151,122 @@ yum install perl*
 * 安装 vim-enhanced
 
 
-### 
+### 基本的SVN服务器配置
+* 新建一个目录用于存储SVN所有文件
+```shell
+mkdir /home/svn
+```
+
+* 新建一个版本仓库
+```shell
+svnadmin create /home/svn/project
+```
+
+* 初始化版本仓库中的目录
+```shell
+# 临时目录 project
+mkdir project project/server project/client project/test
+
+# 初始化SVN目录
+svn import project/ file:///home/svn/project -m “初始化SVN目录”
+
+# 删除临时建立的目录
+rm -rf project
+```
+
+* 添加用户
+```shell
+vim /home/svn/project/conf/passwd
+```
+**要添加SVN用户非常简单，只需在 `/home/svn/project/conf/passwd` 文件添加一个形如 `username=password` 的条目就可以了。为了测试，我添加了如下内容:** <br />
+```shell
+[users]
+# harry = harryssecret
+# sally = sallyssecret
+
+# 新添加的内容 @2018-05-06
+pm = pm_pw
+
+# 能够访问project:/server目录的用户：server_group, server1, server2, server3
+server_group = server_pw
+server1 = server_pw
+server2 = server_pw
+server3 = server_pw
+
+# 能够访问project:/client目录的用户：client_group, client1, client2, client3
+client_group = client_pw
+client1 = client_pw
+client2 = client_pw
+client3 = client_pw
+
+# 能够访问project:/test目录的用户：test_group, test1, test2, test3
+test_group = test_pw
+test1 = test_pw
+test2 = test_pw
+test3 = test_pw
+```
+!["svn_09"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_09.png "svn_09")<br /><br />
+
+
+* 修改用户访问策略
+```shell
+vim /home/svn/project/conf/authz
+```
+
+**`/home/svn/project/conf/authz` 记录用户的访问策略，添加以下内容:** <br />
+
+```shell
+[group]
+# newly added @2018-05-06
+
+# 将定义在/home/svn/project/conf/passwd文件里的用户，分成不同的组，以便访问不同的目录
+project_p = pm
+project_s = server1, server2, server3, server_group
+project_c = client1,client2,client3, client_group
+project_t = test1,test1,test1, test_group
+
+# 能够访问project:/（根目录）的用户所在的组
+[project:/]
+@project_p = rw
+* =
+
+# 能够访问project:/server的用户所在的组
+[project:/server]
+@project_p = rw
+@project_s = rw
+* =
+
+# 能够访问project:/client的用户所在的组
+[project:/client]
+@project_p = rw
+@project_c = rw
+* =
+
+# 能够访问project:/test的用户所在的组
+[project:/test]
+@project_p = rw
+@project_s = rw
+@project_c = rw
+@project_t = rw
+* =
+
+
+
+[project:/doc]
+@project_p = rw
+@project_s = rw
+@project_c = rw
+@project_t = rw
+*=
+```
+!["svn_10"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_10.png "svn_10")<br /><br />
+
+	* 说明：
+		* 以上信息表示：
+			* 只有`project_p`用户组有`根目录`的读写权;
+			* 只有`project_p和project_s用户组`有`project:/server`目录的读写权
+			* 只有`project_p和project_c用户组`有`project:/client`目录的读写权
+			* `project_p, project_s, project_c, project_t用户组`都有`project:/test`目录的读写权
+			* `project_p, project_s, project_c, project_t用户组`都有`project:/doc`目录的读写权
+		* `r`表示对该目录有读权限，`w`表示对该目录有写权限，`rw`表示对该目录有读写权限。
+		* `最后一行的 _* =_ 表示，除了上面设置了权限的用户组之外，其他任何人都被禁止访问本目录。这个很重要，一定要加上！`
