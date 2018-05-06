@@ -8,7 +8,7 @@ CentOS7下搭建SVN服务器（此方法同样适用于UBuntu）
 **SVN简介和工作原理：** <br />
 * subversion（简称svn）是近几年崛起的版本管理软件，是cvs的接班人，目前绝大多数公司和开源软件都使用svn作为代码版本管理软件。Subversion支持linux和windows，但较多安装在linux下。<br />
 * svn服务器有两种运行方式：`独立服务器和借助于apache。`  即`svn://或http://` <br />
-* svn客户端tortoisesvn ，国内镜像请看这里 :point_right: [SVN for Windows安装包](https://pan.baidu.com/s/112VzU5CC9jF8TgRUUbhrmA]    密码：ysn3  <br />
+* svn客户端tortoisesvn ，国内镜像请看这里 :point_right: [SVN for Windows安装包](https://pan.baidu.com/s/112VzU5CC9jF8TgRUUbhrmA)    密码：ysn3  <br />
 * svn的基本工作原理： 在一台服务器上建立一个源代码库，库里可以存放许多不同项目的源程序。有源代码库管理员统一管理这些源程序。每个用户在使用源代码库之前，首先要把源代码库里的项目文件下载到本地，然后开发人员可以在本地修改，然后用svn命令进行提交，由源代码库统一管理修改。<br />
 * subversion目录说明：
 	* dav目录：是提供apache与mod_dav_svn使用的目录，让他们存储内部数据
