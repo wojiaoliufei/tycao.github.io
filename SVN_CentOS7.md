@@ -1,4 +1,4 @@
-CentOS7下搭建SVn服务器（此方法同样适用于UBuntu）
+CentOS7下搭建SVN服务器（此方法同样适用于UBuntu）
 ===============
 ### 参考文档：
 [CentOS Linux搭建SVN Server配置详解](http://www.ha97.com/4467.html)<br />
