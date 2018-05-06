@@ -270,3 +270,160 @@ project_t = test1,test1,test1, test_group
 		* `project_p, project_s, project_c, project_t用户组`都有`project:/doc`目录的读写权
 	* `r`表示对该目录有读权限，`w`表示对该目录有写权限，`rw`表示对该目录有读写权限。
 	* `最后一行的 _* =_ 表示，除了上面设置了权限的用户组之外，其他任何人都被禁止访问本目录。这个很重要，一定要加上！`
+* 修改svnserve.conf文件,让用户和策略配置升效
+```shell
+vim /home/svn/project/conf/svnserve.conf
+```
+添加以下内容：<br />
+```shell
+[general]
+anon-access = none
+auth-access = write
+password-db = /home/svn/project/conf/passwd
+authz-db = /home/svn/project/conf/authz
+```
+!["svn_11"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_11.png "svn_11")<br /><br />
+
+
+* 启动服务器
+```shell
+svnserve -d -r /home/svn
+```
+**注意：如果修改了svn配置，需要重启svn服务，步骤如下：** <br />
+```shell
+ps -aux|grep svnserve
+kill -9 ID号
+svnserve -d -r /home/svn
+```
+接下来， 还要重新启动Apache服务器
+```shell
+systemctl restart httpd
+```
+
+* 测试服务器
+```shell
+# 不是在本机器测试的话，将localhost修改成相应的ip地址
+svn co svn://localhost/project
+```
+!["svn_12"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_12.png "svn_12")<br /><br />
+
+**若是第一次运行 `svn co svn://localhost/project`的话，需要输入 svn所在服务器的 `root` 密码：** <br />
+```shell
+# svn co svn://192.168.60.10/project
+Authentication realm: <svn://192.168.60.10:3690> 92731041-2dae-4c23-97fd-9e1ed7f0d18d
+Password for 'root':
+Authentication realm: <svn://192.168.60.10:3690> 92731041-2dae-4c23-97fd-9e1ed7f0d18d
+Username: server_group
+Password for 'server_group':
+svn: Authorization failed ( server_group没用根目录的访问权 )
+```
+输入 `root密码`之后，紧接着输入了 `svn用户密码`，以上信息说明了：svn用户 `server_group` 没有 `project:/`根目录的访问权限。我们重新输入其他的svn用户再试试看效果：<br />
+```shell
+# svn co svn://192.168.60.10/project
+Authentication realm: <svn://192.168.60.10:3690> 92731041-2dae-4c23-97fd-9e1ed7f0d18d
+Password for ‘root’:
+Authentication realm: <svn://192.168.60.10:3690> 92731041-2dae-4c23-97fd-9e1ed7f0d18d
+Username: pm
+Password for ‘pm’:
+A    project/test
+A    project/server
+A    project/client
+Checked out revision 1.  ( 测试提取成功 )
+```
+以上信息说明 `pm` svn用户具有根目录的访问全选。和我们上面在配置文件里配置的信息完全一致！`server_group`只对`projecft:/server  project:/test  project:/doc目录` 有读写权限。而对`project:/`根目录没有读写权限！ <br />
+
+```shell
+# cd project/server
+# vim main.c
+# svn add main.c
+# svn commit main.c -m “测试一下我的C程序,看什么看,不行啊??”
+Adding         main.c
+Transmitting file data .
+Committed revision 2.  ( 测试提交成功 )
+```
+
+```shell
+# 进入/project目录下
+cd /project
+
+# 新建doc文件夹
+mkdir doc
+
+# 添加到svn服务器上
+svn add doc
+
+# commit
+svn commit doc -m "添加doc文件夹~~"
+```
+
+### 配置SVN服务器的HTTP支持
+* 转换SVN服务器的密码 <br />
+**由于SVN服务器的密码是明文的，HTTP服务器不与支持，所以需要转换成HTTP支持的格式。我写了一个Perl脚本完成这个工作。 脚本内容如下:**  <br />
+```perl
+cd /home/svn/project/conf/
+vim PtoWP.pl
+
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+#open the svn passwd file
+open (FILE, "passwd") or die ("Cannot open the passwd file!!!\n");
+
+#clear the apache passwd file
+open (OUT_FILE, ">webpasswd") or die ("Cannot open the webpasswd file!!!\n");
+close (OUT_FILE);
+
+#begin
+foreach (<FILE>) {
+	if($_ =~ m/^[^#].*=/) {
+		$_ =~ s/=//;
+		`htpasswd -b webpasswd $_`;
+	}
+}
+```
+*  设置 `PtoWP.pl` 执行权限
+```shell
+chmod a+x PtoWP.pl
+```
+
+
+* 运行perl脚本 `PtoWP.pl`
+```shell
+./PtoWP.pl
+```
+!["svn_14"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_14.png "svn_14")<br /><br />
+!["svn_13"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_13.png "svn_13")<br /><br />
+
+
+* 修改httpd.conf，添加关于SVN服务器的内容 <br />
+```shell
+vim /etc/httpd/conf/httpd.conf
+```
+添加以下内容：<br />
+```shell
+<Location /project>
+DAV svn
+SVNPath /home/svn/project/
+AuthType Basic
+AuthName "svn for project"
+AuthUserFile /home/svn/project/conf/webpasswd
+AuthzSVNAccessFile /home/svn/project/conf/authz
+Satisfy all
+Require valid-user
+</Location>
+```
+!["svn_15"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_15.png "svn_15")<br /><br />
+
+* 修改svn目录的属主为apache帐号 <br />
+**注意：原文少了这一步，会出权限问题!!!** <br />
+```shell
+chown -R apache.apache /home/svn/project/
+```
+
+
+* 重启Web服务器：
+```shell
+
+
+```
