@@ -330,7 +330,7 @@ A    project/server
 A    project/client
 Checked out revision 1.  ( 测试提取成功 )
 ```
-以上信息说明 `pm` svn用户具有根目录的访问全选。和我们上面在配置文件里配置的信息完全一致！`server_group`只对`projecft:/server  project:/test  project:/doc目录` 有读写权限。而对`project:/`根目录没有读写权限！ <br />
+以上信息说明 svn用户 `pm` 具有根目录的访问权限，和我们上面在配置文件里配置的信息完全一致！`server_group`只对`projecft:/server       project:/test        project:/doc目录` 有读写权限。而对`project:/`根目录没有读写权限！ <br />
 
 ```shell
 # cd project/server
@@ -341,7 +341,7 @@ Adding         main.c
 Transmitting file data .
 Committed revision 2.  ( 测试提交成功 )
 ```
-
+再次测试：<br />
 ```shell
 # 进入/project目录下
 cd /project
@@ -359,10 +359,12 @@ svn commit doc -m "添加doc文件夹~~"
 ### 配置SVN服务器的HTTP支持
 * 转换SVN服务器的密码 <br />
 **由于SVN服务器的密码是明文的，HTTP服务器不与支持，所以需要转换成HTTP支持的格式。我写了一个Perl脚本完成这个工作。 脚本内容如下:**  <br />
-```perl
+```shell
 cd /home/svn/project/conf/
 vim PtoWP.pl
-
+```
+添加以下内容：<br />
+```perl
 #!/usr/bin/perl
 use warnings;
 use strict;
@@ -382,6 +384,8 @@ foreach (<FILE>) {
 	}
 }
 ```
+!["svn_14"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_14.png "svn_14")<br /><br />
+
 *  设置 `PtoWP.pl` 执行权限
 ```shell
 chmod a+x PtoWP.pl
@@ -392,7 +396,6 @@ chmod a+x PtoWP.pl
 ```shell
 ./PtoWP.pl
 ```
-!["svn_14"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_14.png "svn_14")<br /><br />
 !["svn_13"](https://github.com/tycao/tycao.github.io/blob/master/src/svn_13.png "svn_13")<br /><br />
 
 
