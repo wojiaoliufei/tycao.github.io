@@ -211,8 +211,10 @@ bool SybaseManager::runSQLCommand( string sql )
 }    
 
 void SybaseManager::destroyConnection()    
-{    
-        dbclose(dbProcess);    
+{
+        dbfreebuf(dbProcess);
+        dbclose(dbProcess);
+        dbexit();
 }    
 
 bool SybaseManager::getConnectionStatus()    
