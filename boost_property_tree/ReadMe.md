@@ -1,22 +1,22 @@
-LinuxÏÂ²âÊÔboost::property_tree £º `½âÎöxmlÎÄ¼ş`
+Linuxä¸‹æµ‹è¯•boost::property_tree ï¼š `è§£æxmlæ–‡ä»¶`
 ========================
-### »·¾³: UBuntu 16.04 64bit
+### ç¯å¢ƒ: UBuntu 16.04 64bit
 
-### ÃüÁîĞĞ£º
+### å‘½ä»¤è¡Œï¼š
 ```shell
-# ±àÒëÃüÁî £º Ò»²½µ½Î»µÄÃüÁî£¬Éú³É¿ÉÖ´ĞĞ³ÌĞòmain
+# ç¼–è¯‘å‘½ä»¤ ï¼š ä¸€æ­¥åˆ°ä½çš„å‘½ä»¤ï¼Œç”Ÿæˆå¯æ‰§è¡Œç¨‹åºmain
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11 -Wall -DBOOST_LOG_DYN_LINK ./main.cpp -o main -rdynamic -lpthread -lboost_log -lboost_system -lboost_thread -lboost_filesystem 
 
-# µ±Ç°Ä¿Â¼ `/home/zogy/Desktop/Project` ÏÂµÄÎÄ¼ş½á¹¹
+# å½“å‰ç›®å½• `/home/zogy/Desktop/Project` ä¸‹çš„æ–‡ä»¶ç»“æ„
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 1440
-drwxrwxr-x 2 zogy zogy    4096 5ÔÂ  12 00:07 ./
-drwxr-xr-x 3 zogy zogy    4096 5ÔÂ  11 23:49 ../
--rwxr-xr-x 1 root root 1447092 5ÔÂ  12 00:07 main*
--rwxrwxrwx 1 root root      67 5ÔÂ  11 22:59 main.cpp*
--rwxrwxrwx 1 zogy zogy     660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy    1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy    3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy    4096 5æœˆ  12 00:07 ./
+drwxr-xr-x 3 zogy zogy    4096 5æœˆ  11 23:49 ../
+-rwxr-xr-x 1 root root 1447092 5æœˆ  12 00:07 main*
+-rwxrwxrwx 1 root root      67 5æœˆ  11 22:59 main.cpp*
+-rwxrwxrwx 1 zogy zogy     660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy    1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy    3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# ./main
 ip_address_:127.0.0.1
 mac_address_:mac_address
@@ -34,27 +34,27 @@ ar_adapter_type_:4
 ar_adapter_scope_no_:5
 ar_opt_flag_:2
 ```
-»òÕß¿ÉÒÔÊ¹ÓÃ·Ö²½±àÒë£º<br />
+æˆ–è€…å¯ä»¥ä½¿ç”¨åˆ†æ­¥ç¼–è¯‘ï¼š<br />
 ```shell
-# ±àÒëÉú³Émain.oÁ´½ÓÎÄ¼ş
+# ç¼–è¯‘ç”Ÿæˆmain.oé“¾æ¥æ–‡ä»¶
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11 -Wall -DBOOST_LOG_DYN_LINK -o ./main.o -c ./main.cpp
 
-# ±àÒëÉú³É¿ÉÖ´ĞĞ³ÌĞòmain
+# ç¼–è¯‘ç”Ÿæˆå¯æ‰§è¡Œç¨‹åºmain
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11  ./main.o -o main -rdynamic -lpthread -lboost_log -lboost_system -lboost_thread -lboost_filesystem
 
-# ²é¿´µ±Ç°Éú³ÉµÄĞÂÎÄ¼ş
+# æŸ¥çœ‹å½“å‰ç”Ÿæˆçš„æ–°æ–‡ä»¶
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 3064
-drwxrwxr-x 2 zogy zogy    4096 5ÔÂ  11 23:51 ./
-drwxr-xr-x 3 zogy zogy    4096 5ÔÂ  11 23:49 ../
--rwxr-xr-x 1 root root 1447092 5ÔÂ  11 23:51 main*
--rwxrwxrwx 1 root root      67 5ÔÂ  11 22:59 main.cpp*
--rw-r--r-- 1 root root 1659288 5ÔÂ  11 23:51 main.o
--rwxrwxrwx 1 zogy zogy     660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy    1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy    3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy    4096 5æœˆ  11 23:51 ./
+drwxr-xr-x 3 zogy zogy    4096 5æœˆ  11 23:49 ../
+-rwxr-xr-x 1 root root 1447092 5æœˆ  11 23:51 main*
+-rwxrwxrwx 1 root root      67 5æœˆ  11 22:59 main.cpp*
+-rw-r--r-- 1 root root 1659288 5æœˆ  11 23:51 main.o
+-rwxrwxrwx 1 zogy zogy     660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy    1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy    3489 5æœˆ  11 23:19 tsd_config.h*
 
-# ÔËĞĞ¿ÉÖ´ĞĞ³ÌĞò
+# è¿è¡Œå¯æ‰§è¡Œç¨‹åº
 root@ubuntu:/home/zogy/Desktop/Project# ./main
 ip_address_:127.0.0.1
 mac_address_:mac_address
@@ -77,29 +77,29 @@ root@ubuntu:/home/zogy/Desktop/Project#
 
 
 *******************
-### ÃüÁî×Ü½á£º
+### å‘½ä»¤æ€»ç»“ï¼š
 ```shell
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 24
-drwxrwxr-x 2 zogy zogy 4096 5ÔÂ  12 00:07 ./
-drwxr-xr-x 3 zogy zogy 4096 5ÔÂ  11 23:49 ../
--rwxrwxrwx 1 root root   67 5ÔÂ  11 22:59 main.cpp*
--rwxrwxrwx 1 zogy zogy  660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy 1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy 3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy 4096 5æœˆ  12 00:07 ./
+drwxr-xr-x 3 zogy zogy 4096 5æœˆ  11 23:49 ../
+-rwxrwxrwx 1 root root   67 5æœˆ  11 22:59 main.cpp*
+-rwxrwxrwx 1 zogy zogy  660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy 1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy 3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# 
 root@ubuntu:/home/zogy/Desktop/Project# 
 root@ubuntu:/home/zogy/Desktop/Project# 
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11 -Wall -DBOOST_LOG_DYN_LINK ./main.cpp -o main -rdynamic -lpthread -lboost_log -lboost_system -lboost_thread -lboost_filesystem 
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 1440
-drwxrwxr-x 2 zogy zogy    4096 5ÔÂ  12 00:07 ./
-drwxr-xr-x 3 zogy zogy    4096 5ÔÂ  11 23:49 ../
--rwxr-xr-x 1 root root 1447092 5ÔÂ  12 00:07 main*
--rwxrwxrwx 1 root root      67 5ÔÂ  11 22:59 main.cpp*
--rwxrwxrwx 1 zogy zogy     660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy    1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy    3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy    4096 5æœˆ  12 00:07 ./
+drwxr-xr-x 3 zogy zogy    4096 5æœˆ  11 23:49 ../
+-rwxr-xr-x 1 root root 1447092 5æœˆ  12 00:07 main*
+-rwxrwxrwx 1 root root      67 5æœˆ  11 22:59 main.cpp*
+-rwxrwxrwx 1 zogy zogy     660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy    1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy    3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# ./main
 ip_address_:127.0.0.1
 mac_address_:mac_address
@@ -123,32 +123,32 @@ root@ubuntu:/home/zogy/Desktop/Project#
 root@ubuntu:/home/zogy/Desktop/Project# rm -f main
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 24
-drwxrwxr-x 2 zogy zogy 4096 5ÔÂ  12 00:09 ./
-drwxr-xr-x 3 zogy zogy 4096 5ÔÂ  11 23:49 ../
--rwxrwxrwx 1 root root   67 5ÔÂ  11 22:59 main.cpp*
--rwxrwxrwx 1 zogy zogy  660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy 1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy 3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy 4096 5æœˆ  12 00:09 ./
+drwxr-xr-x 3 zogy zogy 4096 5æœˆ  11 23:49 ../
+-rwxrwxrwx 1 root root   67 5æœˆ  11 22:59 main.cpp*
+-rwxrwxrwx 1 zogy zogy  660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy 1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy 3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11 -Wall -DBOOST_LOG_DYN_LINK -o ./main.o -c ./main.cpp
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 1648
-drwxrwxr-x 2 zogy zogy    4096 5ÔÂ  12 00:10 ./
-drwxr-xr-x 3 zogy zogy    4096 5ÔÂ  11 23:49 ../
--rwxrwxrwx 1 root root      67 5ÔÂ  11 22:59 main.cpp*
--rw-r--r-- 1 root root 1659288 5ÔÂ  12 00:10 main.o
--rwxrwxrwx 1 zogy zogy     660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy    1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy    3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy    4096 5æœˆ  12 00:10 ./
+drwxr-xr-x 3 zogy zogy    4096 5æœˆ  11 23:49 ../
+-rwxrwxrwx 1 root root      67 5æœˆ  11 22:59 main.cpp*
+-rw-r--r-- 1 root root 1659288 5æœˆ  12 00:10 main.o
+-rwxrwxrwx 1 zogy zogy     660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy    1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy    3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# c++ -g -std=c++11  ./main.o -o main -rdynamic -lpthread -lboost_log -lboost_system -lboost_thread -lboost_filesystem
 root@ubuntu:/home/zogy/Desktop/Project# ll
 total 3064
-drwxrwxr-x 2 zogy zogy    4096 5ÔÂ  12 00:10 ./
-drwxr-xr-x 3 zogy zogy    4096 5ÔÂ  11 23:49 ../
--rwxr-xr-x 1 root root 1447092 5ÔÂ  12 00:10 main*
--rwxrwxrwx 1 root root      67 5ÔÂ  11 22:59 main.cpp*
--rw-r--r-- 1 root root 1659288 5ÔÂ  12 00:10 main.o
--rwxrwxrwx 1 zogy zogy     660 5ÔÂ  11 22:21 test_data.xml*
--rwxrwxrwx 1 zogy zogy    1833 5ÔÂ  11 23:02 tsd_config.cpp*
--rwxrwxrwx 1 zogy zogy    3489 5ÔÂ  11 23:19 tsd_config.h*
+drwxrwxr-x 2 zogy zogy    4096 5æœˆ  12 00:10 ./
+drwxr-xr-x 3 zogy zogy    4096 5æœˆ  11 23:49 ../
+-rwxr-xr-x 1 root root 1447092 5æœˆ  12 00:10 main*
+-rwxrwxrwx 1 root root      67 5æœˆ  11 22:59 main.cpp*
+-rw-r--r-- 1 root root 1659288 5æœˆ  12 00:10 main.o
+-rwxrwxrwx 1 zogy zogy     660 5æœˆ  11 22:21 test_data.xml*
+-rwxrwxrwx 1 zogy zogy    1833 5æœˆ  11 23:02 tsd_config.cpp*
+-rwxrwxrwx 1 zogy zogy    3489 5æœˆ  11 23:19 tsd_config.h*
 root@ubuntu:/home/zogy/Desktop/Project# 
 ```
