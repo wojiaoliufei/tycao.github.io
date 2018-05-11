@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<CONFIG>
+	<!--云集资源表-->
+	<CLOUD_RC>
+		<IP_ADDRESS>127.0.0.1</IP_ADDRESS>
+		<SYS_ID>sys_id</SYS_ID>
+		<SRT_ID>srt_id</SRT_ID>
+		<MAC_ADDRESS>mac_address</MAC_ADDRESS>
+		<HOST_NAME>host_name</HOST_NAME>
+		<OS_NAME>os_name</OS_NAME>
+		<CPU_SERIAL_NO>cpu_serial_no</CPU_SERIAL_NO>
+		<DISK_SERIAL_NO>disk_serial_no</DISK_SERIAL_NO>
+		<DBNAME>dbname</DBNAME>
+		<OPT_FLAG>2</OPT_FLAG>
+	</CLOUD_RC>
+	<!--adapter 路由表-->
+	<AR_CFG>
+		<ACCOUNT_ID>account_id</ACCOUNT_ID>
+		<ACCOUNT_TYPE>3</ACCOUNT_TYPE>
+		<ADAPTER_TYPE>4</ADAPTER_TYPE>
+		<ADAPTER_S_NO>5</ADAPTER_S_NO>
+		<OPT_FLAG>2</OPT_FLAG>
+	</AR_CFG>
+</CONFIG>
