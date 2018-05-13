@@ -1,8 +1,8 @@
-ÕÒ³öÒ»¸öÊı×é£¨vectorÈİÆ÷£©Àï£¬µ¥¸ö³öÏÖµÄÄÇ¸öÔªËØ
+æ‰¾å‡ºä¸€ä¸ªæ•°ç»„ï¼ˆvectorå®¹å™¨ï¼‰é‡Œï¼Œå•ä¸ªå‡ºç°çš„é‚£ä¸ªå…ƒç´ 
 =====================
-LeetCodeµØÖ· :point_right: [Single Number](https://leetcode.com/problems/single-number/description/)<br />
+LeetCodeåœ°å€ :point_right: [Single Number](https://leetcode.com/problems/single-number/description/)<br />
 
-Ê¹ÓÃÁËÊı×ÖÖ®¼äµÄ `Òì»ò` ÔËËã£¬ÇÉÃîµØÕÒ³öÁËÄÇ¸öµ¥¸ö³öÏÖµÄÊı×éÔªËØ¡£ÏÂÃæÊÇÎÒµÄ´úÂë£º<br />
+ä½¿ç”¨äº†æ•°å­—ä¹‹é—´çš„ `å¼‚æˆ–` è¿ç®—ï¼Œå·§å¦™åœ°æ‰¾å‡ºäº†é‚£ä¸ªå•ä¸ªå‡ºç°çš„æ•°ç»„å…ƒç´ ã€‚ä¸‹é¢æ˜¯æˆ‘çš„ä»£ç ï¼š<br />
 ```cpp
 class Solution {
 public:

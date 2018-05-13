@@ -1,8 +1,8 @@
-ÕûÊı·´×ª£º¸ø¶¨Ò»¸ö32bitµÄÓĞ·ûºÅÕûĞÍ£¬µßµ¹Õâ¸öÕûĞÍµÄÊı×ÖË³Ğò
+æ•´æ•°åè½¬ï¼šç»™å®šä¸€ä¸ª32bitçš„æœ‰ç¬¦å·æ•´å‹ï¼Œé¢ å€’è¿™ä¸ªæ•´å‹çš„æ•°å­—é¡ºåº
 ================
-LeetCodeµØÖ· :point_right: [Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)<br>
-Ë¼Â·ºÜ¼òµ¥, `Ô­ÊıµÄ¸öÎ» ==> ½á¹ûµÄ×î¸ßÎ». Ô­ÊıµÄ×î¸ßÎ» ==> ½á¹ûµÄ¸öÎ». ` <br>
-ÎÒµÄ´úÂëÈçÏÂ£º<br>
+LeetCodeåœ°å€ :point_right: [Reverse Integer](https://leetcode.com/problems/reverse-integer/description/)<br>
+æ€è·¯å¾ˆç®€å•, `åŸæ•°çš„ä¸ªä½ ==> ç»“æœçš„æœ€é«˜ä½. åŸæ•°çš„æœ€é«˜ä½ ==> ç»“æœçš„ä¸ªä½. ` <br>
+æˆ‘çš„ä»£ç å¦‚ä¸‹ï¼š<br>
 
 #### reverseinteger.h
 
@@ -12,7 +12,7 @@ LeetCodeµØÖ· :point_right: [Reverse Integer](https://leetcode.com/problems/rever
 //    printf("sizeof(long) : %d\n", sizeof(long));   							output : 4
 //    printf("sizeof(int) : %d\n", sizeof(int));									output : 4
 // 		printf("sizeof(long long) : %d\n", sizeof(long long));			output : 8
-// ÎÒµÄ»úÆ÷ÉÏ int ºÍ long¶¼ÊÇ32bit£¬ Òò´ËÕâÀïĞèÒªÊ¹ÓÃlong longÀàĞÍÀ´¶¨Òåret±äÁ¿
+// æˆ‘çš„æœºå™¨ä¸Š int å’Œ longéƒ½æ˜¯32bitï¼Œ å› æ­¤è¿™é‡Œéœ€è¦ä½¿ç”¨long longç±»å‹æ¥å®šä¹‰retå˜é‡
 typedef long long int64;
 
 class Solution {
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 }
 ```
 
-* ÌØÊâÇé¿ö:
-	* ºó¼¸Î»ÊÇ0µÄÇé¿ö(10, 100.)? 
-		* Õâ¸öÎÒÃÇµÄÑ­»·ÒÑ¾­¿¼ÂÇÁË, Èç¹ûÔ­ÊıµÄ¸öÎ»ÊÇ0, res Ôò»áÒ»Ö±±£³ÖÊÇ0, Ö±µ½·Ç0µÄ³öÏÖ.
-	* overflowµÄÎÊÌâ?
-		* ¼ì²âºÜ¼òµ¥, ½« ret ÉèÎª long long, ÄÇÄãÒ»¸ö int ÔõÃ´·´×ª¶¼²»»á³¬³ö long long µÄ·¶Î§ÁË°É? È»ºóÅĞ¶Ï ret ºÍ INT_MAX INT_MINµÄ¹ØÏµ¾Í¿ÉÒÔÁË.
+* ç‰¹æ®Šæƒ…å†µ:
+	* åå‡ ä½æ˜¯0çš„æƒ…å†µ(10, 100.)? 
+		* è¿™ä¸ªæˆ‘ä»¬çš„å¾ªç¯å·²ç»è€ƒè™‘äº†, å¦‚æœåŸæ•°çš„ä¸ªä½æ˜¯0, res åˆ™ä¼šä¸€ç›´ä¿æŒæ˜¯0, ç›´åˆ°é0çš„å‡ºç°.
+	* overflowçš„é—®é¢˜?
+		* æ£€æµ‹å¾ˆç®€å•, å°† ret è®¾ä¸º long long, é‚£ä½ ä¸€ä¸ª int æ€ä¹ˆåè½¬éƒ½ä¸ä¼šè¶…å‡º long long çš„èŒƒå›´äº†å§? ç„¶ååˆ¤æ–­ ret å’Œ INT_MAX INT_MINçš„å…³ç³»å°±å¯ä»¥äº†.
 
 

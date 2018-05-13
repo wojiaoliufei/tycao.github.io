@@ -1,21 +1,21 @@
-×î¼ÑÊ±¼äÂòÂô¹ÉÆ±
+æœ€ä½³æ—¶é—´ä¹°å–è‚¡ç¥¨
 ============
-LeetCodeµØÖ· :point_right: [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)<br>
+LeetCodeåœ°å€ :point_right: [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/)<br>
 
-±¾ÌâÐèÒªÕÒ³ö¹æÂÉ£º<br>
-ÈçºÎ²ÅÄÜ»ñµÃ×î´óÀûÒæ? ÎÒÏëµ½µÄ¾ÍÊÇ, ÎÒÔÚ×îµÍµÄÊ±ºòÂò, ÔÚ×î¸ßµÄÊ±ºòÂô²»¾ÍÐÐÁË? ÓÚÊÇÎÒÏÈËæÊÖÁÐ³ö²âÊÔÓÃÀý, ¿´¿´×Ô¼ºÏëµÄ¶Ô²»¶Ô:<br>
+æœ¬é¢˜éœ€è¦æ‰¾å‡ºè§„å¾‹ï¼š<br>
+å¦‚ä½•æ‰èƒ½èŽ·å¾—æœ€å¤§åˆ©ç›Š? æˆ‘æƒ³åˆ°çš„å°±æ˜¯, æˆ‘åœ¨æœ€ä½Žçš„æ—¶å€™ä¹°, åœ¨æœ€é«˜çš„æ—¶å€™å–ä¸å°±è¡Œäº†? äºŽæ˜¯æˆ‘å…ˆéšæ‰‹åˆ—å‡ºæµ‹è¯•ç”¨ä¾‹, çœ‹çœ‹è‡ªå·±æƒ³çš„å¯¹ä¸å¯¹:<br>
 		    4 3 6 7 8 9 10 4 6 3 9
-×îµÍÎª3, ×î¸ßÊÇ10, ×¬ÁË7¿é. ÓÉÓÚÌâÒâÃ»ÓÐÏÞÖÆ½»Ò×´ÎÊý. ËùÒÔÎÒÔÚ×¬ÁËÒ»·¢Ö®ºó, »¹¿ÉÒÔÔÙÍæ, ¿ªÆôÉÏµÛÊÓ½Ç, ÎÒ·¢ÏÖ 4Âò6Âô, 3Âò9Âô, ÓÖ¿ÉÒÔÔÙ×¬Á½°Ñ. Ò»¹²ÊÇ7 + 2 + 6 = 15¿é. Ã²ËÆµÍÂò¸ßÂôÓÐÒ»¸öºÜÖØÒªµÄÇ°Ìá: Õâ¸öÇø¼äÓ¦¸ÃÊÇÒ»¸ö `´ÓµÍµ½¸ßµÄÓÐÐòÐòÁÐ!`
-<br>Æ©Èç, 4ÂòÎªºÎÔÚ6Âô? ¶ø²»ÊÇµ½9Âô? ÒòÎªÖÐ¼äÓÐ¸ö3 ÆÆ»µÁËÓÐÐò. 4Âò9Âô, ×¬5¿é; 4Âò6Âô¼Ó3Âò9Âô, ×¬8¿é. ²Á, ÎÒÒ»ÏÂ×Ó¾ÍÃ÷°×ÁË.<br>
-Èç¹û»ùÓÚÓÐÐòÕâ¸öÇ°Ìá, ÄÇÃ´ÎÒÃÇµÄÌâÒâ¿ÉÒÔ»¯¼òÎª: **ÕÒµ½È«²¿ÓÐÐò×ÓÐòÁÐ, ¼ÆËã¸÷ÐòÁÐÊ×Î²²îÖµ, ·µ»Ø²îÖµ×ÜºÍ!**  ºËÐÄ´úÂë¾Í³öÀ´ÁË£º<br>
+æœ€ä½Žä¸º3, æœ€é«˜æ˜¯10, èµšäº†7å—. ç”±äºŽé¢˜æ„æ²¡æœ‰é™åˆ¶äº¤æ˜“æ¬¡æ•°. æ‰€ä»¥æˆ‘åœ¨èµšäº†ä¸€å‘ä¹‹åŽ, è¿˜å¯ä»¥å†çŽ©, å¼€å¯ä¸Šå¸è§†è§’, æˆ‘å‘çŽ° 4ä¹°6å–, 3ä¹°9å–, åˆå¯ä»¥å†èµšä¸¤æŠŠ. ä¸€å…±æ˜¯7 + 2 + 6 = 15å—. è²Œä¼¼ä½Žä¹°é«˜å–æœ‰ä¸€ä¸ªå¾ˆé‡è¦çš„å‰æ: è¿™ä¸ªåŒºé—´åº”è¯¥æ˜¯ä¸€ä¸ª `ä»Žä½Žåˆ°é«˜çš„æœ‰åºåºåˆ—!`
+<br>è­¬å¦‚, 4ä¹°ä¸ºä½•åœ¨6å–? è€Œä¸æ˜¯åˆ°9å–? å› ä¸ºä¸­é—´æœ‰ä¸ª3 ç ´åäº†æœ‰åº. 4ä¹°9å–, èµš5å—; 4ä¹°6å–åŠ 3ä¹°9å–, èµš8å—. æ“¦, æˆ‘ä¸€ä¸‹å­å°±æ˜Žç™½äº†.<br>
+å¦‚æžœåŸºäºŽæœ‰åºè¿™ä¸ªå‰æ, é‚£ä¹ˆæˆ‘ä»¬çš„é¢˜æ„å¯ä»¥åŒ–ç®€ä¸º: **æ‰¾åˆ°å…¨éƒ¨æœ‰åºå­åºåˆ—, è®¡ç®—å„åºåˆ—é¦–å°¾å·®å€¼, è¿”å›žå·®å€¼æ€»å’Œ!**  æ ¸å¿ƒä»£ç å°±å‡ºæ¥äº†ï¼š<br>
 ```cpp
 int profit = 0;
 for (auto i = v.begin(); i != v.end(); ++i)
-  if (*i < *(i+1)) profit += *(i+1) - *i; // Ð´µ½ÕâÀï, Ó¦¸Ã·¢ÏÖ·çÏÕ, i+1¸ÒËæ±ãÓÃ? ÅÐ¶ÏÒ»ÏÂ, i+1 != v.end();
+  if (*i < *(i+1)) profit += *(i+1) - *i; // å†™åˆ°è¿™é‡Œ, åº”è¯¥å‘çŽ°é£Žé™©, i+1æ•¢éšä¾¿ç”¨? åˆ¤æ–­ä¸€ä¸‹, i+1 != v.end();
 return profit;
 ```
 
-ÎÒµÄ´úÂëÈçÏÂ£º<br>
+æˆ‘çš„ä»£ç å¦‚ä¸‹ï¼š<br>
 #### best_time_to_sell_and_buy.h
 ```cpp
 #pragma once

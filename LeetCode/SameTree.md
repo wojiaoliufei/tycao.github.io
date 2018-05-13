@@ -1,6 +1,6 @@
-¸ø¶¨Á½¸ö¶þ²æÊ÷£¬Ð´Ò»¸öº¯ÊýÅÐ¶ÏËüÃÇÊÇ·ñÏàÍ¬
+ç»™å®šä¸¤ä¸ªäºŒå‰æ ‘ï¼Œå†™ä¸€ä¸ªå‡½æ•°åˆ¤æ–­å®ƒä»¬æ˜¯å¦ç›¸åŒ
 =================
-### Á½¿Ã¶þ²æÊ÷ÏàÍ¬µÄ¶¨Òå£º  `Á½¿Ã¶þ²æÊ÷½á¹¹ÏàÍ¬£¬ÇÒ¶ÔÓ¦½ÚµãµÄÖµÏàÍ¬£¬Ôò±»ÈÏÎªÊÇÕâÁ½¿Å¶þ²æÊ÷ÏàÍ¬¡£`
+### ä¸¤æ£µäºŒå‰æ ‘ç›¸åŒçš„å®šä¹‰ï¼š  `ä¸¤æ£µäºŒå‰æ ‘ç»“æž„ç›¸åŒï¼Œä¸”å¯¹åº”èŠ‚ç‚¹çš„å€¼ç›¸åŒï¼Œåˆ™è¢«è®¤ä¸ºæ˜¯è¿™ä¸¤é¢—äºŒå‰æ ‘ç›¸åŒã€‚`
 Example 01: <br>
 	
 	Input:     1         1
@@ -29,8 +29,8 @@ Example 03:
 	
 	Output: false
 *****************
-±¾ÌâÄ¿Ö÷ÒªÊÇÔËÓÃÁËµÝ¹é£¬ºÍÉÏ´ÎµÄÄÇ¸ö `ÕÒ³öÒ»¿Ã¶þ²æÊ÷µÄ×î´óÂ·¾¶³¤¶È` ºÜÏàËÆ¡£¶¼ÊÇÔËÓÃÁËµÝ¹éµÄË¼ÏëÈ¥½â¾öÎÊÌâ¡£
-½ÓÏÂÀ´£¬ÎÒÃÇ¸ø³ö´úÂë£º<br>
+æœ¬é¢˜ç›®ä¸»è¦æ˜¯è¿ç”¨äº†é€’å½’ï¼Œå’Œä¸Šæ¬¡çš„é‚£ä¸ª `æ‰¾å‡ºä¸€æ£µäºŒå‰æ ‘çš„æœ€å¤§è·¯å¾„é•¿åº¦` å¾ˆç›¸ä¼¼ã€‚éƒ½æ˜¯è¿ç”¨äº†é€’å½’çš„æ€æƒ³åŽ»è§£å†³é—®é¢˜ã€‚
+æŽ¥ä¸‹æ¥ï¼Œæˆ‘ä»¬ç»™å‡ºä»£ç ï¼š<br>
 #### sametree.h
 ```cpp
 #pragma once
@@ -46,11 +46,11 @@ struct TreeNode
 class Solution {
 public:
     bool isSameTree(TreeNode *p, TreeNode *q) {
-        if (p && q) // Çé¿ö1£º¶¼²»Îª¿ÕÊ÷
+        if (p && q) // æƒ…å†µ1ï¼šéƒ½ä¸ä¸ºç©ºæ ‘
             return (p->val == q->val) && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
-        else if (!q && !p)  // Çé¿ö2£º¶¼Îª¿ÕÊ÷
+        else if (!q && !p)  // æƒ…å†µ2ï¼šéƒ½ä¸ºç©ºæ ‘
             return true;
-        else    // Çé¿ö3£ºÖ»ÓÐÒ»¸öÎª¿ÕÊ÷£¬ÁíÍâÒ»¸ö·Ç¿ÕÊ÷
+        else    // æƒ…å†µ3ï¼šåªæœ‰ä¸€ä¸ªä¸ºç©ºæ ‘ï¼Œå¦å¤–ä¸€ä¸ªéžç©ºæ ‘
             return false;
     }
 };
