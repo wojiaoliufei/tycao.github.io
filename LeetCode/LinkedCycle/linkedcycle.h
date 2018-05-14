@@ -1,0 +1,4 @@
+#ifndef LINKEDCYCLE_H
+#define LINKEDCYCLE_H
+
+#endif // LINKEDCYCLE_H
